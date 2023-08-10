@@ -1,10 +1,12 @@
 import React from 'react'
+import footerStyle from './style/footerStyle.module.css'
 
 const Footer = () => {
+
   return (
-    <div>
-      <p>Footer</p>
-    </div>
+    <footer className={footerStyle.footerForm}>
+      Uppgift av Alex Andstén
+    </footer>
   )
 }
 

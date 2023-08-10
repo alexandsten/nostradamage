@@ -1,10 +1,19 @@
 import React from 'react'
 
-const Movie = () => {
+const Movie = (movieProps) => {
+    let movie = movieProps.movieProps
+
+    // Denna komponent hämtar värden som skickades från MovieList och skapar movie komponenter
   return (
-    <div>
-      <p>Movie</p>
-    </div>
+
+    <>
+        <b>{movie.Title}</b>
+          <div>
+            <img src={movie.Poster}/>
+          </div>
+        <p>{movie.Year}</p>
+        <p>{movie.Type}</p> 
+    </> 
   )
 }
 
