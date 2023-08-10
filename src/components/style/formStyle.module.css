@@ -1,0 +1,18 @@
+.fomStyling {
+    margin: 15px 35%;
+    background-color: beige;
+    height: 150px;
+    width: 250px;
+    padding: 20px 70px;
+    border-radius: 15px;
+    box-shadow: 2px 2px;
+}
+
+.formInput{
+    margin: 25px;
+}
+
+.formSelect {
+    margin-left: 30%;
+
+}

@@ -1,0 +1,28 @@
+.listStyle {
+    margin-left: 300px;
+    background-color: rgb(238, 226, 167);
+    width: 450px;
+    padding-left: 150px;
+    padding-top: 25px;
+    border-radius: 25px;
+    box-shadow: 1px 1px;
+}
+
+.listStyle li{
+    margin: 25px;
+    list-style: none;
+    margin-bottom: 75px;
+}
+
+.listStyle li div b{
+    margin: 25px;
+    padding-bottom: 50px;
+    list-style: square;
+}
+
+.listStyle li img{
+    margin: 0 auto;
+}
+
+
+
