@@ -15,7 +15,7 @@ const MovieApi = () => {
       try {
         setMovieResponse([])        // nollställer föregående API'ets svar
         
-        const response = await fetch(`http://www.omdbapi.com/?apikey=b726c748&s=${movieSearch}${typeSearch}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=b726c748&s=${movieSearch}${typeSearch}`);
         const movieAPI = await response.json();
         
         movieAPI.Search ?       // ternary operator som undersöker API'ets svar
