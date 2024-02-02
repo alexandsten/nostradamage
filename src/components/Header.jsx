@@ -5,7 +5,7 @@ const Header = () => {
 
   return (
     <header className={headerStyle.headerStyling}>
-      <h1>Movies 'n' stuff</h1> 
+      <h1>MMA project - Nostradamage</h1> 
     </header>
   )
 }
