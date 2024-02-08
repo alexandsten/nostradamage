@@ -5,7 +5,9 @@ import Typography from '@mui/material/Typography';
 
 export default function MainMenu( props ) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row', backgroundColor: '#f7f7f7', width: '100%', justifyContent: 'center'}}>
+    <Box sx={{ display: 'flex', flexDirection: 'row', backgroundColor: '#f7f7f7', width: '100%', justifyContent: 'center',
+    position: 'absolute', top: '0'
+    }}>
 
     {/* Meny är här */}
    
@@ -38,7 +40,7 @@ export default function MainMenu( props ) {
                 Demo
             </Typography>
         </Box>
-        
+
     </Box>
     )
 }
