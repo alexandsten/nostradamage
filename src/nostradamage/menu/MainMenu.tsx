@@ -20,21 +20,25 @@ export default function MainMenu( props ) {
                 Our vision
             </Typography>
         </Box>
+
         <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('Protoype')}>
             <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
                 Prototype
             </Typography>
         </Box>
+
         <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('About')}>
             <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
                 About us
             </Typography>
         </Box>
+
         <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('Demo')}>
             <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
                 Demo
             </Typography>
         </Box>
+        
     </Box>
     )
 }

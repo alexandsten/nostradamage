@@ -17,7 +17,7 @@ export default function NostradamageVision() {
         </Box>
 
         <Box sx={{ marginTop: '25px'}}>
-         <iframe
+ {/*         <iframe
             title="Video Player"
             width="560"
             height="315"
@@ -25,7 +25,12 @@ export default function NostradamageVision() {
             frameBorder="0"
             allowFullScreen
         >
-        </iframe>           
+        </iframe>  */}   
+            <img
+                src='https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2FMMAFighting%2Fstatus%2F1591677157927002112&psig=AOvVaw3mlhVRcseSdkaFXKRY-iMg&ust=1707518122302000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIDCuurmnIQDFQAAAAAdAAAAABAU'
+                alt='Smaller Image'
+                style={{ height: '50%', width: '50%' }}
+            />       
         </Box>
         <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold', marginTop: '25px' }}>
             How it works...

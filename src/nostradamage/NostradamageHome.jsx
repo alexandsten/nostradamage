@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 export default function NostradamageHome() {
   return (
     <>
-         <Box>
+        <Box>
             <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold', marginTop: '25px' }}>
                 Predictions have never been this gnarly...
             </Typography> 
@@ -13,7 +13,7 @@ export default function NostradamageHome() {
 
         <Box>
             <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold', marginTop: '25px' }}>
-                Bite down the mouthpiece and check out Nostradamage!
+                Bite down your mouthpiece and check out Nostradamage!
             </Typography> 
         </Box>
 
