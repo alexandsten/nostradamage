@@ -27,7 +27,7 @@ export default function NostradamageVision() {
         >
         </iframe>  */}   
             <img
-                src='https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2FMMAFighting%2Fstatus%2F1591677157927002112&psig=AOvVaw3mlhVRcseSdkaFXKRY-iMg&ust=1707518122302000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIDCuurmnIQDFQAAAAAdAAAAABAU'
+                src='https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2021/11/07/cf3fa970-3f77-11ec-a1b3-e785d5c8830c_image_hires_130910.jpg?itok=JLuZcr6M&v=1636261758'
                 alt='Smaller Image'
                 style={{ height: '50%', width: '50%' }}
             />       
