@@ -16,7 +16,7 @@ export default function NostradamageVision() {
             </Typography> 
         </Box>
 
-        <Box sx={{ marginTop: '25px'}}>
+        <Box sx={{ marginTop: '25px', justifyContent: 'center', display: 'flex', alignItems: 'center'}}>
  {/*         <iframe
             title="Video Player"
             width="560"
