@@ -4,12 +4,47 @@ import Typography from '@mui/material/Typography';
 
 export default function NostradamageView() {
   return (
-      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: '10%'}}>
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center'}}>
+    <>
+      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: '3%'}}>
+
+        {/* Titel är här */}
+        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '5%'}}>
             <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold' }}>
                 Nostradamage
             </Typography>
         </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'row', backgroundColor: '#f7f7f7', width: '100%', justifyContent: 'center'}}>
+
+          {/* Meny är här */}
+          <Box sx={{ margin: '8px', cursor: 'pointer'}}>
+            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
+                Home
+            </Typography>
+          </Box>
+          
+          <Box sx={{ margin: '8px', cursor: 'pointer'}}>
+            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
+                Our vision
+            </Typography>
+          </Box>
+          <Box sx={{ margin: '8px', cursor: 'pointer'}}>
+            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
+                Prototype
+            </Typography>
+          </Box>
+          <Box sx={{ margin: '8px', cursor: 'pointer'}}>
+            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
+                About us
+            </Typography>
+          </Box>
+          <Box sx={{ margin: '8px', cursor: 'pointer'}}>
+            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
+                Demo
+            </Typography>
+          </Box>
+        </Box>
+
+        {/* Content för hem är här */}
         <Box>
             <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold', marginTop: '25px' }}>
                 An upcoming tool to predict fights with the help of AI
@@ -31,6 +66,10 @@ export default function NostradamageView() {
             allowFullScreen
         ></iframe>           
         </Box>
+        <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold', marginTop: '25px' }}>
+            How it works...
+        </Typography> 
       </Box>
+    </>
   )
 }
