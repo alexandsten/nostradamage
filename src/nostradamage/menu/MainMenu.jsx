@@ -21,7 +21,7 @@ export default function MainMenu( props ) {
             </Typography>
         </Box>
 
-        <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('Protoype')}>
+        <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('Prototype')}>
             <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
                 Prototype
             </Typography>
