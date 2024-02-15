@@ -86,6 +86,9 @@ export default function NostradamageDemo() {
                   <MenuItem value={'Henry Cejudo'}>
                     Henry Cejudo
                   </MenuItem>
+                  <MenuItem value={'Robert Whittaker'}>
+                    Robert Whittaker
+                  </MenuItem>
                   </Select>
               </FormControl>
 
@@ -108,6 +111,9 @@ export default function NostradamageDemo() {
                   </MenuItem>
                   <MenuItem value={'Merab Dvalishvili'}>
                     Merab Dvalishvili
+                  </MenuItem>
+                  <MenuItem value={'Paulo Costa'}>
+                    Paulo Costa
                   </MenuItem>
                   </Select>
               </FormControl>
