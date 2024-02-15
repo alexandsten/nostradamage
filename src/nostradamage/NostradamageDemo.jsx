@@ -49,87 +49,7 @@ export default function NostradamageDemo() {
 
   return (
     <>
-        <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
-            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold' }}>
-                This is a demostration of Nostradamage
-            </Typography> 
-            <Box sx={{ 
-              borderRadius: '15px',
-              border: '2px solid #f0f0f0',  
-              boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              marginTop: '20px',
-              padding: '25px'
-            }}
-            >
-              <FormControl fullWidth sx={{ marginBottom: '30px'}}>
-                <InputLabel id="demo-simple-select-label">
-                  Fighter 1
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={fighter1}
-                  label="Age"
-                  onChange={handleChangeFighter1}
-                >
-                  <MenuItem value={'Ian Garry'}>
-                    Ian Garry
-                  </MenuItem>
-                  <MenuItem value={'Alexander Volkanovski'}>
-                    Alexander Volkanovski
-                  </MenuItem>
-                  <MenuItem value={'Henry Cejudo'}>
-                    Henry Cejudo
-                  </MenuItem>
-                  <MenuItem value={'Robert Whittaker'}>
-                    Robert Whittaker
-                  </MenuItem>
-                  </Select>
-              </FormControl>
-
-              <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">
-                  Fighter 2
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={fighter2}
-                  label="Age"
-                  onChange={handleChangeFighter2}
-                >
-                  <MenuItem value={'Geoff Neal'}>
-                    Geoff Neal
-                  </MenuItem>
-                  <MenuItem value={'Illia Tuporia'}>
-                    Illia Tuporia
-                  </MenuItem>
-                  <MenuItem value={'Merab Dvalishvili'}>
-                    Merab Dvalishvili
-                  </MenuItem>
-                  <MenuItem value={'Paulo Costa'}>
-                    Paulo Costa
-                  </MenuItem>
-                  </Select>
-              </FormControl>
-
-              <Button variant="contained"
-                  onClick={fightStart}
-                  sx={{ 
-                    marginTop: '30px', 
-                    marginBottom: '10px', 
-                    marginTop: '25px',
-                    pointerEvents: (fighter1 !== '' && fighter2 !== '') ? 'auto' : 'none', 
-                    opacity: (fighter1 !== '' && fighter2 !== '') ? 1 : 0.5, 
-                  }}
-              >
-                Fight!
-              </Button>
-            </Box>
-        </Box>
+        
 
         {
           fightStartBoolean?(
@@ -163,7 +83,87 @@ export default function NostradamageDemo() {
                 Fight again!
               </Button>
         </>
-          ) : null
+          ) : <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
+          <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold' }}>
+              This is a demostration of Nostradamage
+          </Typography> 
+          <Box sx={{ 
+            borderRadius: '15px',
+            border: '2px solid #f0f0f0',  
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            marginTop: '20px',
+            padding: '25px'
+          }}
+          >
+            <FormControl fullWidth sx={{ marginBottom: '30px'}}>
+              <InputLabel id="demo-simple-select-label">
+                Fighter 1
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={fighter1}
+                label="Age"
+                onChange={handleChangeFighter1}
+              >
+                <MenuItem value={'Ian Garry'}>
+                  Ian Garry
+                </MenuItem>
+                <MenuItem value={'Alexander Volkanovski'}>
+                  Alexander Volkanovski
+                </MenuItem>
+                <MenuItem value={'Henry Cejudo'}>
+                  Henry Cejudo
+                </MenuItem>
+                <MenuItem value={'Robert Whittaker'}>
+                  Robert Whittaker
+                </MenuItem>
+                </Select>
+            </FormControl>
+
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">
+                Fighter 2
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={fighter2}
+                label="Age"
+                onChange={handleChangeFighter2}
+              >
+                <MenuItem value={'Geoff Neal'}>
+                  Geoff Neal
+                </MenuItem>
+                <MenuItem value={'Illia Tuporia'}>
+                  Illia Tuporia
+                </MenuItem>
+                <MenuItem value={'Merab Dvalishvili'}>
+                  Merab Dvalishvili
+                </MenuItem>
+                <MenuItem value={'Paulo Costa'}>
+                  Paulo Costa
+                </MenuItem>
+                </Select>
+            </FormControl>
+
+            <Button variant="contained"
+                onClick={fightStart}
+                sx={{ 
+                  marginTop: '30px', 
+                  marginBottom: '10px', 
+                  marginTop: '25px',
+                  pointerEvents: (fighter1 !== '' && fighter2 !== '') ? 'auto' : 'none', 
+                  opacity: (fighter1 !== '' && fighter2 !== '') ? 1 : 0.5, 
+                }}
+            >
+              Fight!
+            </Button>
+          </Box>
+      </Box>
         }
         
     </>
