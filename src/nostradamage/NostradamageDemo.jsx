@@ -13,8 +13,6 @@ import { useState } from 'react';
 
 export default function NostradamageDemo() {
 
-  const [age, setAge] = useState('');
-
   const [fighter1, setFighter1] = useState('');
   const [fighter2, setFighter2] = useState('');
   const [fightStartBoolean, setFightStartBoolean] = useState(false);
