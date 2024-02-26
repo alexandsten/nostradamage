@@ -7,7 +7,7 @@ import SinglePost from './post/singlePost';
 export default function NostradamageHome() {
   return (
     <>
-        <Box sx={{ display: 'flex', justifyContent: 'center', width: '33%'}}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', width: '33%', backgroundColor: 'white', borderRadius: '12px', padding: '8px'}}>
             <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold', marginTop: '25px', fontFamily: "Roboto Mono" }}>
               <b>Welcome to Nostradamage!</b>   We are two fans who are working on a project that will try to predict the outcome of matchups with the help of some coding magic.
             </Typography> 

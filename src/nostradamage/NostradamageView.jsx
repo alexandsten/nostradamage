@@ -14,9 +14,18 @@ export default function NostradamageView() {
 
   return (
     <>
-      <Box sx={{ width: '100%', minHeight: '550px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: '200px'}}>
+      <Box sx={{ width: '100%', minHeight: '550px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: '200px', backgroundImage: 'url(./img/bg1.jpg)'}}>
 
-        
+      <div
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)',
+            backgroundSize: 'cover', // Adjust as needed
+            width: '100%',
+            minHeight: '550px',
+            position: 'absolute',
+            zIndex: -1,
+          }}
+        ></div>
       <MainMenu
         setSelectedItem = {setSelectedItem}
       />

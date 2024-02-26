@@ -6,7 +6,7 @@ export default function SinglePost({ postTitle, postContent }) {
   return (
     <Grid container spacing={1} sx={{ marginTop: '25px', width: '500px'}}>
       <Grid item xs={8} sx={{ borderRadius: '12px', textAlign: 'center', width: '100%' }}>
-        <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold', marginTop: '25px', fontFamily: "Assistant" }}>
+        <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold', marginTop: '25px', fontFamily: "Assistant", color: 'white' }}>
           {postTitle}
         </Typography>
       </Grid>
