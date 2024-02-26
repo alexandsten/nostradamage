@@ -6,6 +6,8 @@ import Header from './components/Header'
 import MovieAPI from './components/MovieAPI'
 import Footer from './components/Footer'
 import NostradamageView from './nostradamage/NostradamageView'
+import './nostradamage/styles.css'
+
 
 function App() {
 
