@@ -49,8 +49,6 @@ export default function NostradamageDemo() {
 
   return (
     <>
-        
-
         {
           fightStartBoolean?(
 
@@ -63,13 +61,11 @@ export default function NostradamageDemo() {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
-                    marginTop: '20px',
-                    padding: '25px'}} >
-                      <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold' }}>
-                        {fightResultText1}
-                      </Typography>
-
-                      
+                    padding: '25px'}} 
+              >
+                <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold' }}>
+                  {fightResultText1}
+                </Typography> 
               </Box>
               <Button 
                 variant="contained"
@@ -77,7 +73,6 @@ export default function NostradamageDemo() {
                 sx={{ 
                   marginTop: '30px', 
                   marginBottom: '10px', 
-                  marginTop: '25px',
                 }}
               >
                 Fight again!
@@ -155,7 +150,6 @@ export default function NostradamageDemo() {
                 sx={{ 
                   marginTop: '30px', 
                   marginBottom: '10px', 
-                  marginTop: '25px',
                   pointerEvents: (fighter1 !== '' && fighter2 !== '') ? 'auto' : 'none', 
                   opacity: (fighter1 !== '' && fighter2 !== '') ? 1 : 0.5, 
                 }}

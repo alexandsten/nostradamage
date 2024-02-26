@@ -1,44 +1,66 @@
-import React from 'react'
-import Box from '@mui/material/Box';
+import React from 'react';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 
-
-export default function MainMenu( props ) {
+export default function MainMenu(props) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row', backgroundColor: '#f7f7f7', width: '100%', justifyContent: 'center',
-        position: 'absolute', top: '0'}}
-    >
-   
-        <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('Home')}>
-            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
-                Home
-            </Typography>
-        </Box>
+    <Grid container spacing={2} sx={{ position: 'absolute', top: 0, width: '100%' }}>
+      <Grid item xs={12} sm={1} sx={{ textAlign: 'center' }}>
+        <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold' }}>
+          Nostradamage
+        </Typography>
+      </Grid>
 
-        <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('Vision')}>
-            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
-                Our vision
-            </Typography>
-        </Box>
+      <Grid container item xs={12} sm={11} spacing={2} justifyContent={'flex-end'}>
+        <Grid item>
+          <Typography
+            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}
+            onClick={() => props.setSelectedItem('Home')}
+          >
+            Home
+          </Typography>
+        </Grid>
 
-        <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('Prototype')}>
-            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
-                Prototype
-            </Typography>
-        </Box>
+        <Grid item>
+          <Typography
+            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}
+            onClick={() => props.setSelectedItem('Vision')}
+          >
+            Our vision
+          </Typography>
+        </Grid>
 
-        <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('About')}>
-            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
-                About us
-            </Typography>
-        </Box>
+        <Grid item>
+          <Typography
+            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}
+            onClick={() => props.setSelectedItem('Prototype')}
+          >
+            Prototype
+          </Typography>
+        </Grid>
 
-        <Box sx={{ margin: '8px', cursor: 'pointer'}} onClick={() => props.setSelectedItem('Demo')}>
-            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold','&:hover': { textDecoration: 'underline'} }}>
-                Demo
-            </Typography>
-        </Box>
+        {/* Uncomment the next lines when needed */}
+        {/* <Grid item>
+          <Typography
+            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}
+            onClick={() => props.setSelectedItem('About')}
+          >
+            About us
+          </Typography>
+        </Grid> */}
 
-    </Box>
-    )
+        <Grid item>
+          <Typography
+            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}
+            onClick={() => props.setSelectedItem('Demo')}
+          >
+            Demo
+          </Typography>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
 }
+
+    
+

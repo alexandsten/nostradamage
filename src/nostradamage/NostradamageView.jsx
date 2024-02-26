@@ -14,13 +14,8 @@ export default function NostradamageView() {
 
   return (
     <>
-      <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: '3%'}}>
+      <Box sx={{ width: '100%', minHeight: '550px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: '200px'}}>
 
-        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: '5%'}}>
-            <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold' }}>
-                Nostradamage
-            </Typography>
-        </Box>
         
       <MainMenu
         setSelectedItem = {setSelectedItem}
