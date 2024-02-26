@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 
 export default function MainMenu(props) {
   return (
-    <Grid container spacing={2} sx={{ position: 'absolute', top: 0, width: '100%', padding: '20px' }}>
+    <Grid container spacing={2} sx={{ position: 'absolute', top: 0, width: '100%', padding: '20px', backgroundColor: 'white' }}>
       <Grid item xs={12} sm={1} sx={{ textAlign: 'center' }}>
         <Typography sx={{ fontSize: '22px', fontWeight: 'Bold', fontFamily: "Roboto Mono" }}>
           Nostradamage
