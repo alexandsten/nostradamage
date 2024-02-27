@@ -1,31 +1,49 @@
 // server.mjs
-import mysql from 'mysql2/promise';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: 'YOUR_API_KEY',
+  authDomain: 'YOUR_AUTH_DOMAIN',
+  projectId: 'YOUR_PROJECT_ID',
+  storageBucket: 'YOUR_STORAGE_BUCKET',
+  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+  appId: 'YOUR_APP_ID',
+};
+
+// Initialize Firebase
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+// Now you can use specific Firebase services
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+
+// Express app
 import express from 'express';
-
-const pool = mysql.createPool({
-  host: 'your-mysql-host',       // Replace with the actual host of your MySQL server
-  user: 'your-mysql-user',       // Replace with your MySQL username
-  password: 'your-mysql-password', // Replace with your MySQL password
-  database: 'your-mysql-database', // Replace with the name of your MySQL database
-  connectionLimit: 10,
-});
-
 const app = express();
 const port = 3000;
 
-app.get('/', async (req, res) => {
-  try {
-    const connection = await pool.getConnection();
-    const [rows, fields] = await connection.query('SELECT * FROM your_table'); // Replace with your actual table name
-    connection.release();
+app.get('/', (req, res) => {
+  res.send('Hello, Firebase!');
+});
 
-    res.json(rows);
+// Example using Firebase Auth
+app.get('/login', async (req, res) => {
+  try {
+    // Dummy code, replace with actual authentication logic
+    const email = 'test@example.com';
+    const password = 'password';
+    const userCredential = await auth.signInWithEmailAndPassword(email, password);
+    const user = userCredential.user;
+    res.send(`Logged in as ${user.email}`);
   } catch (error) {
-    console.error('Error executing query:', error);
-    res.status(500).send('Internal Server Error');
+    console.error('Authentication error:', error);
+    res.status(500).send('Authentication error');
   }
 });
 
 app.listen(port, () => {
-  console.log(`Amazing! Server is running on http://localhost:${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });
