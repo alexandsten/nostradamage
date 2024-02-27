@@ -1,0 +1,13 @@
+
+{
+    "name": "myPetsFunction",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {
+      "firebase-functions": "^3.14.0",
+      "firebase-admin": "^9.0.0",
+      "express": "^4.17.1"
+
+    }
+  }
+  
