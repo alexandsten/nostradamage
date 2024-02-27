@@ -1,7 +1,7 @@
 // server.mjs
-import * as firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -14,11 +14,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
 // Now you can use specific Firebase services
-const auth = firebase.auth();
-const firestore = firebase.firestore();
+const auth = getAuth(firebaseApp);
+const firestore = getFirestore(firebaseApp);
 
 // Express app
 import express from 'express';
