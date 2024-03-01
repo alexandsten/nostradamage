@@ -8,6 +8,8 @@ import { getDatabase, ref, get } from 'firebase/database';
 
 export default function NostradamageHome() {
   const [data, setData] = useState([]);
+  const [toFetch, setToFetch] = useState(['Fighter1', 'Fighter2', 'Fighter3', 'Fighter4']);
+  const [fighterNames, setFighterNames] = useState([]);
 
   const firebaseConfig = {
 
@@ -33,19 +35,23 @@ export default function NostradamageHome() {
   const firebaseApp = initializeApp(firebaseConfig);
   const database = getDatabase(firebaseApp);
 
-  const [fighterNames, setFighterNames] = useState("");
-
-
   const onClickFighter = async () => {
-    console.log('click')
+    console.log('click');
     try {
-      const snapshot = await get(ref(database, 'Fighter1'));
-      const fighterData = snapshot.val();
-      if (fighterData) {
-        setData(fighterData);
-        setFighterNames(fighterData.Name)
+      const fightersData = [];
+
+      for (const fighterName of toFetch) {
+        const snapshot = await get(ref(database, fighterName));
+        const fighterData = snapshot.val();
+
+        if (fighterData) {
+          fightersData.push(fighterData);
+        }
       }
-      console.log(database)
+
+      setData(fightersData);
+      setFighterNames(fightersData.map(fighter => fighter.Name));
+      console.log(database);
 
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -65,18 +71,37 @@ export default function NostradamageHome() {
           padding: '8px',
         }}
       >
-       
-     {database}
 
-      </Box>
-
-      {/* Display the fetched data */}
-      {data && (
-        <Box sx={{ marginTop: '20px', marginBottom: '20px', justifyContent: 'center', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
-          {/* <SinglePost postTitle={data.title} postContent={data.content} /> */}
+            {data && (
+              <Box
+                sx={{
+                  marginTop: '20px',
+                  marginBottom: '20px',
+                  justifyContent: 'center',
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexDirection: 'column',
+                }}
+              >
+                {fighterNames.map((fighterName, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      backgroundColor: 'white',
+                      borderRadius: '12px',
+                      padding: '8px',
+                      margin: '4px',
+                    }}
+                  >
+                    {fighterName}
+                  </Box>
+                ))}
+              </Box>
+            )}
         </Box>
-      )}
 
+        {/* Display the fetched data */}
+        
       {/* Add more SinglePost components or modify as needed */}
     </>
   );
