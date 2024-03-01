@@ -45,7 +45,7 @@ export default function NostradamageHome() {
         setData(fighterData);
         setFighterNames(fighterData.Name)
       }
-      console.log(fighterNames)
+      console.log(database)
 
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -66,7 +66,7 @@ export default function NostradamageHome() {
         }}
       >
        
-     {fighterNames}
+     {database}
 
       </Box>
 
