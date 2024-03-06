@@ -8,7 +8,7 @@ import { getDatabase, ref, get } from 'firebase/database';
 
 export default function NostradamageHome() {
   const [data, setData] = useState([]);
-  const [toFetch, setToFetch] = useState(['Fighter1', 'Fighter2', 'Fighter3', 'Fighter4']);
+  const [toFetch, setToFetch] = useState(['Brandon Moreno_dict']);
   const [fighterNames, setFighterNames] = useState([]);
 
   const firebaseConfig = {
@@ -50,7 +50,7 @@ export default function NostradamageHome() {
       }
 
       setData(fightersData);
-      setFighterNames(fightersData.map(fighter => fighter.Name));
+      setFighterNames(fightersData.map(fighter => fighter.Stance));
       console.log(database);
 
     } catch (error) {
