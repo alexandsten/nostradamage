@@ -1,10 +1,8 @@
-// NostradamageHome.jsx
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
-
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function NostradamageHome() {
   const [data, setData] = useState([]);
@@ -25,19 +23,33 @@ export default function NostradamageHome() {
   
     appId: "1:381854619282:web:2b2c211d9613baf52bf84b",
 
-    databaseURL: 'https://nostradamage-backend-01-default-rtdb.europe-west1.firebasedatabase.app/', // Update this line
+    databaseURL: 'https://nostradamage-backend-01-default-rtdb.europe-west1.firebasedatabase.app/', 
 
   
   };
-  
-  
 
   const firebaseApp = initializeApp(firebaseConfig);
   const database = getDatabase(firebaseApp);
+  const auth = getAuth(firebaseApp);
+
+  useEffect(() => {
+    const signInUser = async () => {
+      try {
+        await signInWithEmailAndPassword(auth, 'alex.andsten@gmail.com', 'jagvetiS11');
+        console.log('User signed in successfully');
+      } catch (error) {
+        console.error('Authentication error:', error);
+      }
+    };
+
+    signInUser(); // Automatically sign in when the component mounts
+  }, [auth]);
 
   const onClickFighter = async () => {
     console.log('click');
     try {
+      // Ensure the user is signed in before attempting to fetch data
+
       const fightersData = [];
 
       for (const fighterName of toFetch) {
@@ -50,7 +62,7 @@ export default function NostradamageHome() {
       }
 
       setData(fightersData);
-      setFighterNames(fightersData.map(fighter => fighter.Stance));
+      setFighterNames(fightersData.map((fighter) => fighter.Stance));
       console.log(database);
 
     } catch (error) {
@@ -72,37 +84,33 @@ export default function NostradamageHome() {
         }}
       >
 
-            {data && (
+        {data && (
+          <Box
+            sx={{
+              marginTop: '20px',
+              marginBottom: '20px',
+              justifyContent: 'center',
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'column',
+            }}
+          >
+            {fighterNames.map((fighterName, index) => (
               <Box
+                key={index}
                 sx={{
-                  marginTop: '20px',
-                  marginBottom: '20px',
-                  justifyContent: 'center',
-                  display: 'flex',
-                  alignItems: 'center',
-                  flexDirection: 'column',
+                  backgroundColor: 'white',
+                  borderRadius: '12px',
+                  padding: '8px',
+                  margin: '4px',
                 }}
               >
-                {fighterNames.map((fighterName, index) => (
-                  <Box
-                    key={index}
-                    sx={{
-                      backgroundColor: 'white',
-                      borderRadius: '12px',
-                      padding: '8px',
-                      margin: '4px',
-                    }}
-                  >
-                    {fighterName}
-                  </Box>
-                ))}
+                {fighterName}
               </Box>
-            )}
-        </Box>
-
-        {/* Display the fetched data */}
-        
-      {/* Add more SinglePost components or modify as needed */}
+            ))}
+          </Box>
+        )}
+      </Box>
     </>
   );
 }
