@@ -74,7 +74,7 @@ export default function NostradamageHome() {
 
   return (
     <>
-      <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold',  color: 'white', marginBottom: '3em' }}>
+      <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold',  color: 'white', margin: '3em' }}>
          Nostradamage - MMA fight predictor
       </Typography> 
      <Stack direction="row" sx={{ width: '80%' }} align="center" justifyContent="center">
@@ -85,12 +85,15 @@ export default function NostradamageHome() {
           width: '33%',
           backgroundColor: 'white',
           borderRadius: '12px',
-          padding: '8px',
-          flexDirection: 'row',
+          padding: '1em',
+          flexDirection: 'column',
           margin: '12px'
         }}
       >
-        Hiss pitch för idén
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+          Nostradamage - MMA fight predictor
+        </Typography> 
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit minima nemo aliquid distinctio fuga eius repellendus facere reiciendis, quas, nobis cumque unde quam commodi rem consequuntur optio maiores. Eius, iure!
       </Box>
       <Box
         sx={{
@@ -99,15 +102,19 @@ export default function NostradamageHome() {
           width: '33%',
           backgroundColor: 'white',
           borderRadius: '12px',
-          padding: '8px',
-          flexDirection: 'row',
-          margin: '12px'
+          padding: '1em',
+          flexDirection: 'column',
+          margin: '12px',
+
         }}
       >
-        Teknologin bakom detta
+         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+          Teknologin bakom detta
+        </Typography> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum blanditiis minima, mollitia voluptates voluptate, consectetur sequi a aspernatur illum optio nulla laboriosam placeat doloribus quos pariatur enim. Totam, aliquid accusantium!
       </Box>
     </Stack>
-    <Stack direction="row" sx={{ width: '80%', marginTop: '5em'}}>
+    <Stack direction="row" sx={{ width: '80%', marginTop: '5em'}}  align="center" justifyContent="center">
       <Box
         sx={{
           display: 'flex',
@@ -115,12 +122,15 @@ export default function NostradamageHome() {
           width: '33%',
           backgroundColor: 'white',
           borderRadius: '12px',
-          padding: '8px',
-          flexDirection: 'row',
+          padding: '1em',
+          flexDirection: 'column',
           margin: '12px'
         }}
       >
-        Funktion / användbarhet
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+          Funktion / användbarhet
+        </Typography> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat rerum, asperiores nulla voluptatum, corporis possimus eos ipsa illum quae placeat id cupiditate quibusdam, fuga nobis quis. Odit, quam. Necessitatibus.
       </Box>
       <Box
         sx={{
@@ -129,12 +139,15 @@ export default function NostradamageHome() {
           width: '33%',
           backgroundColor: 'white',
           borderRadius: '12px',
-          padding: '8px',
-          flexDirection: 'row',
+          padding: '1em',
+          flexDirection: 'column',
           margin: '12px'
         }}
       >
-        Varför / rolig?
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+            Varför / rolig?
+        </Typography> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum exercitationem dignissimos laudantium quaerat molestias perspiciatis amet, autem culpa! Sunt veniam libero, sed tempora provident veritatis explicabo porro beatae illo labore.
       </Box>
       <Box
         sx={{
@@ -143,12 +156,15 @@ export default function NostradamageHome() {
           width: '33%',
           backgroundColor: 'white',
           borderRadius: '12px',
-          padding: '8px',
-          flexDirection: 'row',
+          padding: '1em',
+          flexDirection: 'column',
           margin: '12px'
         }}
       >
-        Bygga community?
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+          Bygga community?
+        </Typography> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quam id facilis sequi iure cumque totam ex voluptatem voluptas reiciendis commodi maxime nostrum, quis eaque quasi nisi, minus tenetur architecto.
       </Box>
     </Stack>
     </>
