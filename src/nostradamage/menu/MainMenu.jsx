@@ -22,16 +22,16 @@ export default function MainMenu(props) {
 
       <Grid container item xs={12} sm={11} spacing={2} justifyContent={'flex-end'}>
       <Grid item >
-          <SocialIcon url="https://www.tiktok.com" />
+          <SocialIcon url="https://www.tiktok.com" style={{ width: '40px', height: '40px' }}/>
         </Grid>
         <Grid item >
-          <SocialIcon url="https://www.instagram.com" />
+          <SocialIcon url="https://www.instagram.com" style={{ width: '40px', height: '40px' }}/>
         </Grid>
         <Grid item >
-          <SocialIcon url="https://www.x.com" />
+          <SocialIcon url="https://www.x.com" style={{ width: '40px', height: '40px' }}/>
         </Grid>
         <Grid item sx={{ marginRight: '5%'}}>
-          <SocialIcon url="https://www.discord.com" />
+          <SocialIcon url="https://www.discord.com" style={{ width: '40px', height: '40px' }}/>
         </Grid>
         <Grid item>
           <Typography
