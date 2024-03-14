@@ -35,7 +35,7 @@ export default function MainMenu(props) {
         </Grid>
         <Grid item>
           <Typography
-            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+            sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
             onClick={() => props.setSelectedItem('Home')}
           >
             Home
@@ -44,7 +44,7 @@ export default function MainMenu(props) {
 
         {/* <Grid item>
           <Typography
-            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+            sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
             onClick={() => props.setSelectedItem('Vision')}
           >
             Our vision
@@ -53,7 +53,7 @@ export default function MainMenu(props) {
 
         <Grid item>
           <Typography
-            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+            sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
             onClick={() => props.setSelectedItem('Prototype')}
           >
             Prototype
@@ -63,7 +63,7 @@ export default function MainMenu(props) {
         {/* Uncomment the next lines when needed */}
         <Grid item>
           <Typography
-            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}
+            sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' } }}
             onClick={() => props.setSelectedItem('About')}
           >
             About us
@@ -72,7 +72,7 @@ export default function MainMenu(props) {
 
         {/* <Grid item>
           <Typography
-            sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+            sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
             onClick={() => props.setSelectedItem('Demo')}
           >
             Demo
