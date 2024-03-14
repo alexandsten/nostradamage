@@ -15,22 +15,22 @@ export default function NostradamageView() {
   const [selectedItem, setSelectedItem] = useState('Home');
 
   return (
-    <>
+    <> 
+      <MainMenu
+        setSelectedItem = {setSelectedItem}
+      />
         <div
           style={{
             backgroundImage: `url(${bgImage})`,
             backgroundSize: 'cover', // Adjust as needed
-            width: '100%',
-            minHeight: '550px',
-            marginTop: '-80px'
+            // width: '100%',
+            // minHeight: '850px'
           }}
         >
-        <Box sx={{ width: '100%', minHeight: '550px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', marginTop: '200px'}}>
+        <Box sx={{ width: '100%', minHeight: '550px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
 
 
-          <MainMenu
-            setSelectedItem = {setSelectedItem}
-          />
+         
 
             {selectedItem == 'Home' ? <NostradamageHome /> : null}
             {selectedItem == 'Vision' ? <NostradamageVision /> : null}
