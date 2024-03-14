@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import Typography from '@mui/material/Typography';
 
 export default function NostradamageHome() {
   const [data, setData] = useState([]);
@@ -72,8 +74,11 @@ export default function NostradamageHome() {
 
   return (
     <>
+      <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold',  color: 'white', marginBottom: '3em' }}>
+         Nostradamage - MMA fight predictor
+      </Typography> 
+     <Stack direction="row" sx={{ width: '80%' }} align="center" justifyContent="center">
       <Box
-        onClick={onClickFighter}
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -81,36 +86,71 @@ export default function NostradamageHome() {
           backgroundColor: 'white',
           borderRadius: '12px',
           padding: '8px',
+          flexDirection: 'row',
+          margin: '12px'
         }}
       >
-
-        {data && (
-          <Box
-            sx={{
-              marginTop: '20px',
-              marginBottom: '20px',
-              justifyContent: 'center',
-              display: 'flex',
-              alignItems: 'center',
-              flexDirection: 'column',
-            }}
-          >
-            {fighterNames.map((fighterName, index) => (
-              <Box
-                key={index}
-                sx={{
-                  backgroundColor: 'white',
-                  borderRadius: '12px',
-                  padding: '8px',
-                  margin: '4px',
-                }}
-              >
-                {fighterName}
-              </Box>
-            ))}
-          </Box>
-        )}
+        Hiss pitch för idén
       </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '33%',
+          backgroundColor: 'white',
+          borderRadius: '12px',
+          padding: '8px',
+          flexDirection: 'row',
+          margin: '12px'
+        }}
+      >
+        Teknologin bakom detta
+      </Box>
+    </Stack>
+    <Stack direction="row" sx={{ width: '80%', marginTop: '5em'}}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '33%',
+          backgroundColor: 'white',
+          borderRadius: '12px',
+          padding: '8px',
+          flexDirection: 'row',
+          margin: '12px'
+        }}
+      >
+        Funktion / användbarhet
+      </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '33%',
+          backgroundColor: 'white',
+          borderRadius: '12px',
+          padding: '8px',
+          flexDirection: 'row',
+          margin: '12px'
+        }}
+      >
+        Varför / rolig?
+      </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          width: '33%',
+          backgroundColor: 'white',
+          borderRadius: '12px',
+          padding: '8px',
+          flexDirection: 'row',
+          margin: '12px'
+        }}
+      >
+        Bygga community?
+      </Box>
+    </Stack>
     </>
   );
 }

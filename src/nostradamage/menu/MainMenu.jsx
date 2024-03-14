@@ -25,12 +25,12 @@ export default function MainMenu(props) {
         </Grid>
 
         <Grid item>
-          <Typography
+          {/* <Typography
             sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
             onClick={() => props.setSelectedItem('Vision')}
           >
             Our vision
-          </Typography>
+          </Typography> */}
         </Grid>
 
         <Grid item>
@@ -53,12 +53,12 @@ export default function MainMenu(props) {
         </Grid> */}
 
         <Grid item>
-          <Typography
+          {/* <Typography
             sx={{ fontSize: '16px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
             onClick={() => props.setSelectedItem('Demo')}
           >
             Demo
-          </Typography>
+          </Typography> */}
         </Grid>
       </Grid>
     </Grid>
