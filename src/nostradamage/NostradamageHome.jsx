@@ -74,7 +74,7 @@ export default function NostradamageHome() {
 
   return (
     <>
-      <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold',  color: 'white', margin: '3em' }}>
+      <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold',  color: 'white', margin: '3em', fontFamily: "Roboto Mono" }}>
          Nostradamage - MMA fight predictor
       </Typography> 
      <Stack direction="row" sx={{ width: '80%' }} align="center" justifyContent="center">
@@ -90,8 +90,8 @@ export default function NostradamageHome() {
           margin: '12px'
         }}
       >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
-          Nostradamage - MMA fight predictor
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+          MMA fight predictor
         </Typography> 
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit minima nemo aliquid distinctio fuga eius repellendus facere reiciendis, quas, nobis cumque unde quam commodi rem consequuntur optio maiores. Eius, iure!
       </Box>
@@ -108,7 +108,7 @@ export default function NostradamageHome() {
 
         }}
       >
-         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
           Teknologin bakom detta
         </Typography> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum blanditiis minima, mollitia voluptates voluptate, consectetur sequi a aspernatur illum optio nulla laboriosam placeat doloribus quos pariatur enim. Totam, aliquid accusantium!
@@ -127,7 +127,7 @@ export default function NostradamageHome() {
           margin: '12px'
         }}
       >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
           Funktion / användbarhet
         </Typography> 
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat rerum, asperiores nulla voluptatum, corporis possimus eos ipsa illum quae placeat id cupiditate quibusdam, fuga nobis quis. Odit, quam. Necessitatibus.
@@ -144,7 +144,7 @@ export default function NostradamageHome() {
           margin: '12px'
         }}
       >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
             Varför / rolig?
         </Typography> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum exercitationem dignissimos laudantium quaerat molestias perspiciatis amet, autem culpa! Sunt veniam libero, sed tempora provident veritatis explicabo porro beatae illo labore.
@@ -161,7 +161,7 @@ export default function NostradamageHome() {
           margin: '12px'
         }}
       >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em' }}>
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
           Bygga community?
         </Typography> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quam id facilis sequi iure cumque totam ex voluptatem voluptas reiciendis commodi maxime nostrum, quis eaque quasi nisi, minus tenetur architecto.
