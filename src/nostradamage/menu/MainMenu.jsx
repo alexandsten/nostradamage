@@ -13,7 +13,7 @@ import 'react-social-icons/tiktok'
 
 export default function MainMenu(props) {
   return (
-    <Grid container spacing={2} sx={{ position: 'sticky', top: 0, width: '102%', padding: '20px', backgroundColor: 'white', paddingRight: '50px' }}>
+    <Grid container spacing={2} sx={{ position: 'sticky', top: 0, width: '101.5%', padding: '20px', backgroundColor: 'white', paddingRight: '50px' }}>
       <Grid item xs={12} sm={1} sx={{ textAlign: 'center' }}>
         <Typography sx={{ fontSize: '22px', fontWeight: 'bold', fontFamily: "Roboto Mono" }}>
           Nostradamage
