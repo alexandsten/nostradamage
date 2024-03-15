@@ -114,7 +114,18 @@ export default function NostradamageHome() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum blanditiis minima, mollitia voluptates voluptate, consectetur sequi a aspernatur illum optio nulla laboriosam placeat doloribus quos pariatur enim. Totam, aliquid accusantium!
       </Box>
     </Stack>
-    <Stack direction="row" sx={{ width: '80%', marginTop: '5em'}}  align="center" justifyContent="center">
+    <Stack direction="row" sx={{ backgroundColor: 'black', height: '5%', width: '80%', color: 'white', marginTop: '3em', padding: '2em', borderRadius: '10px'}}  
+    align="center" justifyContent="center"
+    >
+        <Box sx={{ padding: '3%' }}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere quia natus unde impedit enim maiores debitis hic, dignissimos nemo quas quisquam omnis cumque in totam similique quod reprehenderit deserunt.
+
+        </Box>
+        <Box sx={{ padding: '3%' }}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, perspiciatis repudiandae? Deleniti quod quam voluptas velit aspernatur ipsum fuga, earum laboriosam, libero necessitatibus ut culpa veritatis delectus quas accusantium similique.
+        </Box>
+    </Stack>
+    <Stack direction="row" sx={{ width: '80%', marginTop: '3em'}}  align="center" justifyContent="center">
       <Box
         sx={{
           display: 'flex',
