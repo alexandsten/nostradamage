@@ -108,7 +108,10 @@ export default function NostradamagePrototype() {
                             }}
                         >
                             <div>
-                                {matchupName}
+                                <b>
+                                  {matchupName}
+                                </b>
+                        
                             </div>
                             <div>
                                 {Object.entries(fighterNames[0][matchupName]).map(([fighter, fighterData], idx) => (
