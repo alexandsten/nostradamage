@@ -6,7 +6,7 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState([]);
-  const [toFetch, setToFetch] = useState(['Brandon Moreno_dict']);
+  const [toFetch, setToFetch] = useState(['Upcoming fightcard predictions']);
   const [fighterNames, setFighterNames] = useState([]);
 
   const firebaseConfig = {
@@ -62,9 +62,9 @@ export default function NostradamagePrototype() {
       }
 
       setData(fightersData);
-      setFighterNames(fightersData.map((fighter) => fighter.Stance));
+      setFighterNames(fightersData.map((fighter) => fighter));
       console.log(database);
-
+      console.log(fighterNames);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -95,19 +95,32 @@ export default function NostradamagePrototype() {
               flexDirection: 'column',
             }}
           >
-            {fighterNames.map((fighterName, index) => (
-              <Box
-                key={index}
-                sx={{
-                  backgroundColor: 'white',
-                  borderRadius: '12px',
-                  padding: '8px',
-                  margin: '4px',
-                }}
-              >
-                {fighterName}
-              </Box>
-            ))}
+           {fighterNames.length === 1 && (
+                <Box>
+                    {Object.keys(fighterNames[0]).map((matchupName, index) => (
+                        <Box
+                            key={index}
+                            sx={{
+                                backgroundColor: 'white',
+                                borderRadius: '12px',
+                                padding: '8px',
+                                margin: '4px',
+                            }}
+                        >
+                            <div>
+                                {matchupName}
+                            </div>
+                            <div>
+                                {Object.entries(fighterNames[0][matchupName]).map(([fighter, fighterData], idx) => (
+                                    <div key={idx}>
+                                        {fighter} {JSON.stringify(fighterData)}
+                                    </div>
+                                ))}
+                            </div>
+                        </Box>
+                    ))}
+                </Box>
+            )}
           </Box>
         )}
       </Box>
