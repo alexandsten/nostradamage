@@ -3,11 +3,13 @@ import Box from '@mui/material/Box';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import Button from '@mui/material/Button';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState([]);
   const [toFetch, setToFetch] = useState(['Upcoming fightcard predictions']);
   const [fighterNames, setFighterNames] = useState([]);
+  const [fightButtonBool, setFightButtonBool] = useState(true);
 
   const firebaseConfig = {
 
@@ -37,6 +39,7 @@ export default function NostradamagePrototype() {
       try {
         await signInWithEmailAndPassword(auth, 'alex.andsten@gmail.com', 'jagvetiS11');
         console.log('User signed in successfully');
+        
       } catch (error) {
         console.error('Authentication error:', error);
       }
@@ -63,8 +66,9 @@ export default function NostradamagePrototype() {
 
       setData(fightersData);
       setFighterNames(fightersData.map((fighter) => fighter));
-      console.log(database);
-      console.log(fighterNames);
+      // console.log(database);
+      // console.log(fighterNames);
+      setFightButtonBool(false)
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -73,7 +77,6 @@ export default function NostradamagePrototype() {
   return (
     <>
       <Box
-        onClick={onClickFighter}
         sx={{
           display: 'flex',
           justifyContent: 'center',
@@ -81,10 +84,30 @@ export default function NostradamagePrototype() {
           backgroundColor: 'white',
           borderRadius: '12px',
           padding: '8px',
+          marginTop: '3em',
+          marginBottom: '3em'
         }}
       >
+        {
+          fightButtonBool && (
+            <Button
+              sx={{
+                backgroundColor: 'black',
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: 'black',
+                  color: 'white',
+                },
+              }}
+            onClick={onClickFighter}
+            >
+            Upcoming fightcard
+          </Button>
+          )
+        }
+      
 
-        {data && (
+        {!fightButtonBool && (
           <Box
             sx={{
               marginTop: '20px',
@@ -93,8 +116,22 @@ export default function NostradamagePrototype() {
               display: 'flex',
               alignItems: 'center',
               flexDirection: 'column',
+              marginBottom: '20px'
             }}
           >
+            <Button
+              sx={{
+                backgroundColor: 'black',
+                color: 'white',
+                '&:hover': {
+                  backgroundColor: 'black',
+                  color: 'white',
+                },
+              }}
+              onClick={() => setFightButtonBool(true)} 
+            >
+              Close
+            </Button>
            {fighterNames.length === 1 && (
                 <Box>
                     {Object.keys(fighterNames[0]).map((matchupName, index) => (
