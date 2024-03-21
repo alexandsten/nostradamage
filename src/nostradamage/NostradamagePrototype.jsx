@@ -4,6 +4,11 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import Button from '@mui/material/Button';
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState([]);
@@ -89,28 +94,18 @@ export default function NostradamagePrototype() {
           minHeight: '300px'
         }}
       >
-        {
-          fightButtonBool && (
-            <Button
-              sx={{
-                backgroundColor: 'black',
-                width: '150px',
-                height: '60px',
-                borderRadius: '15px',
-                color: 'white',
-                '&:hover': {
-                  backgroundColor: 'black',
-                  color: 'white',
-                },
-              }}
-            onClick={onClickFighter}
-            >
-            Upcoming fightcard
-          </Button>
-          )
-        }
-      
-
+      <Accordion sx={{ width: '100%'}}>
+        <AccordionSummary
+          expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="1em" viewBox="0 0 630 700"><path fill="currentColor" d="M622 106L311 417L0 106l65-65l246 245L556 41z"/></svg>}
+          aria-controls="panel1-content"
+          id="panel1-header"
+          onClick={onClickFighter}
+        >
+         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+          Upcoming fight card
+        </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
         {!fightButtonBool && (
           <Box
             sx={{
@@ -123,22 +118,6 @@ export default function NostradamagePrototype() {
               marginBottom: '20px'
             }}
           >
-            <Button
-              sx={{
-                backgroundColor: 'black',
-                color: 'white',
-                width: '120px',
-                height: '50px',
-                borderRadius: '15px',
-                '&:hover': {
-                  backgroundColor: 'black',
-                  color: 'white',
-                },
-              }}
-              onClick={() => setFightButtonBool(true)} 
-            >
-              Close
-            </Button>
            {fighterNames.length === 1 && (
                 <Box>
                     {Object.keys(fighterNames[0]).map((matchupName, index) => (
@@ -171,6 +150,8 @@ export default function NostradamagePrototype() {
             )}
           </Box>
         )}
+        </AccordionDetails>
+      </Accordion>
       </Box>
     </>
   );
