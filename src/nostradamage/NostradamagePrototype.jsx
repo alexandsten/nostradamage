@@ -85,7 +85,8 @@ export default function NostradamagePrototype() {
           borderRadius: '12px',
           padding: '8px',
           marginTop: '3em',
-          marginBottom: '3em'
+          marginBottom: '3em',
+          minHeight: '300px'
         }}
       >
         {
@@ -93,6 +94,9 @@ export default function NostradamagePrototype() {
             <Button
               sx={{
                 backgroundColor: 'black',
+                width: '150px',
+                height: '60px',
+                borderRadius: '15px',
                 color: 'white',
                 '&:hover': {
                   backgroundColor: 'black',
@@ -123,6 +127,9 @@ export default function NostradamagePrototype() {
               sx={{
                 backgroundColor: 'black',
                 color: 'white',
+                width: '120px',
+                height: '50px',
+                borderRadius: '15px',
                 '&:hover': {
                   backgroundColor: 'black',
                   color: 'white',
@@ -142,6 +149,7 @@ export default function NostradamagePrototype() {
                                 borderRadius: '12px',
                                 padding: '8px',
                                 margin: '4px',
+                                marginTop: '2em'
                             }}
                         >
                             <div>

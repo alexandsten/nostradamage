@@ -15,7 +15,7 @@ import nostraLogoHigh from '../img/nostraLogoHigh.png'
 
 export default function MainMenu(props) {
   return (
-    <Grid container spacing={2} sx={{ position: 'sticky', top: 0, width: '101.5%', padding: '20px', backgroundColor: 'white', paddingRight: '50px' }}>
+    <Grid container spacing={2} sx={{ position: 'sticky', top: 0, width: '101.5%', padding: '20px', backgroundColor: 'white', paddingRight: '50px', zIndex: 9999 }}>
       <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
         <Avatar sx={{ width: '110px', height: '110px', marginTop: '-1.5em'}} src={nostraLogoHigh} />
         <Typography sx={{ fontSize: '22px', fontWeight: 'bold', fontFamily: "Roboto Mono" }}>
