@@ -9,6 +9,7 @@ import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import { Stack, Avatar } from '@mui/material';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState([]);
@@ -94,64 +95,72 @@ export default function NostradamagePrototype() {
           minHeight: '300px'
         }}
       >
-      <Accordion sx={{ width: '100%'}}>
-        <AccordionSummary
-          expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="0.9em" height="1em" viewBox="0 0 630 700"><path fill="currentColor" d="M622 106L311 417L0 106l65-65l246 245L556 41z"/></svg>}
-          aria-controls="panel1-content"
-          id="panel1-header"
-          onClick={onClickFighter}
-        >
-         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-          Upcoming fight card
-        </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-        {!fightButtonBool && (
-          <Box
-            sx={{
-              marginTop: '20px',
-              marginBottom: '20px',
-              justifyContent: 'center',
-              display: 'flex',
-              alignItems: 'center',
-              flexDirection: 'column',
-              marginBottom: '20px'
-            }}
-          >
-           {fighterNames.length === 1 && (
-                <Box>
-                    {Object.keys(fighterNames[0]).map((matchupName, index) => (
-                        <Box
-                            key={index}
-                            sx={{
-                                backgroundColor: 'white',
-                                borderRadius: '12px',
-                                padding: '8px',
-                                margin: '4px',
-                                marginTop: '2em'
-                            }}
-                        >
-                            <div>
-                                <b>
-                                  {matchupName}
-                                </b>
-                        
-                            </div>
-                            <div>
-                                {Object.entries(fighterNames[0][matchupName]).map(([fighter, fighterData], idx) => (
-                                    <div key={idx}>
-                                        {fighter} {JSON.stringify(fighterData)}
-                                    </div>
-                                ))}
-                            </div>
-                        </Box>
-                    ))}
-                </Box>
+        <Stack direction='column'>
+          <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+            Nostradamage prototype
+          </Typography>
+          <Typography sx={{ fontSize: '14px', fontWeight: 'semiBold', margin: '1em' }}>
+            Click to open fight predictions
+          </Typography> 
+          <Accordion >
+            <AccordionSummary
+              expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 630 700"><path fill="currentColor" d="M622 106L311 417L0 106l65-65l246 245L556 41z"/></svg>}
+              aria-controls="panel1-content"
+              id="panel1-header"
+              onClick={onClickFighter}
+            >
+            <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+              Upcoming fight card
+            </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+            {!fightButtonBool && (
+              <Box
+                sx={{
+                  marginTop: '20px',
+                  marginBottom: '20px',
+                  justifyContent: 'center',
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexDirection: 'column'
+                }}
+              >
+              {fighterNames.length === 1 && (
+                    <Box>
+                        {Object.keys(fighterNames[0]).map((matchupName, index) => (
+                            <Box
+                                key={index}
+                                sx={{
+                                    backgroundColor: 'white',
+                                    borderRadius: '12px',
+                                    padding: '8px',
+                                    margin: '4px',
+                                    marginTop: '2em'
+                                }}
+                            >
+                                <div>
+                                    <b>
+                                      {matchupName}
+                                    </b>
+                            
+                                </div>
+                                <div>
+                                    {Object.entries(fighterNames[0][matchupName]).map(([fighter, fighterData], idx) => (
+                                        <div key={idx}>
+                                            {fighter} {JSON.stringify(fighterData)}
+                                        </div>
+                                    ))}
+                                </div>
+                            </Box>
+                        ))}
+                    </Box>
+                )}
+              </Box>
             )}
-          </Box>
-        )}
-        </AccordionDetails>
-      </Accordion>
+            </AccordionDetails>
+          </Accordion>
+        </Stack>
+
       </Box>
     </>
   );
