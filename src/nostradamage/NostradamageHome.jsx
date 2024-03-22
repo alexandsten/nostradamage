@@ -109,7 +109,7 @@ export default function NostradamageHome() {
         }}
       >
          <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-          Teknologin bakom detta
+          Technology behind our product
         </Typography> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum blanditiis minima, mollitia voluptates voluptate, consectetur sequi a aspernatur illum optio nulla laboriosam placeat doloribus quos pariatur enim. Totam, aliquid accusantium!
       </Box>
@@ -139,7 +139,7 @@ export default function NostradamageHome() {
         }}
       >
         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-          Funktion / användbarhet
+          Functionality
         </Typography> 
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat rerum, asperiores nulla voluptatum, corporis possimus eos ipsa illum quae placeat id cupiditate quibusdam, fuga nobis quis. Odit, quam. Necessitatibus.
       </Box>
@@ -156,7 +156,7 @@ export default function NostradamageHome() {
         }}
       >
         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-            Varför / rolig?
+            Why use Nostradamage?
         </Typography> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum exercitationem dignissimos laudantium quaerat molestias perspiciatis amet, autem culpa! Sunt veniam libero, sed tempora provident veritatis explicabo porro beatae illo labore.
       </Box>
@@ -173,7 +173,7 @@ export default function NostradamageHome() {
         }}
       >
         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-          Bygga community?
+          Our community
         </Typography> 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quam id facilis sequi iure cumque totam ex voluptatem voluptas reiciendis commodi maxime nostrum, quis eaque quasi nisi, minus tenetur architecto.
       </Box>
