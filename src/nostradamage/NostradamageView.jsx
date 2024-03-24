@@ -7,7 +7,7 @@ import NostradamageHome from './NostradamageHome';
 import NostradamageDemo from './NostradamageDemo';
 import NostradamagePrototype from './NostradamagePrototype';
 import NostradamageAbout from './NostradamageAbout';
-import bgImage from './img/biggif1.gif';
+import bgImage from './img/bg5gif.gif';
 
 
 
@@ -22,7 +22,7 @@ export default function NostradamageView() {
       />
         <div
           style={{
-            backgroundImage: `url(${bgImage})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
             backgroundSize: 'cover', // Adjust as needed
             // width: '100%',
             // minHeight: '850px'
