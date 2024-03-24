@@ -87,7 +87,6 @@ export default function NostradamagePrototype() {
           display: 'flex',
           justifyContent: 'center',
           width: '33%',
-          backgroundColor: 'white',
           borderRadius: '12px',
           padding: '8px',
           marginTop: '3em',
@@ -96,10 +95,10 @@ export default function NostradamagePrototype() {
         }}
       >
         <Stack direction='column'>
-          <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+          <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono", color: 'white' }}>
             Nostradamage prototype
           </Typography>
-          <Typography sx={{ fontSize: '14px', fontWeight: 'semiBold', margin: '1em' }}>
+          <Typography sx={{ fontSize: '14px', fontWeight: 'semiBold', margin: '1em', color: 'white' }}>
             Click to open fight predictions
           </Typography> 
           <Accordion >
