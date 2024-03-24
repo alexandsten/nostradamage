@@ -7,7 +7,8 @@ import NostradamageHome from './NostradamageHome';
 import NostradamageDemo from './NostradamageDemo';
 import NostradamagePrototype from './NostradamagePrototype';
 import NostradamageAbout from './NostradamageAbout';
-import bgImage from './img/bg1.jpg';
+import bgImage from './img/biggif1.gif';
+
 
 
 export default function NostradamageView() {
