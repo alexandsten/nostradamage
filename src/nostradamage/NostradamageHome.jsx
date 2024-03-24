@@ -73,111 +73,121 @@ export default function NostradamageHome() {
   };
 
   return (
-    <>
-      <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold',  color: 'white', margin: '3em', fontFamily: "Roboto Mono" }}>
-         Nostradamage - MMA fight predictor
-      </Typography> 
-     <Stack direction="row" sx={{ width: '80%' }} align="center" justifyContent="center">
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '33%',
-          backgroundColor: 'white',
-          borderRadius: '12px',
-          padding: '1em',
-          flexDirection: 'column',
-          margin: '12px'
-        }}
-      >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-          MMA fight predictor
-        </Typography> 
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit minima nemo aliquid distinctio fuga eius repellendus facere reiciendis, quas, nobis cumque unde quam commodi rem consequuntur optio maiores. Eius, iure!
-      </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '33%',
-          backgroundColor: 'white',
-          borderRadius: '12px',
-          padding: '1em',
-          flexDirection: 'column',
-          margin: '12px',
-
-        }}
-      >
-         <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-          Technology behind our product
-        </Typography> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum blanditiis minima, mollitia voluptates voluptate, consectetur sequi a aspernatur illum optio nulla laboriosam placeat doloribus quos pariatur enim. Totam, aliquid accusantium!
-      </Box>
-    </Stack>
-    <Stack direction="row" sx={{ backgroundColor: 'black', height: '5%', width: '80%', color: 'white', marginTop: '3em', padding: '2em', borderRadius: '10px'}}  
-    align="center" justifyContent="center"
+<>
+  <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold', color: 'white', margin: '3em', fontFamily: "Roboto Mono" }}>
+    Nostradamage - MMA fight predictor
+  </Typography>
+  <Stack
+    direction={{ base: 'column', sm: 'row' }}
+    sx={{ width: { sm: '100%', xs: '80%' } }} // Adjusted width for xs
+    align="center"
+    justifyContent="center"
+  >
+    <Box
+      sx={{
+        display: 'flex',
+        justifySelf: 'center',
+        width: { sm: '33%', xs: '80%' }, // Adjusted width for xs
+        backgroundColor: 'white',
+        borderRadius: '12px',
+        padding: '1em',
+        flexDirection: 'column',
+        margin: '12px'
+      }}
     >
-        <Box sx={{ padding: '3%' }}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere quia natus unde impedit enim maiores debitis hic, dignissimos nemo quas quisquam omnis cumque in totam similique quod reprehenderit deserunt.
+      <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+        MMA fight predictor
+      </Typography>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit minima nemo aliquid distinctio fuga eius repellendus facere reiciendis, quas, nobis cumque unde quam commodi rem consequuntur optio maiores. Eius, iure!
+    </Box>
+    <Box
+      sx={{
+        display: 'flex',
+        // justifySelf: 'center',
+        width: { sm: '33%', xs: '80%' }, // Adjusted width for xs
+        backgroundColor: 'white',
+        borderRadius: '12px',
+        padding: '1em',
+        flexDirection: 'column',
+        margin: '12px'
+      }}
+    >
+      <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+        Technology behind our product
+      </Typography>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum blanditiis minima, mollitia voluptates voluptate, consectetur sequi a aspernatur illum optio nulla laboriosam placeat doloribus quos pariatur enim. Totam, aliquid accusantium!
+    </Box>
+  </Stack>
+  <Stack direction="row" sx={{ backgroundColor: 'black', height: '5%', width: '80%', color: 'white', marginTop: '3em', padding: '2em', borderRadius: '10px' }}
+    align="center" justifyContent="center"
+  >
+    <Box sx={{ padding: '3%' }}>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere quia natus unde impedit enim maiores debitis hic, dignissimos nemo quas quisquam omnis cumque in totam similique quod reprehenderit deserunt.
 
-        </Box>
-        <Box sx={{ padding: '3%' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, perspiciatis repudiandae? Deleniti quod quam voluptas velit aspernatur ipsum fuga, earum laboriosam, libero necessitatibus ut culpa veritatis delectus quas accusantium similique.
-        </Box>
-    </Stack>
-    <Stack direction="row" sx={{ width: '80%', marginTop: '3em'}}  align="center" justifyContent="center">
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '33%',
-          backgroundColor: 'white',
-          borderRadius: '12px',
-          padding: '1em',
-          flexDirection: 'column',
-          margin: '12px'
-        }}
-      >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-          Functionality
-        </Typography> 
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat rerum, asperiores nulla voluptatum, corporis possimus eos ipsa illum quae placeat id cupiditate quibusdam, fuga nobis quis. Odit, quam. Necessitatibus.
-      </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '33%',
-          backgroundColor: 'white',
-          borderRadius: '12px',
-          padding: '1em',
-          flexDirection: 'column',
-          margin: '12px'
-        }}
-      >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-            Why use Nostradamage?
-        </Typography> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum exercitationem dignissimos laudantium quaerat molestias perspiciatis amet, autem culpa! Sunt veniam libero, sed tempora provident veritatis explicabo porro beatae illo labore.
-      </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '33%',
-          backgroundColor: 'white',
-          borderRadius: '12px',
-          padding: '1em',
-          flexDirection: 'column',
-          margin: '12px'
-        }}
-      >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-          Our community
-        </Typography> 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quam id facilis sequi iure cumque totam ex voluptatem voluptas reiciendis commodi maxime nostrum, quis eaque quasi nisi, minus tenetur architecto.
-      </Box>
-    </Stack>
-    </>
+    </Box>
+    <Box sx={{ padding: '3%' }}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, perspiciatis repudiandae? Deleniti quod quam voluptas velit aspernatur ipsum fuga, earum laboriosam, libero necessitatibus ut culpa veritatis delectus quas accusantium similique.
+    </Box>
+  </Stack>
+  <Stack
+    direction={{ base: 'column', sm: 'row' }} // Set direction based on screen size
+    sx={{ width: '80%', marginTop: '3em' }}
+    align="center"
+    justifyContent="center"
+  >
+    <Box
+      sx={{
+        display: 'flex',
+        // justifyContent: 'center',
+        width: {sm:'33%', xs: '80'},
+        backgroundColor: 'white',
+        borderRadius: '12px',
+        padding: '1em',
+        flexDirection: 'column',
+        margin: '12px'
+      }}
+    >
+      <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+        Functionality
+      </Typography>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus fugiat rerum, asperiores nulla voluptatum, corporis possimus eos ipsa illum quae placeat id cupiditate quibusdam, fuga nobis quis. Odit, quam. Necessitatibus.
+    </Box>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        width: {sm:'33%', xs: '80'},
+        backgroundColor: 'white',
+        borderRadius: '12px',
+        padding: '1em',
+        flexDirection: 'column',
+        margin: '12px'
+      }}
+    >
+      <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+        Why use Nostradamage?
+      </Typography>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum exercitationem dignissimos laudantium quaerat molestias perspiciatis amet, autem culpa! Sunt veniam libero, sed tempora provident veritatis explicabo porro beatae illo labore.
+    </Box>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        width: {sm:'33%', xs: '80'},
+        backgroundColor: 'white',
+        borderRadius: '12px',
+        padding: '1em',
+        flexDirection: 'column',
+        margin: '12px'
+      }}
+    >
+      <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
+        Our community
+      </Typography>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quam id facilis sequi iure cumque totam ex voluptatem voluptas reiciendis commodi maxime nostrum, quis eaque quasi nisi, minus tenetur architecto.
+    </Box>
+  </Stack>
+</>
+
   );
 }
