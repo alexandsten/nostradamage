@@ -5,6 +5,8 @@ import { getDatabase, ref, get } from 'firebase/database';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { Typography, Grid, Container, Stack } from '@mui/material';
 import '../../src/fonts/fonts.css';
+import './styles.css'
+
 
 export default function NostradamageHome() {
   const [data, setData] = useState([]);
@@ -74,15 +76,28 @@ export default function NostradamageHome() {
 
   return (
 <>
-<Typography sx={{ fontSize: '22px', fontWeight: 'semiBold', color: 'white', margin: '3em', fontFamily: "FontFamily1" }}>
-      Nostradamage - MMA fight predictor
-    </Typography>
+    {/* 
+        <Typography sx={{ fontSize: '22px', color: 'white', margin: '3em', fontFamily: "Press Start 2P" }}>
+          Nostradamage - MMA fight predictor
+        </Typography> 
+    */}
+
+     <Stack
+      direction={{ base: 'column', sm: 'row' }}
+      mt={3}
+      align="center"
+      justifyContent="center"
+    > 
+      <h1>Nostradamage</h1>
+    </Stack>
+   
     <Stack
       direction={{ base: 'column', sm: 'row' }}
       sx={{ width: { sm: '100%', xs: '80%'} }} // Adjusted width for xs
       align="center"
       justifyContent="center"
-    >
+    > 
+       
       <Box
         sx={{
           display: 'flex',
@@ -95,7 +110,7 @@ export default function NostradamageHome() {
           color: 'white'
         }}
       >
-        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "FontFamily2", color: 'white' }}>
+        <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Press Start 2P", color: 'white' }}>
           MMA fight predictor
         </Typography>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit minima nemo aliquid distinctio fuga eius repellendus facere reiciendis, quas, nobis cumque unde quam commodi rem consequuntur optio maiores. Eius, iure!
@@ -122,7 +137,10 @@ export default function NostradamageHome() {
       align="center" justifyContent="center"
     >
       <Box sx={{ padding: '3%' }}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere quia natus unde impedit enim maiores debitis hic, dignissimos nemo quas quisquam omnis cumque in totam similique quod reprehenderit deserunt.
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere quia natus unde impedit enim maiores debitis hic, dignissimos nemo quas quisquam omnis cumque in totam similique quod reprehenderit deserunt.
+        </p>
+        
 
       </Box>
       <Box sx={{ padding: '3%' }}>
