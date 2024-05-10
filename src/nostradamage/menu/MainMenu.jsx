@@ -27,11 +27,23 @@ export default function MainMenu(props) {
 
   return (
      <>
-      <Grid container spacing={2} sx={{ position: 'sticky', top: 0, width: '101.5%', padding: '20px', backgroundColor: 'white', paddingRight: '50px', zIndex: 5000,
-      '@media (max-width: 1100px)': {
-        width: 'calc(100% + 50px)', // Adjust padding-right when full width
-       
-      } }}
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          position: 'sticky',
+          top: 0,
+          maxWidth: '100vw', // Set a maximum width
+          width: '100%', // Take full width on smaller screens
+          padding: '20px',
+          
+          paddingRight: '50px',
+          zIndex: 5000,
+          overflow: 'hidden',
+          '@media (min-width: 1100px)': {
+            maxWidth: 'calc(100% - 50px)', // Adjust width for larger screens
+          },
+        }}
       >
         <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
           <Avatar sx={{ width: '110px', height: '110px', marginTop: '-1.5em'}} src={nostraLogoColor} />
@@ -41,7 +53,7 @@ export default function MainMenu(props) {
         </Grid>
 
         <Grid container item xs={12} sm={11} spacing={2} justifyContent={'flex-end'}>
-        {!isSocialScreen && (
+        {/* {!isSocialScreen && (
           <Grid item >
             <SocialIcon url="https://www.tiktok.com" style={{ width: '40px', height: '40px' }}/>
           </Grid>
@@ -60,11 +72,19 @@ export default function MainMenu(props) {
           <Grid item sx={{ marginRight: '5%'}}>
             <SocialIcon url="https://www.discord.com" style={{ width: '40px', height: '40px' }}/>
           </Grid>
-           )}
+           )} */}
           {!isSmallScreen && (
           <Grid item>
             <Typography
-              sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+             sx={{
+              fontSize: '28px',
+              fontWeight: 'semiBold',
+              cursor: 'pointer',
+              '&:hover': { textDecoration: 'underline' },
+              fontFamily: "Fira Sans",
+              color: 'white', // Set text color to white
+              textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
+            }}
               onClick={() => props.setSelectedItem('Home')}
             >
               Home
@@ -74,7 +94,15 @@ export default function MainMenu(props) {
             {!isSmallScreen && (
           <Grid item>
               <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+                  sx={{
+                  fontSize: '28px',
+                  fontWeight: 'semiBold',
+                  cursor: 'pointer',
+                  '&:hover': { textDecoration: 'underline' },
+                  fontFamily: "Fira Sans",
+                  color: 'white', // Set text color to white
+                  textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
+                }}
                 onClick={() => props.setSelectedItem('Prototype')}
               >
                 Prototype
@@ -84,7 +112,15 @@ export default function MainMenu(props) {
               {!isSmallScreen && (
             <Grid item>
               <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+                sx={{
+                fontSize: '28px',
+                fontWeight: 'semiBold',
+                cursor: 'pointer',
+                '&:hover': { textDecoration: 'underline' },
+                fontFamily: "Fira Sans",
+                color: 'white', // Set text color to white
+                textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
+              }}
                 onClick={() => props.setSelectedItem('About')}
               >
                 About us

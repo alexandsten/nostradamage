@@ -17,17 +17,18 @@ export default function NostradamageView() {
 
   return (
     <> 
-      <MainMenu
-        setSelectedItem = {setSelectedItem}
-      />
+      
         <div
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
             backgroundSize: 'cover', // Adjust as needed
-            // width: '100%',
-            // minHeight: '850px'
+            width: '100%',
+            minHeight: '850px'
           }}
         >
+          <MainMenu
+          setSelectedItem = {setSelectedItem}
+          />
         <Box sx={{ width: '100%', minHeight: '550px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
 
 
