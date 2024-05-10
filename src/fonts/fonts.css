@@ -1,0 +1,41 @@
+/* Define each font family separately */
+
+@font-face {
+    font-family: 'FontFamily1';
+    src: url('./fonts/FFFFORWA.ttf') format('ttf');
+    /* Optionally, specify font-weight and font-style */
+  }
+  
+  @font-face {
+    font-family: 'FontFamily2';
+    src: url('./fonts/kongtext.ttf') format('ttf');
+    /* Optionally, specify font-weight and font-style */
+  }
+  
+  @font-face {
+    font-family: 'FontFamily3';
+    src: url('./fonts/ka1.ttf') format('ttf');
+    /* Optionally, specify font-weight and font-style */
+  }
+  
+  /* Add other font families as needed */
+  
+  /* Apply fonts to specific elements */
+  
+  body {
+    font-family: 'FontFamily1', sans-serif;
+    /* Use FontFamily1 as the default font */
+  }
+  
+  h1 {
+    font-family: 'FontFamily2', sans-serif;
+    /* Use FontFamily2 for headings */
+  }
+  
+  p {
+    font-family: 'FontFamily3', sans-serif;
+    /* Use FontFamily3 for paragraphs */
+  }
+  
+  /* Add more specific font styles as needed */
+  
