@@ -83,7 +83,7 @@ export default function NostradamageHome() {
     */}
 
      <Stack
-      height={800}
+      height={600}
       mt={3}
       sx={{ backgroundColor: 'orange', width: '100vw'}}
       align="center"
@@ -95,7 +95,7 @@ export default function NostradamageHome() {
     </Stack>
    
     <Stack
-      height={800}
+      height={600}
       mt={3}
       sx={{ backgroundColor: 'blue', width: '100vw'}}
       align="center"
@@ -103,7 +103,7 @@ export default function NostradamageHome() {
       flexDirection="column"
     > 
       <h1>Nostradamage</h1>
-      <h3>The predictor of the octagon</h3>
+      <h2>The predictor of the octagon</h2>
     </Stack>
    
   </>

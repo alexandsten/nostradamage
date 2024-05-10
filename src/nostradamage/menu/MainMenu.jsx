@@ -47,9 +47,9 @@ export default function MainMenu(props) {
       >
         <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
           <Avatar sx={{ width: '110px', height: '110px', marginTop: '-1.5em'}} src={nostraLogoColor} />
-          <Typography sx={{ fontSize: '22px', fontWeight: 'bold', fontFamily: "Roboto Mono", color: 'white' }}>
-            Nostradamage
-          </Typography> 
+              <p className='logo'>
+                Nostradamage
+              </p>
         </Grid>
 
         <Grid container item xs={12} sm={11} spacing={2} justifyContent={'flex-end'}>
@@ -74,57 +74,25 @@ export default function MainMenu(props) {
           </Grid>
            )} */}
           {!isSmallScreen && (
-          <Grid item>
-            <Typography
-             sx={{
-              fontSize: '28px',
-              fontWeight: 'semiBold',
-              cursor: 'pointer',
-              '&:hover': { textDecoration: 'underline' },
-              fontFamily: "Fira Sans",
-              color: 'white', // Set text color to white
-              // textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
-            }}
-              onClick={() => props.setSelectedItem('Home')}
-            >
-              Home
-            </Typography>
+          <Grid item onClick={() => props.setSelectedItem('Home')}>
+            <p className='menu'>
+                Home
+            </p>
           </Grid>
           )}
             {!isSmallScreen && (
-          <Grid item>
-              <Typography
-                  sx={{
-                  fontSize: '28px',
-                  fontWeight: 'semiBold',
-                  cursor: 'pointer',
-                  '&:hover': { textDecoration: 'underline' },
-                  fontFamily: "Fira Sans",
-                  color: 'white', // Set text color to white
-                  // textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
-                }}
-                onClick={() => props.setSelectedItem('Prototype')}
-              >
+          <Grid item onClick={() => props.setSelectedItem('Prototype')}>
+              <p className='menu'>
                 Prototype
-              </Typography>
+              </p>
+
             </Grid>
              )}
               {!isSmallScreen && (
-            <Grid item>
-              <Typography
-                sx={{
-                fontSize: '28px',
-                fontWeight: 'semiBold',
-                cursor: 'pointer',
-                '&:hover': { textDecoration: 'underline' },
-                fontFamily: "Fira Sans",
-                color: 'white', // Set text color to white
-                // textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
-              }}
-                onClick={() => props.setSelectedItem('About')}
-              >
+            <Grid item onClick={() => props.setSelectedItem('About')}>
+              <p className='menu'>
                 About us
-              </Typography>
+              </p>
             </Grid>
              )}
               {isSmallScreen && (
