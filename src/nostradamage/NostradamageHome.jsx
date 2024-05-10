@@ -6,7 +6,8 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { Typography, Grid, Container, Stack } from '@mui/material';
 import '../../src/fonts/fonts.css';
 import './styles.css'
-
+import fighter1 from './img/fighter1.png';
+import machine1 from './img/machine1.png';
 
 export default function NostradamageHome() {
   const [data, setData] = useState([]);
@@ -82,29 +83,30 @@ export default function NostradamageHome() {
         </Typography> 
     */}
 
-     <Stack
+    <Stack
       height={600}
       mt={3}
-      sx={{ backgroundColor: 'orange', width: '100vw'}}
+      sx={{ backgroundColor: 'orange', width: '100vw' }}
       align="center"
       justifyContent="center"
       flexDirection="column"
     > 
       <h1>Nostradamage</h1>
       <h3>The predictor of the octagon</h3>
+      <img src={fighter1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter'/>
     </Stack>
    
     <Stack
       height={600}
       mt={3}
-      sx={{ backgroundColor: 'blue', width: '100vw'}}
+      sx={{ backgroundColor: 'blue', width: '100vw' }}
       align="center"
       justifyContent="center"
       flexDirection="column"
     > 
       <h1>Nostradamage</h1>
-      <h2>The predictor of the octagon</h2>
-  
+      <h3>The predictor of the octagon</h3>
+      <img src={machine1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter'/>
     </Stack>
    
   </>
