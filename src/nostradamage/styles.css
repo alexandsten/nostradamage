@@ -30,6 +30,11 @@ p {
   color: white; 
 }
 
+.data {
+  font-family: "VT323";
+  color: black; 
+}
+
 .menu {
   font-family: "Pixelify Sans";
   font-size: 18px;

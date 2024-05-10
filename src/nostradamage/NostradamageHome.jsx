@@ -104,6 +104,7 @@ export default function NostradamageHome() {
     > 
       <h1>Nostradamage</h1>
       <h2>The predictor of the octagon</h2>
+  
     </Stack>
    
   </>

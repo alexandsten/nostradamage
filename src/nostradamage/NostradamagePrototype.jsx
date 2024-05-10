@@ -95,12 +95,8 @@ export default function NostradamagePrototype() {
         }}
       >
         <Stack direction='column'>
-          <Typography sx={{ fontSize: '22px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono", color: 'white' }}>
-            Nostradamage prototype
-          </Typography>
-          <Typography sx={{ fontSize: '14px', fontWeight: 'semiBold', margin: '1em', color: 'white' }}>
-            Click to open fight predictions
-          </Typography> 
+          <h2>Nostradamage prototype</h2>
+          <p className='menu'>Click to open fight predictions</p>
           <Accordion >
             <AccordionSummary
               expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 630 700"><path fill="currentColor" d="M622 106L311 417L0 106l65-65l246 245L556 41z"/></svg>}
@@ -139,14 +135,17 @@ export default function NostradamagePrototype() {
                             >
                                 <div>
                                     <b>
-                                      {matchupName}
+                                      <p className='data'>
+                                        {matchupName}
+                                      </p>
                                     </b>
                             
                                 </div>
                                 <div>
                                     {Object.entries(fighterNames[0][matchupName]).map(([fighter, fighterData], idx) => (
-                                        <div key={idx}>
-                                            {fighter} {JSON.stringify(fighterData)}
+                                        <div  key={idx}>
+                                          <p className='data'>{fighter} {JSON.stringify(fighterData)}</p>
+                                            
                                         </div>
                                     ))}
                                 </div>
