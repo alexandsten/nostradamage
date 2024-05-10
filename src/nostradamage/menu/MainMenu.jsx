@@ -47,7 +47,7 @@ export default function MainMenu(props) {
       >
         <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
           <Avatar sx={{ width: '110px', height: '110px', marginTop: '-1.5em'}} src={nostraLogoColor} />
-          <Typography sx={{ fontSize: '22px', fontWeight: 'bold', fontFamily: "Roboto Mono" }}>
+          <Typography sx={{ fontSize: '22px', fontWeight: 'bold', fontFamily: "Roboto Mono", color: 'white' }}>
             Nostradamage
           </Typography> 
         </Grid>
@@ -83,7 +83,7 @@ export default function MainMenu(props) {
               '&:hover': { textDecoration: 'underline' },
               fontFamily: "Fira Sans",
               color: 'white', // Set text color to white
-              textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
+              // textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
             }}
               onClick={() => props.setSelectedItem('Home')}
             >
@@ -101,7 +101,7 @@ export default function MainMenu(props) {
                   '&:hover': { textDecoration: 'underline' },
                   fontFamily: "Fira Sans",
                   color: 'white', // Set text color to white
-                  textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
+                  // textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
                 }}
                 onClick={() => props.setSelectedItem('Prototype')}
               >
@@ -119,7 +119,7 @@ export default function MainMenu(props) {
                 '&:hover': { textDecoration: 'underline' },
                 fontFamily: "Fira Sans",
                 color: 'white', // Set text color to white
-                textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
+                // textShadow: '1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black', // Add black border (stroke)
               }}
                 onClick={() => props.setSelectedItem('About')}
               >

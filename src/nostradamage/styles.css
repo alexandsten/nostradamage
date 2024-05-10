@@ -16,6 +16,11 @@ h1 {
   color: white; 
 }
 
+h3 {
+  font-family: "Notable";
+  color: white; 
+}
+
 body {
   font-family: var(--font-family);
   line-height: var(--line-height);

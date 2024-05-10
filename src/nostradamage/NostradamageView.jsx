@@ -20,16 +20,18 @@ export default function NostradamageView() {
       
         <div
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
-            backgroundSize: 'cover', // Adjust as needed
-            width: '100%',
-            minHeight: '850px'
+            // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
+            // backgroundSize: 'cover', // Adjust as needed
+            
+            backgroundColor: 'orange',
+            minHeight: '850px',
+            overflow: 'hidden'
           }}
         >
           <MainMenu
           setSelectedItem = {setSelectedItem}
           />
-        <Box sx={{ width: '100%', minHeight: '550px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
+        <Box sx={{  minHeight: '550px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
 
 
          
