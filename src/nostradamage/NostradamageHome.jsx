@@ -97,16 +97,17 @@ export default function NostradamageHome() {
     </Stack>
    
     <Stack
-      height={600}
+      height={800}
       mt={3}
       sx={{ backgroundColor: 'blue', width: '100vw' }}
       align="center"
       justifyContent="center"
       flexDirection="column"
     > 
-      <h1>Nostradamage</h1>
-      <h3>The predictor of the octagon</h3>
+      <h1>Our predictions</h1>
+      <h3>70% correct picks last 6 months</h3>
       <img src={machine1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter'/>
+      <p>Our algorithm is always improving</p>
     </Stack>
    
   </>
