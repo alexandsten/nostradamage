@@ -13,7 +13,7 @@ import { Stack, Avatar } from '@mui/material';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState([]);
-  const [toFetch, setToFetch] = useState(['Upcoming fightcard predictions']);
+  const [toFetch, setToFetch] = useState(['UFC 302']);
   const [fighterNames, setFighterNames] = useState([]);
   const [fightButtonBool, setFightButtonBool] = useState(true);
 
@@ -104,8 +104,8 @@ export default function NostradamagePrototype() {
               id="panel1-header"
               onClick={onClickFighter}
             >
-            <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono" }}>
-              Upcoming fight card
+            <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono", color: 'black' }}>
+              UFC 302
             </Typography>
             </AccordionSummary>
             <AccordionDetails>
