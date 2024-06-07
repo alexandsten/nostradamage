@@ -3,9 +3,7 @@ import Box from '@mui/material/Box';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
 import bgImage from './img/bg5gif.gif';
@@ -13,7 +11,7 @@ import bgImage from './img/bg5gif.gif';
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
   const [toFetch, setToFetch] = useState(['UFC 300', 'UFC 301', 'UFC 302']);
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(null);
 
   const firebaseConfig = {
     apiKey: "AIzaSyBFK9TBeGAkS-5-9zOS4HJog4n_EfITLKI",
@@ -42,19 +40,23 @@ export default function NostradamagePrototype() {
     signInUser(); // Automatically sign in when the component mounts
   }, [auth]);
 
-  const handleAccordionChange = (panel) => async (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-    if (isExpanded && !data[panel]) {
+  const handleButtonClick = async (event) => {
+    setExpanded(event);
+    if (!data[event]) {
       try {
-        const snapshot = await get(ref(database, panel));
+        const snapshot = await get(ref(database, event));
         const fighterData = snapshot.val();
         if (fighterData) {
-          setData((prevData) => ({ ...prevData, [panel]: fighterData }));
+          setData((prevData) => ({ ...prevData, [event]: fighterData }));
         }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     }
+  };
+
+  const resetView = () => {
+    setExpanded(null);
   };
 
   return (
@@ -70,45 +72,34 @@ export default function NostradamagePrototype() {
           borderRadius: '25px'
         }}
       >
-
-      
-      <Box
-        sx={{
-          display: 'flex',
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
-          backgroundSize: 'cover', 
-          justifyContent: 'center',
-          width: '33%',
-          borderRadius: '12px',
-          padding: '4em',
-          marginTop: '3em',
-          marginBottom: '3em',
-          minHeight: '50vh',
-          minWidth: '40vw',
-          border: '4px solid black', 
-        }}
-      >
-        
-        <Stack direction='column'>
-          <h2>Nostradamage prototype</h2>
-          <p className='menu'>Click to open fight predictions</p>
-          {toFetch.map((event, index) => (
-            <Accordion
-              key={index}
-              expanded={expanded === event}
-              onChange={handleAccordionChange(event)}
-            >
-              <AccordionSummary
-                expandIcon={<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 630 700"><path fill="currentColor" d="M622 106L311 417L0 106l65-65l246 245L556 41z"/></svg>}
-                aria-controls={`panel${index}-content`}
-                id={`panel${index}-header`}
-              >
-                <Typography sx={{ fontSize: '18px', fontWeight: 'semiBold', margin: '1em', fontFamily: "Roboto Mono", color: 'black' }}>
-                  {event}
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                {data[event] ? (
+        <Box
+          sx={{
+            display: 'flex',
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
+            backgroundSize: 'cover', 
+            justifyContent: 'center',
+            width: '30vw',
+            borderRadius: '12px',
+            padding: '4em',
+            marginTop: '3em',
+            marginBottom: '3em',
+            minHeight: '50vh',
+            minWidth: '40vw',
+            maxHeight: '50vh',
+            overflowY: 'auto', 
+            overflowX: 'hidden',
+            border: '4px solid black', 
+          }}
+        >
+          <Stack direction='column'>
+            <h2>Nostradamage prototype</h2>
+            {!expanded && <p className='menu'>Click to open fight predictions</p>}
+            {expanded ? (
+              <>
+                <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em' }}>
+                  Reset
+                </Button>
+                {data[expanded] ? (
                   <Box
                     sx={{
                       marginTop: '20px',
@@ -119,16 +110,26 @@ export default function NostradamagePrototype() {
                       flexDirection: 'column'
                     }}
                   >
-                    <Box>
-                      {Object.keys(data[event]).map((matchupName, index2) => (
+                    <Box
+                      sx={{
+                        width: '40vw',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        flexWrap: 'wrap', // Add flexWrap to allow items to wrap
+                        gap: '1em', // Add gap between items
+                      }}
+                    >
+                      {Object.keys(data[expanded]).map((matchupName, index) => (
                         <Box
-                          key={index2}
+                          key={index}
                           sx={{
                             backgroundColor: 'white',
                             borderRadius: '12px',
                             padding: '8px',
                             margin: '4px',
-                            marginTop: '2em'
+                            marginTop: '2em',
+                            minWidth: '100px',
+                            flex: '1 1 30%', // Adjust flex properties for responsive layout
                           }}
                         >
                           <div>
@@ -139,7 +140,7 @@ export default function NostradamagePrototype() {
                             </b>
                           </div>
                           <div>
-                            {Object.entries(data[event][matchupName]).map(([fighter, fighterData], idx) => (
+                            {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
                               <div key={idx}>
                                 <p className='data'>{fighter} {JSON.stringify(fighterData)}</p>
                               </div>
@@ -152,11 +153,21 @@ export default function NostradamagePrototype() {
                 ) : (
                   <Typography>Loading...</Typography>
                 )}
-              </AccordionDetails>
-            </Accordion>
-          ))}
-        </Stack>
-      </Box>
+              </>
+            ) : (
+              toFetch.map((event, index) => (
+                <Button
+                  key={index}
+                  variant="contained"
+                  onClick={() => handleButtonClick(event)}
+                  sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Roboto Mono" }}
+                >
+                  {event}
+                </Button>
+              ))
+            )}
+          </Stack>
+        </Box>
       </Stack>
     </>
   );
