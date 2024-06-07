@@ -46,7 +46,7 @@ export default function MainMenu(props) {
         }}
       >
         <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
-          <img style={{ width: '120%', height: '120%', marginRight: '2em'}} src={nostraLogoColor} />
+          <img style={{ width: '120%', height: '120%', marginRight: '2em' }} src={nostraLogoColor} />
               <p className='logo'>
                 Nostradamage
               </p>
