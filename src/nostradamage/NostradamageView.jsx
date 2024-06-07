@@ -49,6 +49,7 @@ export default function NostradamageView() {
               display: 'flex',
               justifyContent: 'center',
               flexDirection: 'column',
+              background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
               alignItems: 'center',
             }}
           >

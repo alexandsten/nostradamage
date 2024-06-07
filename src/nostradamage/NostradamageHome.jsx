@@ -21,9 +21,9 @@ export default function NostradamageHome() {
 
       <Stack
         sx={{
-          background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 45%)',
+          // background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 33%)',
           width: '100vw',
-          height: '100vh'
+          height: '75vh'
         }}
         align="center"
         justifyContent="center"
@@ -35,11 +35,11 @@ export default function NostradamageHome() {
     </Stack>
    
     <Stack
-        height={800}
         mt={3}
         sx={{
-          background: 'radial-gradient(circle, rgba(0, 0, 139, 1) 0%, rgba(0, 0, 90, 1) 100%)',
+          background: 'radial-gradient(circle, rgba(0, 0, 139, 1) 0%, rgba(0, 0, 90, 1) 40%)',
           width: '100vw',
+          height: '100vh'
         }}
         align="center"
         justifyContent="center"

@@ -12,6 +12,7 @@
 
 h1 {
   font-family: "Press Start 2P";
+  font-size: 1.3em;
   color: white; 
 }
 
@@ -37,7 +38,7 @@ p {
 
 .menu {
   font-family: "Pixelify Sans";
-  font-size: 18px;
+  font-size: 1.2em;
   color: white; 
 }
 
