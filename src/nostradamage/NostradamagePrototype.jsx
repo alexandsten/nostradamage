@@ -66,9 +66,9 @@ export default function NostradamagePrototype() {
       <Stack
         sx={{
           padding: '1em',
-          backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.5)), url(${monitorTexture})`,
-        backgroundSize: 'cover', 
-          border: '3px solid rgba(0, 0, 50, 1)', 
+          backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.1), rgba(11, 21, 74, 0.8)), url(${monitorTexture})`,
+          backgroundSize: 'cover', 
+          border: '1px solid rgba(0, 0, 50, 1)', 
           justifyContent: 'center',
           alignItems: 'center',
           minWidth: '50vw',
