@@ -46,7 +46,9 @@ export default function MainMenu(props) {
         }}
       >
         <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
-          <img style={{ width: '120%', height: '120%', marginRight: '2em' }} src={nostraLogoColor} />
+         {!isSmallScreen && ( 
+            <img style={{ width: '10em', height: '10em', marginRight: '2em' }} src={nostraLogoColor} />
+          )}
               <p className='logo'>
                 Nostradamage
               </p>
@@ -104,7 +106,7 @@ export default function MainMenu(props) {
             marginRight: '20px', // Adjust margin as needed
           }} item>
             <IconButton onClick={toggleDrawer(true)} sx={{ paddingRight: '1em'}} >
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="black" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
             </IconButton>
           </Grid>
            )}
@@ -121,7 +123,7 @@ export default function MainMenu(props) {
           <Grid container direction="column" spacing={2} sx={{ padding: '20px' }}>
             <Grid item>
               <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'black' }}
                 onClick={() => props.setSelectedItem('Home')}
               >
                 Home
@@ -129,7 +131,7 @@ export default function MainMenu(props) {
             </Grid>
             <Grid item>
               <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'black' }}
                 onClick={() => props.setSelectedItem('Prototype')}
               >
                 Prototype
@@ -137,7 +139,7 @@ export default function MainMenu(props) {
             </Grid>
             <Grid item>
               <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Fira Sans" }}
+                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'black' }}
                 onClick={() => props.setSelectedItem('About')}
               >
                 About us
