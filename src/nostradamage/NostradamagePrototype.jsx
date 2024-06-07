@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
@@ -29,31 +29,21 @@ export default function NostradamagePrototype() {
   const database = getDatabase(firebaseApp);
   const auth = getAuth(firebaseApp);
 
-  useEffect(() => {
-    const signInUser = async () => {
-      try {
-        await signInWithEmailAndPassword(auth, 'alex.andsten@gmail.com', 'jagvetiS11');
-        console.log('User signed in successfully');
-      } catch (error) {
-        console.error('Authentication error:', error);
-      }
-    };
-
-    signInUser(); // Automatically sign in when the component mounts
-  }, [auth]);
-
   const handleButtonClick = async (event) => {
     setExpanded(event);
     if (!data[event]) {
       try {
+        await signInWithEmailAndPassword(auth, 'alex.andsten@gmail.com', 'jagvetiS11');
+        console.log('User signed in successfully');
+
         const snapshot = await get(ref(database, event));
         const fighterData = snapshot.val();
         if (fighterData) {
           setData((prevData) => ({ ...prevData, [event]: fighterData }));
-          // Sign the user out after fetching the data
-          await signOut(auth);
-          console.log('User signed out successfully');
         }
+
+        await signOut(auth);
+        console.log('User signed out successfully');
       } catch (error) {
         console.error('Error fetching data:', error);
       }
