@@ -8,7 +8,7 @@ import NostradamageDemo from './NostradamageDemo';
 import NostradamagePrototype from './NostradamagePrototype';
 import NostradamageAbout from './NostradamageAbout';
 import bgImage from './img/texture2.jpg';
-import { GlobalStyles } from '@mui/material';
+import { GlobalStyles, Typography } from '@mui/material';
 
 export default function NostradamageView() {
   /// menu states
@@ -60,6 +60,23 @@ export default function NostradamageView() {
             {selectedItem === 'Demo' && <NostradamageDemo />}
           </Box>
         </Stack>
+        <Box
+        component="footer"
+        sx={{
+          width: '100%',
+          backgroundColor: '#282c34',
+          color: 'white',
+          textAlign: 'center',
+          padding: '1em 0',
+        }}
+      >
+        <Typography variant="body2">
+          &copy; 2024 Nostradamage. All rights reserved.
+        </Typography>
+        <Typography variant="body2">
+          Dummy text for footer - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Typography>
+      </Box>
       </Stack>
     </>
   );

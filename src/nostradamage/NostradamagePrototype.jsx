@@ -56,6 +56,7 @@ export default function NostradamagePrototype() {
 
   return (
     <>
+    
       <Stack
         sx={{
           padding: '1em',
@@ -169,6 +170,7 @@ export default function NostradamagePrototype() {
           </Stack>
         </Box>
       </Stack>
+      
     </>
   );
 }
