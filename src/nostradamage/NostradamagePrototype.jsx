@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
 import bgImage from './img/bg5gif.gif';
 import staticBackground from './img/static3.gif';
-import monitorTexture from './img/texture2.jpg';
+import monitorTexture from './img/textureCracked.jpg';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
@@ -66,7 +66,7 @@ export default function NostradamagePrototype() {
       <Stack
         sx={{
           padding: '1em',
-          backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.1), rgba(11, 21, 74, 0.8)), url(${monitorTexture})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 150, 0.1), rgba(11, 21, 74, 0.6)), url(${monitorTexture})`,
           backgroundSize: 'cover', 
           border: '1px solid rgba(0, 0, 50, 1)', 
           justifyContent: 'center',
@@ -91,7 +91,7 @@ export default function NostradamagePrototype() {
             maxHeight: '50vh',
             overflowY: 'auto', 
             overflowX: 'hidden',
-            border: '8px solid rgba(0, 0, 50, 1)', 
+            border: '8px solid black', 
           }}
         >
           <Stack direction='column'>
