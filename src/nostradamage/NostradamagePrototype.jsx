@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
 import bgImage from './img/bg5gif.gif';
+import staticBackground from './img/static2.webp';
+import monitorTexture from './img/texture2.jpg';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
@@ -64,8 +66,9 @@ export default function NostradamagePrototype() {
       <Stack
         sx={{
           padding: '1em',
-          background: 'radial-gradient(circle, rgba(0, 0, 139, 1) 0%, rgba(0, 0, 50, 1) 100%)',
-          border: '8px solid rgba(0, 0, 50, 1)', 
+          backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.5)), url(${monitorTexture})`,
+        backgroundSize: 'cover', 
+          border: '3px solid rgba(0, 0, 50, 1)', 
           justifyContent: 'center',
           alignItems: 'center',
           minWidth: '50vw',
@@ -75,7 +78,7 @@ export default function NostradamagePrototype() {
         <Box
           sx={{
             display: 'flex',
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${staticBackground})`,
             backgroundSize: 'cover', 
             justifyContent: 'center',
             width: '30vw',
