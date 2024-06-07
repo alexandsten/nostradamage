@@ -8,6 +8,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
+import bgImage from './img/bg5gif.gif';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
@@ -58,18 +59,36 @@ export default function NostradamagePrototype() {
 
   return (
     <>
+      <Stack
+        sx={{
+          padding: '1em',
+          background: 'radial-gradient(circle, rgba(0, 0, 139, 1) 0%, rgba(0, 0, 50, 1) 100%)',
+          border: '7px solid black', 
+          justifyContent: 'center',
+          alignItems: 'center',
+          minWidth: '50vw',
+          borderRadius: '25px'
+        }}
+      >
+
+      
       <Box
         sx={{
           display: 'flex',
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
+          backgroundSize: 'cover', 
           justifyContent: 'center',
           width: '33%',
           borderRadius: '12px',
-          padding: '8px',
+          padding: '4em',
           marginTop: '3em',
           marginBottom: '3em',
-          minHeight: '300px'
+          minHeight: '50vh',
+          minWidth: '40vw',
+          border: '4px solid black', 
         }}
       >
+        
         <Stack direction='column'>
           <h2>Nostradamage prototype</h2>
           <p className='menu'>Click to open fight predictions</p>
@@ -138,6 +157,7 @@ export default function NostradamagePrototype() {
           ))}
         </Stack>
       </Box>
+      </Stack>
     </>
   );
 }

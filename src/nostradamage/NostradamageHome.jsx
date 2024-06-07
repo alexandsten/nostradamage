@@ -85,7 +85,7 @@ export default function NostradamageHome() {
 
       <Stack
         sx={{
-          background: 'radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,140,0,1) 50%)',
+          background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 45%)',
           width: '100vw',
           height: '100vh'
         }}
