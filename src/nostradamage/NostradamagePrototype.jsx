@@ -65,7 +65,7 @@ export default function NostradamagePrototype() {
         sx={{
           padding: '1em',
           background: 'radial-gradient(circle, rgba(0, 0, 139, 1) 0%, rgba(0, 0, 50, 1) 100%)',
-          border: '7px solid black', 
+          border: '8px solid rgba(0, 0, 50, 1)', 
           justifyContent: 'center',
           alignItems: 'center',
           minWidth: '50vw',
@@ -88,15 +88,15 @@ export default function NostradamagePrototype() {
             maxHeight: '50vh',
             overflowY: 'auto', 
             overflowX: 'hidden',
-            border: '4px solid black', 
+            border: '8px solid rgba(0, 0, 50, 1)', 
           }}
         >
           <Stack direction='column'>
             <h2>Nostradamage prototype</h2>
-            {!expanded && <p className='menu'>Click to open fight predictions</p>}
+            {!expanded && <p className='data' style={{ color: 'white', fontSize: '20px'}}>Click to open fight predictions</p>}
             {expanded ? (
               <>
-                <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em' }}>
+                <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans" }}>
                   Reset
                 </Button>
                 {data[expanded] ? (
@@ -123,18 +123,22 @@ export default function NostradamagePrototype() {
                         <Box
                           key={index}
                           sx={{
-                            backgroundColor: 'white',
-                            borderRadius: '12px',
+                            backgroundColor: '#b5e1ff',
                             padding: '8px',
                             margin: '4px',
                             marginTop: '2em',
                             minWidth: '100px',
-                            flex: '1 1 30%', // Adjust flex properties for responsive layout
+                            flex: '1 1 30%',
+                            border: '8px solid #8fb2c9',
+                            transition: 'background-color 0.3s', // Add transition for smooth effect
+                            '&:hover': {
+                              backgroundColor: '#94c7f2', // Darker color on hover
+                            },
                           }}
                         >
                           <div>
                             <b>
-                              <p className='data'>
+                              <p className='data' style={{ fontSize: '18px' }}>
                                 {matchupName}
                               </p>
                             </b>
@@ -142,7 +146,7 @@ export default function NostradamagePrototype() {
                           <div>
                             {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
                               <div key={idx}>
-                                <p className='data'>{fighter} {JSON.stringify(fighterData)}</p>
+                                <p className='data' style={{ fontSize: '20px' }}>{fighter} {JSON.stringify(fighterData)}</p>
                               </div>
                             ))}
                           </div>
@@ -151,7 +155,7 @@ export default function NostradamagePrototype() {
                     </Box>
                   </Box>
                 ) : (
-                  <Typography>Loading...</Typography>
+                <p style={{ fontSize: '20px' }}>Loading...</p>  
                 )}
               </>
             ) : (
@@ -160,7 +164,7 @@ export default function NostradamagePrototype() {
                   key={index}
                   variant="contained"
                   onClick={() => handleButtonClick(event)}
-                  sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Roboto Mono" }}
+                  sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}
                 >
                   {event}
                 </Button>
