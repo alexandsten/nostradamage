@@ -16,10 +16,21 @@ export default function NostradamageView() {
 
   return (
     <>
-      <GlobalStyles styles={{ body: { margin: 0, padding: 0, backgroundColor: 'orange' }, html: { margin: 0, padding: 0 } }} />
+     <GlobalStyles
+        styles={{
+          body: {
+            margin: 0,
+            padding: 0,
+            background: 'radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,140,0,1) 50%)',
+          },
+          html: {
+            margin: 0,
+            padding: 0,
+          }
+        }}
+      />
       <Stack
         sx={{
-          backgroundColor: 'orange',
           width: '100%'
         }}
       >
@@ -28,14 +39,13 @@ export default function NostradamageView() {
           sx={{
             // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
             // backgroundSize: 'cover', 
-            backgroundColor: 'orange',
+            backgroundColor: 'rgba(255,140,0,1)',
             minHeight: '850px',
             overflow: 'hidden'
           }}
         >
           <Box
             sx={{
-              minHeight: '550px',
               display: 'flex',
               justifyContent: 'center',
               flexDirection: 'column',

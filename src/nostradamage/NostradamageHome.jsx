@@ -83,27 +83,32 @@ export default function NostradamageHome() {
         </Typography> 
     */}
 
-    <Stack
-      height={600}
-      mt={3}
-      sx={{ backgroundColor: 'orange', width: '100vw' }}
-      align="center"
-      justifyContent="center"
-      flexDirection="column"
-    > 
+      <Stack
+        sx={{
+          background: 'radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,140,0,1) 50%)',
+          width: '100vw',
+          height: '100vh'
+        }}
+        align="center"
+        justifyContent="center"
+        flexDirection="column"
+      >
       <h1>Nostradamage</h1>
       <h3>The predictor of the octagon</h3>
       <img src={fighter1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter'/>
     </Stack>
    
     <Stack
-      height={800}
-      mt={3}
-      sx={{ backgroundColor: 'blue', width: '100vw' }}
-      align="center"
-      justifyContent="center"
-      flexDirection="column"
-    > 
+        height={800}
+        mt={3}
+        sx={{
+          background: 'radial-gradient(circle, rgba(0, 0, 139, 1) 0%, rgba(0, 0, 90, 1) 100%)',
+          width: '100vw',
+        }}
+        align="center"
+        justifyContent="center"
+        flexDirection="column"
+      >
       <h1>Our predictions</h1>
       <h3>70% correct picks last 6 months</h3>
       <img src={machine1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter'/>
