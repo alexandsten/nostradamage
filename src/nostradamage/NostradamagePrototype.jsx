@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
 import bgImage from './img/bg5gif.gif';
-import staticBackground from './img/static2.webp';
+import staticBackground from './img/static3.gif';
 import monitorTexture from './img/texture2.jpg';
 
 export default function NostradamagePrototype() {
