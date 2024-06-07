@@ -8,6 +8,7 @@ import '../../src/fonts/fonts.css';
 import './styles.css'
 import fighter1 from './img/fighter1.png';
 import machine1 from './img/machine1.png';
+import staticMatrix from './img/static4.gif';
 
 export default function NostradamageHome() {
 
@@ -41,14 +42,28 @@ export default function NostradamageHome() {
           width: '100vw',
           height: '100vh'
         }}
-        align="center"
+        alignItems="center"
         justifyContent="center"
-        flexDirection="column"
+        direction="column"
       >
       <h1>Our predictions</h1>
       <h3>70% correct picks last 6 months</h3>
-      <img src={machine1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter'/>
-      <p>Our algorithm is always improving</p>
+      <Stack 
+        sx={{ 
+          height: '25em', 
+          width: '25em',
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url(${staticMatrix})`,
+          backgroundSize: 'cover', 
+          borderRadius: '2em'
+        }}
+        alignItems="center"
+        justifyContent="center"
+        direction="column"
+      >
+        {/* <img src={machine1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter'/> */}
+        <p style={{ fontSize: '1.3em'}}>Our algorithm is always improving</p>
+      </Stack>
+      
     </Stack>
    
   </>

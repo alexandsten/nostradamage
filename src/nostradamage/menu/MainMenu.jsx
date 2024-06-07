@@ -47,7 +47,7 @@ export default function MainMenu(props) {
       >
         <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
          {!isSmallScreen && ( 
-            <img style={{ width: '10em', height: '10em', marginRight: '2em' }} src={nostraLogoColor} />
+            <img style={{ width: '8em', height: '8em', marginRight: '2em' }} src={nostraLogoColor} />
           )}
               <p className='logo'>
                 Nostradamage

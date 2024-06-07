@@ -7,7 +7,7 @@ import NostradamageHome from './NostradamageHome';
 import NostradamageDemo from './NostradamageDemo';
 import NostradamagePrototype from './NostradamagePrototype';
 import NostradamageAbout from './NostradamageAbout';
-import bgImage from './img/bg5gif.gif';
+import bgImage from './img/texture2.jpg';
 import { GlobalStyles } from '@mui/material';
 
 export default function NostradamageView() {
@@ -37,9 +37,9 @@ export default function NostradamageView() {
         <MainMenu setSelectedItem={setSelectedItem} />
         <Stack
           sx={{
-            // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${bgImage})`,
+            // backgroundImage: `linear-gradient(rgba(0, 0, 150, 0.1), rgba(11, 21, 74, 0.6)), url(${bgImage})`,
             // backgroundSize: 'cover', 
-            backgroundColor: '#ed652b',
+            // backgroundColor: '#ed652b',
             minHeight: '850px',
             overflow: 'hidden'
           }}
