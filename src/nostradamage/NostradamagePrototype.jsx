@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get } from 'firebase/database';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
@@ -50,6 +50,9 @@ export default function NostradamagePrototype() {
         const fighterData = snapshot.val();
         if (fighterData) {
           setData((prevData) => ({ ...prevData, [event]: fighterData }));
+          // Sign the user out after fetching the data
+          await signOut(auth);
+          console.log('User signed out successfully');
         }
       } catch (error) {
         console.error('Error fetching data:', error);
