@@ -10,7 +10,8 @@ import static2 from './img/static4.gif';
 import black from './img/A_black_image.jpg';
 import staticBackground from './img/static3.gif';
 import staticBackground2 from './img/static1.webp';
-import wolf from './img/wolf.webp';
+import fight from './img/fight.webp';
+import nostraLogoColor from './img/NDLOGOICON.png'
 import pixelBackground from './img/pixelbackground1.webp';
 import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
@@ -97,7 +98,10 @@ export default function NostradamagePrototype() {
         <Box
           sx={{
             display: 'flex',
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${staticBackground})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 60, 0.3), rgba(0, 0, 0, 0.7)), url(${pixelBackground })`,
+
+
+
             backgroundSize: 'cover', 
             justifyContent: 'center',
             width: '30vw',
@@ -122,8 +126,8 @@ export default function NostradamagePrototype() {
             }}
           >
             <Stack direction='row' gap={2} alignItems='flex-start' justifyContent='center' m={3}>
-              <h2>Nostradamage</h2>
-              <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={wolf}/>            
+              <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={nostraLogoColor}/> 
+              <h2>Nostradamage</h2>            
             </Stack>
             
             {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Click to open fight predictions</Typography>}
@@ -189,7 +193,11 @@ export default function NostradamagePrototype() {
                     </Box>
                   </Box>
                 ) : (
-                <Typography sx={{ fontSize: '2.4em', fontFamily: 'VT323' }}>Loading...</Typography>  
+                  <Stack direction='row' justifyContent='center' alignItems='center' gap={1}>
+                    <Typography sx={{ fontSize: '2.4em', fontFamily: 'VT323' }}>Loading...</Typography>
+                    <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={fight}/>
+                  </Stack>
+                  
                 )}
               </>
             ) : (
