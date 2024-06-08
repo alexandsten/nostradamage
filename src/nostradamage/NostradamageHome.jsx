@@ -66,8 +66,8 @@ export default function NostradamageHome() {
             justifyContent="center"
             direction="column"
           >
-            <p style="font-size: 1.3em;">66% success rate over the last 6 months</p>
-            <p style="font-size: 1.3em;">3/5 correct picks for the last main fight card</p>
+            <p style={{fontSize: '1.3em' }}>66% success rate over the last 6 months</p>
+            <p style={{fontSize: '1.3em' }}>3/5 correct picks for the last main fight card</p>
           </Stack>
         </Stack>
       </Box>
