@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
 import static2 from './img/static4.gif';
+import black from './img/A_black_image.jpg';
 import staticBackground from './img/static3.gif';
 import staticBackground2 from './img/static1.webp';
 import monitorTexture from './img/textureCracked.jpg';
@@ -123,7 +124,7 @@ export default function NostradamagePrototype() {
                         <Box
                           key={index}
                           sx={{
-                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${static2})`,
+                            backgroundImage: `url(${black})`,
                             backgroundSize: 'cover', 
                             padding: '8px',
                             margin: '4px',
@@ -133,7 +134,7 @@ export default function NostradamagePrototype() {
                             flex: '1 1 30%',
                             borderRadius: '15px',
                             border: '3px solid white',
-                            transition: 'background-image 0.8s', // Add transition for smooth effect
+                            transition: 'background-image 1.8s', // Add transition for smooth effect
                             '&:hover': {
                               backgroundImage: `url(${staticBackground2})` // Darker color on hover
                             },
