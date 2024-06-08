@@ -40,7 +40,7 @@ export default function NostradamageView() {
             // backgroundImage: `linear-gradient(rgba(0, 0, 150, 0.1), rgba(11, 21, 74, 0.6)), url(${bgImage})`,
             // backgroundSize: 'cover', 
             // backgroundColor: '#ed652b',
-            minHeight: '850px',
+            // minHeight: '850px',
             overflow: 'hidden'
           }}
         >
@@ -51,6 +51,8 @@ export default function NostradamageView() {
               flexDirection: 'column',
               background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
               alignItems: 'center',
+              padding: '0px',
+              margin: '0px'
             }}
           >
             {selectedItem === 'Home' && <NostradamageHome />}

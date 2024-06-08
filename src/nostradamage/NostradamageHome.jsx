@@ -25,7 +25,7 @@ export default function NostradamageHome() {
         <Stack
           sx={{
             width: '100vw',
-            height: '75vh',
+            height: '85vh',
           }}
           align="center"
           justifyContent="center"

@@ -36,7 +36,7 @@ export default function MainMenu(props) {
           maxWidth: '100vw', // Set a maximum width
           width: '100%', // Take full width on smaller screens
           padding: '20px',
-          
+          margin: '0px',
           paddingRight: '50px',
           zIndex: 5000,
           overflow: 'hidden',
@@ -47,7 +47,7 @@ export default function MainMenu(props) {
       >
         <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
          {!isSmallScreen && ( 
-            <img style={{ width: '8em', height: '8em', marginRight: '2em' }} src={nostraLogoColor} />
+            <img style={{ width: '4em', height: '4em', marginRight: '2em' }} src={nostraLogoColor} />
           )}
               <p className='logo'>
                 Nostradamage

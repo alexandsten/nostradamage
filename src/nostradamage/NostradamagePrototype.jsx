@@ -66,7 +66,9 @@ export default function NostradamagePrototype() {
           justifyContent: 'center',
           alignItems: 'center',
           minWidth: '50vw',
-          borderRadius: '25px'
+          borderRadius: '25px',
+          margin: '2em',
+          marginTop: '0em'
         }}
       >
         <Box

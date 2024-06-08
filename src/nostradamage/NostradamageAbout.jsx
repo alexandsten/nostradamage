@@ -9,16 +9,18 @@ export default function NostradamageAbout() {
           sx={{
             display: 'flex',
             justifyContent: 'center',
-            width: '33%',
+            width: '100%',
+            background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 33%)',
+            margin: '0px',
             borderRadius: '12px',
-            padding: '8px',
+            padding: '2em',
             flexDirection: 'row',
-            margin: '12px'
+            minHeight: '80vh'
           }}
         >
-            <Typography sx={{ fontSize: '16px', fontWeight: 'semiBold', marginTop: '25px', color: 'white' }}>
+            <p style={{ fontSize: '24px'}}>
                 We are undefeated and undisputed
-            </Typography> 
+            </p> 
         </Box>
     </>
   )
