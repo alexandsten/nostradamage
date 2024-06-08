@@ -93,7 +93,7 @@ export default function NostradamagePrototype() {
         >
           <Stack direction='column'>
             <h2>Nostradamage prototype</h2>
-            {!expanded && <p className='data' style={{ color: 'white', fontSize: '20px'}}>Click to open fight predictions</p>}
+            {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Click to open fight predictions</Typography>}
             {expanded ? (
               <>
                 <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans" }}>
@@ -139,26 +139,24 @@ export default function NostradamagePrototype() {
                             },
                           }}
                         >
-                          <div>
-                            <b>
-                              <p className='data' style={{ fontSize: '18px', color: 'white' }}>
+                          <Stack>
+                              <Typography className='data' sx={{ fontSize: '18px', color: 'white', fontFamily: 'VT323' }}>
                                 {matchupName}
-                              </p>
-                            </b>
-                          </div>
-                          <div>
+                              </Typography>
+                          </Stack>
+                          <Stack>
                             {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
-                              <div key={idx}>
-                                <p className='data' style={{ fontSize: '20px', color: 'white' }}>{fighter} {JSON.stringify(fighterData)}</p>
-                              </div>
+                              <Stack key={idx}>
+                                <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>{fighter} {JSON.stringify(fighterData)}</Typography>
+                              </Stack>
                             ))}
-                          </div>
+                          </Stack>
                         </Box>
                       ))}
                     </Box>
                   </Box>
                 ) : (
-                <p style={{ fontSize: '20px' }}>Loading...</p>  
+                <Typography sx={{ fontSize: '2.4em', fontFamily: 'VT323' }}>Loading...</Typography>  
                 )}
               </>
             ) : (

@@ -77,24 +77,24 @@ export default function MainMenu(props) {
            )} */}
           {!isSmallScreen && (
           <Grid item onClick={() => props.setSelectedItem('Home')}>
-            <p className='menu'>
+            <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
                 Home
-            </p>
+            </Typography>
           </Grid>
           )}
             {!isSmallScreen && (
           <Grid item onClick={() => props.setSelectedItem('Prototype')}>
-              <p className='menu'>
+              <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
                 Prototype
-              </p>
+              </Typography>
 
             </Grid>
              )}
               {!isSmallScreen && (
             <Grid item onClick={() => props.setSelectedItem('About')}>
-              <p className='menu'>
+              <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
                 About us
-              </p>
+              </Typography>
             </Grid>
              )}
               {isSmallScreen && (
