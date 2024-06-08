@@ -10,6 +10,9 @@ import static2 from './img/static4.gif';
 import black from './img/A_black_image.jpg';
 import staticBackground from './img/static3.gif';
 import staticBackground2 from './img/static1.webp';
+import wolf from './img/wolf.webp';
+import pixelBackground from './img/pixelbackground1.webp';
+import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
 
 export default function NostradamagePrototype() {
@@ -109,13 +112,24 @@ export default function NostradamagePrototype() {
             overflowX: 'hidden',
             border: '8px solid black', 
           }}
+          
         >
-          <Stack direction='column'>
-            <h2>Nostradamage prototype</h2>
+   
+
+          
+          <Stack direction='column' justifyContent='center' alignItems='center' 
+            sx={{ height: '100%', borderRadius: '10px', width: '100%'
+            }}
+          >
+            <Stack direction='row' gap={2} alignItems='flex-start' justifyContent='center' m={3}>
+              <h2>Nostradamage</h2>
+              <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={wolf}/>            
+            </Stack>
+            
             {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Click to open fight predictions</Typography>}
             {expanded ? (
               <>
-                <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans" }}>
+                <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans", fontSize: '1.3em' }}>
                   Reset
                 </Button>
                 {data[expanded] ? (
@@ -142,7 +156,7 @@ export default function NostradamagePrototype() {
                         <Box
                           key={index}
                           sx={{
-                            backgroundImage: `url(${black})`,
+                            backgroundImage: `url(${staticBackground2})`,
                             backgroundSize: 'cover', 
                             padding: '8px',
                             margin: '4px',
@@ -154,7 +168,7 @@ export default function NostradamagePrototype() {
                             border: '3px solid white',
                             transition: 'background-image 1.8s', // Add transition for smooth effect
                             '&:hover': {
-                              backgroundImage: `url(${staticBackground2})` // Darker color on hover
+                              backgroundImage: `url(${staticFilm})` // Darker color on hover
                             },
                           }}
                         >
