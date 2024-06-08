@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
 import bgImage from './img/bg5gif.gif';
 import staticBackground from './img/static3.gif';
+import staticBackground2 from './img/static1.webp';
 import monitorTexture from './img/textureCracked.jpg';
 
 export default function NostradamagePrototype() {
@@ -122,13 +123,16 @@ export default function NostradamagePrototype() {
                         <Box
                           key={index}
                           sx={{
-                            backgroundColor: '#b5e1ff',
+                            backgroundImage: `url(${staticBackground2})`,
+                            backgroundSize: 'cover', 
                             padding: '8px',
                             margin: '4px',
                             marginTop: '2em',
                             minWidth: '100px',
+                            maxWidth: '250px',
                             flex: '1 1 30%',
-                            border: '8px solid #8fb2c9',
+                            borderRadius: '15px',
+                            border: '3px solid white',
                             transition: 'background-color 0.3s', // Add transition for smooth effect
                             '&:hover': {
                               backgroundColor: '#94c7f2', // Darker color on hover
@@ -137,7 +141,7 @@ export default function NostradamagePrototype() {
                         >
                           <div>
                             <b>
-                              <p className='data' style={{ fontSize: '18px' }}>
+                              <p className='data' style={{ fontSize: '18px', color: 'white' }}>
                                 {matchupName}
                               </p>
                             </b>
@@ -145,7 +149,7 @@ export default function NostradamagePrototype() {
                           <div>
                             {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
                               <div key={idx}>
-                                <p className='data' style={{ fontSize: '20px' }}>{fighter} {JSON.stringify(fighterData)}</p>
+                                <p className='data' style={{ fontSize: '20px', color: 'white' }}>{fighter} {JSON.stringify(fighterData)}</p>
                               </div>
                             ))}
                           </div>
