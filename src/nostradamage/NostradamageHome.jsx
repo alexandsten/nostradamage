@@ -50,7 +50,7 @@ export default function NostradamageHome() {
           direction="column"
         >
           <h1>Our predictions</h1>
-          <h3>70% correct picks last 6 months</h3>
+          <h3>Our algorithm is always improving</h3>
           <Stack
             sx={{
               height: '15em',
@@ -66,7 +66,8 @@ export default function NostradamageHome() {
             justifyContent="center"
             direction="column"
           >
-            <p style={{ fontSize: '1.3em' }}>Our algorithm is always improving</p>
+            <p style="font-size: 1.3em;">66% success rate over the last 6 months</p>
+            <p style="font-size: 1.3em;">3/5 correct picks for the last main fight card</p>
           </Stack>
         </Stack>
       </Box>
