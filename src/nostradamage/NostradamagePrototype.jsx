@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get, goOffline, goOnline } from 'firebase/database';
@@ -16,6 +16,7 @@ export default function NostradamagePrototype() {
   const [data, setData] = useState({});
   const [toFetch, setToFetch] = useState(['UFC 300', 'UFC 301', 'UFC 302']);
   const [expanded, setExpanded] = useState(null);
+  const [isConnected, setIsConnected] = useState(false);
 
   const firebaseConfig = {
     apiKey: "AIzaSyBFK9TBeGAkS-5-9zOS4HJog4n_EfITLKI",
@@ -38,7 +39,8 @@ export default function NostradamagePrototype() {
         await signInWithEmailAndPassword(auth, 'alex.andsten@gmail.com', 'jagvetiS11');
         console.log('User signed in successfully');
 
-        goOnline(database); // Connect to the database
+        goOnline(database);
+        setIsConnected(true); // Mark connection as active
 
         const snapshot = await get(ref(database, event));
         const fighterData = snapshot.val();
@@ -47,10 +49,15 @@ export default function NostradamagePrototype() {
         }
 
         await signOut(auth);
-        goOffline(database); // Disconnect from the database
+        goOffline(database);
+        setIsConnected(false); // Mark connection as inactive
         console.log('User signed out and disconnected from database successfully');
       } catch (error) {
         console.error('Error fetching data:', error);
+        if (isConnected) {
+          goOffline(database);
+          setIsConnected(false);
+        }
       }
     }
   };
@@ -58,6 +65,15 @@ export default function NostradamagePrototype() {
   const resetView = () => {
     setExpanded(null);
   };
+
+  // Ensure cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (isConnected) {
+        goOffline(database);
+      }
+    };
+  }, [isConnected]);
 
   return (
     <>
