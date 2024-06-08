@@ -64,7 +64,7 @@ export default function NostradamageView() {
         component="footer"
         sx={{
           width: '100%',
-          backgroundColor: '#282c34',
+          backgroundColor: '#161c1c',
           color: 'white',
           textAlign: 'center',
           padding: '1em 0',
