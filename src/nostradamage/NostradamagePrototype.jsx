@@ -13,6 +13,7 @@ import staticBackground2 from './img/static1.webp';
 import fight from './img/fight.webp';
 import nostraLogoColor from './img/NDLOGOICON.png'
 import pixelBackground from './img/pixelbackground1.webp';
+import pixelBackground2 from './img/pixelbackground2.webp';
 import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
 
@@ -98,7 +99,7 @@ export default function NostradamagePrototype() {
         <Box
           sx={{
             display: 'flex',
-            backgroundImage: `linear-gradient(rgba(0, 0, 60, 0.3), rgba(0, 0, 0, 0.7)), url(${pixelBackground })`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 30, 0.5), rgba(0, 0, 0, 0.9)), url(${pixelBackground2})`,
 
 
 
@@ -165,8 +166,8 @@ export default function NostradamagePrototype() {
                             padding: '8px',
                             margin: '4px',
                             marginTop: '2em',
-                            minWidth: '100px',
-                            maxWidth: '250px',
+                            minWidth: '10em',
+                            maxWidth: '20em',
                             flex: '1 1 30%',
                             borderRadius: '15px',
                             border: '3px solid white',
