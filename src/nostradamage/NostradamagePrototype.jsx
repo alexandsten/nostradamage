@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, get } from 'firebase/database';
+import { getDatabase, ref, get, goOffline, goOnline } from 'firebase/database';
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -38,6 +38,8 @@ export default function NostradamagePrototype() {
         await signInWithEmailAndPassword(auth, 'alex.andsten@gmail.com', 'jagvetiS11');
         console.log('User signed in successfully');
 
+        goOnline(database); // Connect to the database
+
         const snapshot = await get(ref(database, event));
         const fighterData = snapshot.val();
         if (fighterData) {
@@ -45,7 +47,8 @@ export default function NostradamagePrototype() {
         }
 
         await signOut(auth);
-        console.log('User signed out successfully');
+        goOffline(database); // Disconnect from the database
+        console.log('User signed out and disconnected from database successfully');
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -58,7 +61,6 @@ export default function NostradamagePrototype() {
 
   return (
     <>
-    
       <Stack
         sx={{
           padding: '1em',
@@ -175,7 +177,6 @@ export default function NostradamagePrototype() {
           </Stack>
         </Box>
       </Stack>
-      
     </>
   );
 }
