@@ -120,10 +120,10 @@ export default function MainMenu(props) {
         sx={{ zIndex: 9999 }}
       >
         <div role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-          <Grid container direction="column" spacing={2} sx={{ padding: '20px' }}>
+          <Grid container direction="column" spacing={2} sx={{ padding: '20px', background: 'radial-gradient(circle, rgba(255,185,0,9) 0%, #ed652b 60%)', height: '102vh', overflow: 'hidden' }}>
             <Grid item>
               <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'black' }}
+                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
                 onClick={() => props.setSelectedItem('Home')}
               >
                 Home
@@ -131,7 +131,7 @@ export default function MainMenu(props) {
             </Grid>
             <Grid item>
               <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'black' }}
+                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
                 onClick={() => props.setSelectedItem('Prototype')}
               >
                 Prototype
@@ -139,7 +139,7 @@ export default function MainMenu(props) {
             </Grid>
             <Grid item>
               <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'black' }}
+                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
                 onClick={() => props.setSelectedItem('About')}
               >
                 About us
