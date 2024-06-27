@@ -12,14 +12,14 @@ import staticBackground from './img/static3.gif';
 import staticBackground2 from './img/static1.webp';
 import fight from './img/fight.webp';
 import nostraLogoColor from './img/NDLOGOICON.png'
-import pixelBackground1 from './img/pixelbackground1.webp';
-import pixelBackground2 from './img/pixelbackground2.webp';
+import pixelBackground1 from './img/pixBack4.gif';
+import pixelBackground2 from './img/pixBack3.gif';
 import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
-  const [toFetch, setToFetch] = useState(['UFC 300', 'UFC 301', 'UFC 302']);
+  const [toFetch, setToFetch] = useState(['UFC 302', 'UFC 303']);
   const [expanded, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
@@ -100,7 +100,7 @@ export default function NostradamagePrototype() {
           sx={{
             display: 'flex',
             backgroundImage: expanded 
-              ? `url(${pixelBackground1})` 
+              ? `linear-gradient(rgba(0, 0, 30, 0.5), rgba(0, 0, 0, 0.9)), url(${pixelBackground1})` 
               : `linear-gradient(rgba(0, 0, 30, 0.5), rgba(0, 0, 0, 0.9)), url(${pixelBackground2})`,
             backgroundSize: 'cover', 
             justifyContent: 'center',
