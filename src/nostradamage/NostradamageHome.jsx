@@ -68,6 +68,7 @@ export default function NostradamageHome() {
           >
             <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>66% success rate over the last 6 months</Typography>
             <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>3/5 correct picks for the last main fight card</Typography>
+            <iframe title="netflix" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNzkwMTA0YjgtMGQ4OC00YTczLTkzODEtYzliOTQ4NmEwYWRkIiwidCI6ImY3NGUwNTA1LWMyODMtNDljZC04ODU5LWVkNDJjMmJmZDc5NCJ9" frameborder="0" allowFullScreen="true"></iframe>
           </Stack>
         </Stack>
       </Box>
