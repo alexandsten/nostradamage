@@ -55,7 +55,7 @@ export default function NostradamageView() {
               margin: '0px'
             }}
           >
-            {selectedItem === 'Home' && <NostradamageHome />}
+            {selectedItem === 'Home' && <NostradamageHome setView={setSelectedItem} />}
             {selectedItem === 'Vision' && <NostradamageVision />}
             {selectedItem === 'Prototype' && <NostradamagePrototype />}
             {selectedItem === 'About' && <NostradamageAbout />}

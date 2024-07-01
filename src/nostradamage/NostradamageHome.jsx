@@ -1,13 +1,13 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import { Typography, Stack } from '@mui/material';
+import { Typography, Stack, Grid } from '@mui/material';
 import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/fighter1.png';
 import texture2 from './img/texture2.jpg';
 import static2 from './img/static2.webp';
 
-export default function NostradamageHome() {
+export default function NostradamageHome({setView}) {
   return (
     <Box
       sx={{
@@ -25,7 +25,7 @@ export default function NostradamageHome() {
         <Stack
           sx={{
             width: '100vw',
-            height: '85vh',
+            minHeight: '85vh',
           }}
           align="center"
           justifyContent="center"
@@ -33,7 +33,32 @@ export default function NostradamageHome() {
         >
           <h1>Nostradamage</h1>
           <h3>The predictor of the octagon</h3>
-          <img src={fighter1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter' />
+          <Grid container>
+            <Grid item xs={12} sm={12} md={4} p={4}>
+            <h3>
+              Nostradamage: Revolutionizing UFC Predictions
+            </h3>
+            <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
+              Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. As the popularity of UFC continues to surge globally, the demand for accurate fight predictions has never been higher. Nostradamage addresses this need by analyzing extensive data on fighter statistics, fight histories, and various influencing factors to deliver precise predictions.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} onClick={() => setView('Prototype')}
+              sx={{ cursor: "pointer"}}>
+              <img src={fighter1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter' />
+              <h3>
+                Click to try now!
+              </h3>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} p={4}>
+            <h3>
+            Disclaimer: For Entertainment Purposes Only
+            </h3>
+            <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
+              Nostradamage is designed purely for entertainment and to enhance your enjoyment of UFC MMA events. While our algorithms provide detailed fight predictions, these are not intended for betting purposes. We do not take responsibility for any bets placed based on our predictions. Enjoy the excitement of UFC with Nostradamage, but please gamble responsibly and at your own risk.
+              </Typography>
+            </Grid>
+          </Grid>
+          
         </Stack>
 
         <Stack
@@ -59,7 +84,8 @@ export default function NostradamageHome() {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${static2})`,
               backgroundSize: 'cover', 
               border: '8px solid black',
-              borderRadius: '2em'
+              borderRadius: '2em',
+              marginTop: '2em'
             }}
             p={5}
             alignItems="center"
@@ -68,7 +94,7 @@ export default function NostradamageHome() {
           >
             <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>66% success rate over the last 6 months</Typography>
             <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>3/5 correct picks for the last main fight card</Typography>
-            <iframe title="netflix" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNzkwMTA0YjgtMGQ4OC00YTczLTkzODEtYzliOTQ4NmEwYWRkIiwidCI6ImY3NGUwNTA1LWMyODMtNDljZC04ODU5LWVkNDJjMmJmZDc5NCJ9" frameborder="0" allowFullScreen="true"></iframe>
+            <iframe title="netflix2" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZTk2MzRmMzUtMzk3Yy00ZWZhLTlkMTktZjJkYWE5YTY0MDdlIiwidCI6ImY3NGUwNTA1LWMyODMtNDljZC04ODU5LWVkNDJjMmJmZDc5NCJ9" frameborder="0" allowFullScreen="true"></iframe>
           </Stack>
         </Stack>
       </Box>

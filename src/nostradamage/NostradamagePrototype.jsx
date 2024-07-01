@@ -13,7 +13,7 @@ import staticBackground2 from './img/static1.webp';
 import fight from './img/fight.webp';
 import nostraLogoColor from './img/NDLOGOICON.png'
 import pixelBackground1 from './img/pixBack4.gif';
-import pixelBackground2 from './img/pixBack3.gif';
+import pixelBackground2 from './img/pixelbackground1.webp';
 import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
 
