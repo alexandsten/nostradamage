@@ -45,13 +45,14 @@ export default function MainMenu(props) {
           },
         }}
       >
-        <Grid item xs={12} sm={1} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row' }}>
-         {!isSmallScreen && ( 
-            <img style={{ width: '4em', height: '4em', marginRight: '2em' }} src={nostraLogoColor} />
-          )}
-              <p className='logo'>
-                Nostradamage
-              </p>
+        <Grid item xs={12} sm={1} onClick={() => props.setSelectedItem('Home')} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row', cursor: "pointer", }}>
+         
+          <img style={{ width: '4em', height: '4em', marginRight: '2em' }} src={nostraLogoColor} />
+          {!isSmallScreen && ( 
+            <p className='logo' >
+              Nostradamage
+            </p>
+          )}  
         </Grid>
 
         <Grid container item xs={12} sm={11} spacing={2} justifyContent={'flex-end'}>
