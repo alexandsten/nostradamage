@@ -32,22 +32,25 @@ export default function NostradamageHome({setView}) {
           flexDirection="column"
         >
           <h1>Nostradamage</h1>
-          <h3>The predictor of the octagon</h3>
+          {/* <h3>The predictor of the octagon</h3> */}
           <Grid container>
             <Grid item xs={12} sm={12} md={4} p={4}>
-            <h3>
-              Nostradamage: Revolutionizing UFC Predictions
-            </h3>
-            <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
-              Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. As the popularity of UFC continues to surge globally, the demand for accurate fight predictions has never been higher. Nostradamage addresses this need by analyzing extensive data on fighter statistics, fight histories, and various influencing factors to deliver precise predictions.
+              <h3>
+                Revolutionizing UFC Predictions
+              </h3>
+              <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
+                Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. As the popularity of UFC continues to surge globally, the demand for accurate fight predictions has never been higher. Nostradamage addresses this need by analyzing extensive data on fighter statistics, fight histories, and various influencing factors to deliver precise predictions.
               </Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={4} onClick={() => setView('Prototype')}
               sx={{ cursor: "pointer"}}>
-              <img src={fighter1} style={{ width: '300px', height: '300px', borderRadius: '50%', alignSelf: 'center' }} alt='fighter' />
-              <h3>
-                Click to try now!
-              </h3>
+                <h3>
+                  Click to try now!
+                </h3>
+                <div className="image-container">
+                  <img className="fighterImage" src={fighter1} style={{ width: '20em', height: '20em', borderRadius: '50%', alignSelf: 'center' }} alt='fighter' 
+                />
+                </div>
             </Grid>
             <Grid item xs={12} sm={12} md={4} p={4}>
             <h3>
@@ -101,5 +104,7 @@ export default function NostradamageHome({setView}) {
 
 
     </Box>
+    
   );
+  
 }

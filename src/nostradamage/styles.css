@@ -58,6 +58,26 @@ body {
   font-weight: var(--font-weight);
 }
 
+.image-container {
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
 
+.fighterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .fighterImage {
+  transform: scale(1.1);
+}
 
   
