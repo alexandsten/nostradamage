@@ -27,13 +27,13 @@ export default function NostradamageHome({setView}) {
             width: '100vw',
             minHeight: '85vh',
           }}
-          align="center"
+          alignItems="center"
           justifyContent="center"
           flexDirection="column"
         >
           <h1>Nostradamage</h1>
           {/* <h3>The predictor of the octagon</h3> */}
-          <Grid container>
+          <Grid container sx={{ width: '80%' }}>
             <Grid item xs={12} sm={12} md={4} p={4}>
               <h3>
                 Revolutionizing UFC Predictions
@@ -42,15 +42,35 @@ export default function NostradamageHome({setView}) {
                 Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. As the popularity of UFC continues to surge globally, the demand for accurate fight predictions has never been higher. Nostradamage addresses this need by analyzing extensive data on fighter statistics, fight histories, and various influencing factors to deliver precise predictions.
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={12} md={4} onClick={() => setView('Prototype')}
-              sx={{ cursor: "pointer"}}>
-                <h3>
-                  Click to try now!
-                </h3>
-                <div className="image-container">
-                  <img className="fighterImage" src={fighter1} style={{ width: '20em', height: '20em', borderRadius: '50%', alignSelf: 'center' }} alt='fighter' 
+            <Grid 
+              item 
+              xs={12} 
+              sm={12} 
+              md={4} 
+              onClick={() => setView('Prototype')}
+              sx={{ 
+                cursor: "pointer",
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center' 
+              }}
+            >
+              <h3>Click to try now!</h3>
+              <div className="image-container">
+                <img 
+                  className="fighterImage" 
+                  src={fighter1} 
+                  style={{ 
+                    width: '20em', 
+                    height: '20em', 
+                    borderRadius: '50%', 
+                    alignSelf: 'center' 
+                  }} 
+                  alt='fighter' 
                 />
-                </div>
+              </div>
             </Grid>
             <Grid item xs={12} sm={12} md={4} p={4}>
             <h3>
