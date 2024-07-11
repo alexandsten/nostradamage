@@ -9,6 +9,7 @@ import NostradamagePrototype from './NostradamagePrototype';
 import NostradamageAbout from './NostradamageAbout';
 import bgImage from './img/texture2.jpg';
 import { GlobalStyles, Typography } from '@mui/material';
+import texture2 from './img/texture2.jpg';
 
 export default function NostradamageView() {
   /// menu states
@@ -22,6 +23,9 @@ export default function NostradamageView() {
             margin: 0,
             padding: 0,
             background: '#ed652b',
+            // background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
+            // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${texture2})`,
+            // backgroundSize: 'cover',
           },
           html: {
             margin: 0,
@@ -50,6 +54,8 @@ export default function NostradamageView() {
               justifyContent: 'center',
               flexDirection: 'column',
               background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${texture2})`,
+              backgroundSize: 'cover',
               alignItems: 'center',
               padding: '0px',
               margin: '0px'
@@ -66,7 +72,7 @@ export default function NostradamageView() {
         component="footer"
         sx={{
           width: '100%',
-          backgroundColor: '#161c1c',
+          backgroundColor: '#ed652b',
           color: 'white',
           textAlign: 'center',
           padding: '1em 0',

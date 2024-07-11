@@ -94,7 +94,7 @@ export default function NostradamagePrototype() {
             minWidth: '50vw',
             borderRadius: '25px',
             margin: '2em',
-            marginTop: '0em',
+            marginTop: '2em',
             minHeight: '65vh',
             maxHeight: '65vh'
           }}
