@@ -103,8 +103,8 @@ export default function NostradamagePrototype() {
             sx={{
               display: 'flex',
               backgroundImage: expanded 
-                ? `linear-gradient(rgba(0, 0, 30, 0.5), rgba(0, 0, 0, 0.9)), url(${pixelBackground1})` 
-                : `linear-gradient(rgba(0, 0, 30, 0.5), rgba(0, 0, 0, 0.9)), url(${pixelBackground2})`,
+                ? `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.9)), url(${pixelBackground1})` 
+                : `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.9)), url(${pixelBackground2})`,
               backgroundSize: 'cover', 
               backgroundPosition: 'center bottom',
               justifyContent: 'center',
@@ -129,7 +129,7 @@ export default function NostradamagePrototype() {
               }}
             >
               <Stack direction='row' gap={2} alignItems='flex-start' justifyContent='center' m={3}>
-                <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={fighterLogo}/> 
+                {/* <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={fighterLogo}/>  */}
                 <h2>Nostradamage</h2>            
               </Stack>
               
