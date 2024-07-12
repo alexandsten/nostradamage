@@ -25,7 +25,7 @@ export default function NostradamageHome({setView}) {
         <Stack
           sx={{
             width: '100vw',
-            minHeight: '85vh',
+            minHeight: '90vh',
           }}
           alignItems="center"
           justifyContent="center"
@@ -39,7 +39,7 @@ export default function NostradamageHome({setView}) {
                 Revolutionizing UFC Predictions
               </h3>
               <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
-                Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. As the popularity of UFC continues to surge globally, the demand for accurate fight predictions has never been higher. Nostradamage addresses this need by analyzing extensive data on fighter statistics, fight histories, and various influencing factors to deliver precise predictions.
+                Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. 
               </Typography>
             </Grid>
             <Grid 
@@ -74,10 +74,10 @@ export default function NostradamageHome({setView}) {
             </Grid>
             <Grid item xs={12} sm={12} md={4} p={4}>
             <h3>
-            Disclaimer: For Entertainment Purposes Only
+            Disclaimer
             </h3>
             <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
-              Nostradamage is designed purely for entertainment and to enhance your enjoyment of UFC MMA events. While our algorithms provide detailed fight predictions, these are not intended for betting purposes. We do not take responsibility for any bets placed based on our predictions. Enjoy the excitement of UFC with Nostradamage, but please gamble responsibly and at your own risk.
+               We do not take responsibility for any bets placed based on our predictions. Enjoy the excitement of Nostradamage, but please gamble responsibly and at your own risk.
               </Typography>
             </Grid>
           </Grid>
