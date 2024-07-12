@@ -23,6 +23,7 @@ export default function NostradamageView() {
             margin: 0,
             padding: 0,
             background: '#ed652b',
+            overflowX: 'hidden'
             // background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
             // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${texture2})`,
             // backgroundSize: 'cover',

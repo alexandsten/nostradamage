@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Typography, Avatar, IconButton, Drawer, Stack, useMediaQuery} from '@mui/material';
+import { Grid, Typography, Avatar, IconButton, Drawer, Stack, useMediaQuery, GlobalStyles} from '@mui/material';
 // import { Menu as MenuIcon } from '@mui/icons-material';
 import { SocialIcon } from 'react-social-icons';
 import 'react-social-icons/instagram'
@@ -27,27 +27,41 @@ export default function MainMenu(props) {
 
   return (
      <>
+        {/* <GlobalStyles
+        styles={{
+          body: {
+           
+            overflowX: 'hidden', // Hide overflow on x-axis
+          },
+          html: {
+           
+            overflowX: 'hidden', // Hide overflow on x-axis
+          }
+        }}
+      /> */}
       <Grid
         container
         spacing={2}
         sx={{
           position: 'sticky',
           top: 0,
-          maxWidth: '100vw', // Set a maximum width
-          width: '100%', // Take full width on smaller screens
-          padding: '20px',
+          // width: '100vw', // Set a maximum width
+          maxWidth: '100vw',
+          padding: '10px',
           margin: '0px',
+          backgroundColor: '#ed652b',
           paddingRight: '50px',
           zIndex: 5000,
-          overflow: 'hidden',
-          '@media (min-width: 1100px)': {
-            maxWidth: 'calc(100% - 50px)', // Adjust width for larger screens
-          },
+          overflowX: 'hidden',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.7)',
+          // '@media (min-width: 1100px)': {
+          //   maxWidth: 'calc(100% - 50px)', // Adjust width for larger screens
+          // },
         }}
       >
         <Grid item xs={12} sm={1} onClick={() => props.setSelectedItem('Home')} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row', cursor: "pointer", marginTop: '-1em' }}>
          
-          <img style={{ width: '4em', height: '4em', marginRight: '2em' }} src={nostraLogoColor} />
+          <img style={{ width: '3em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
           {!isSmallScreen && ( 
             <p className='logo' >
               Nostradamage
@@ -105,9 +119,10 @@ export default function MainMenu(props) {
             right: 0,
             marginTop: '20px', // Adjust margin as needed
             marginRight: '20px', // Adjust margin as needed
+            overflowX: 'hidden',
           }} item>
             <IconButton onClick={toggleDrawer(true)} sx={{ paddingRight: '1em'}} >
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-1em' }} width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
             </IconButton>
           </Grid>
            )}
@@ -120,7 +135,7 @@ export default function MainMenu(props) {
         onClose={toggleDrawer(false)}
         sx={{ zIndex: 9999 }}
       >
-        <div role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+        <Stack role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
           <Grid container direction="column" spacing={2} sx={{ padding: '20px', background: 'radial-gradient(circle, rgba(255,185,0,9) 0%, #ed652b 60%)', height: '102vh', overflow: 'hidden' }}>
             <Grid item>
               <Typography
@@ -147,7 +162,7 @@ export default function MainMenu(props) {
               </Typography>
             </Grid>
           </Grid>
-        </div>
+        </Stack>
       </Drawer>
     </>
   );
