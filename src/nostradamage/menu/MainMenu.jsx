@@ -136,7 +136,7 @@ export default function MainMenu(props) {
         sx={{ zIndex: 9999 }}
       >
         <Stack role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-          <Grid container direction="column" spacing={2} sx={{ padding: '20px', background: 'radial-gradient(circle, rgba(255,185,0,9) 0%, #ed652b 60%)', height: '102vh', overflow: 'hidden' }}>
+          <Grid container direction="column" spacing={2} sx={{ padding: '20px', backgroundColor: '#141414', height: '102vh', overflow: 'hidden' }}>
             <Grid item>
               <Typography
                 sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
