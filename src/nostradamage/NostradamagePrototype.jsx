@@ -24,7 +24,7 @@ import styled, { keyframes } from 'styled-components';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
-  const [toFetch, setToFetch] = useState(['UFC 302', 'UFC 303']);
+  const [toFetch, setToFetch] = useState(['UFC 302', 'UFC 303', 'UFC Fight Night Namajunas vs Cortez']);
   const [expanded, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
