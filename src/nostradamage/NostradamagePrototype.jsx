@@ -101,6 +101,16 @@ export default function NostradamagePrototype() {
     };
   }, [isConnected]);
 
+  const [visiblePulseDivs, setVisiblePulseDivs] = useState({});
+
+  // Toggle visibility of the PulseDiv when a Stack is clicked
+  const toggleVisibility = (idx) => {
+    setVisiblePulseDivs((prev) => ({
+      ...prev,
+      [idx]: !prev[idx]
+    }));
+  };
+
   return (
     <>
       <Box sx={{ minHeight: '78vh'}}>
@@ -176,6 +186,9 @@ export default function NostradamagePrototype() {
                         flexDirection: 'column'
                       }}
                     >
+                       <FlashDiv>
+                        {expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Press to predict</Typography>}
+                      </FlashDiv>
                       <Box
                         sx={{
                           width: '40vw',
@@ -187,9 +200,11 @@ export default function NostradamagePrototype() {
                       >
                         {Object.keys(data[expanded]).map((matchupName, index) => (
                           <Box
+                          onClick={() => toggleVisibility(matchupName)}
                           key={index}
                           sx={{
-                            backgroundImage: `url(${staticBackground2})`,
+                            backgroundImage: visiblePulseDivs[matchupName] ? `url(${staticFilm})` : `url(${staticBackground2})`,
+                            cursor: "pointer",
                             backgroundSize: 'cover', 
                             padding: '12px',
                             paddingLeft: '16px',
@@ -201,9 +216,7 @@ export default function NostradamagePrototype() {
                             borderRadius: '15px',
                             border: '3px solid white',
                             transition: 'background-image 1.8s', // Add transition for smooth effect
-                            '&:hover': {
-                              backgroundImage: `url(${staticFilm})` // Darker color on hover
-                            },
+                          
                           }}
                           >
                            
@@ -214,9 +227,18 @@ export default function NostradamagePrototype() {
                             </Stack>
                             <Stack>
                               {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
-                               <PulseDiv>  <Stack key={idx}>
-                                  <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>{fighter} {JSON.stringify(fighterData)}</Typography>
-                                </Stack> </PulseDiv>
+                                <Stack key={idx} flexDirection={'row'} gap={2}>
+                                  <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
+                                    {fighter}:
+                                  </Typography>
+                                  {visiblePulseDivs[matchupName] && (
+                                    <PulseDiv>
+                                      <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
+                                        {JSON.stringify(fighterData)}
+                                      </Typography>
+                                    </PulseDiv>
+                                  )}
+                                </Stack>
                               ))}
                             </Stack>
                            
