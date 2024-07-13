@@ -74,6 +74,8 @@ export default function NostradamageView() {
         sx={{
           width: '100%',
           backgroundColor: '#ed652b',
+          borderTop: 'black solid 1px',
+          boxShadow: '0 -4px 8px rgba(0, 0, 0, 0.2)',
           color: 'white',
           textAlign: 'center',
           padding: '1em 0',
@@ -83,7 +85,7 @@ export default function NostradamageView() {
           &copy; 2024 Nostradamage. All rights reserved.
         </Typography>
         <Typography variant="body2">
-          Contact us: <a href="mailto:info@nostradamage.com" style={{ color: 'inherit' }}>info@nostradamage.com</a>, 1234 Nostradamage Lane, Imaginary City, 56789
+          Contact us: <a href="mailto:info@nostradamage.com" style={{ color: 'inherit' }}>info@nostradamage.com</a>, 12345 Nostradamage Lane, Imaginary City, 56789
         </Typography>
       </Box>
       </Stack>
