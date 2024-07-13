@@ -48,6 +48,7 @@ export default function MainMenu(props) {
           // width: '100vw', // Set a maximum width
           maxWidth: '100vw',
           padding: '10px',
+          paddingBottom: '0px',
           margin: '0px',
           backgroundColor: '#ed652b',
           paddingRight: '50px',
@@ -59,7 +60,7 @@ export default function MainMenu(props) {
           // },
         }}
       >
-        <Grid item xs={12} sm={1} onClick={() => props.setSelectedItem('Home')} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row', cursor: "pointer", marginTop: '-1em' }}>
+        <Grid item xs={12} sm={1} p={0.2} onClick={() => props.setSelectedItem('Home')} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row', cursor: "pointer", marginTop: '-1em' }}>
          
           <img style={{ width: '3em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
           {!isSmallScreen && ( 
@@ -122,7 +123,7 @@ export default function MainMenu(props) {
             overflowX: 'hidden',
           }} item>
             <IconButton onClick={toggleDrawer(true)} sx={{ paddingRight: '1em'}} >
-            <svg xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-1em' }} width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-1.5em' }} width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
             </IconButton>
           </Grid>
            )}

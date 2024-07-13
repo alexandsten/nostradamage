@@ -7,10 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -20,12 +17,9 @@
     "firebase": "^10.8.0",
     "mysql": "^2.18.1",
     "mysql2": "^3.9.2",
-    "react-social-icons": "^6.15.0",
-    "react-spring": "^9.7.3",
-    "@react-spring/web": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-social-icons": "^6.15.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
