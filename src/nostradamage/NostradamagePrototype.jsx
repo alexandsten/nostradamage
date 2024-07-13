@@ -168,7 +168,7 @@ export default function NostradamagePrototype() {
                               padding: '8px',
                               margin: '4px',
                               marginTop: '2em',
-                              minWidth: '8em',
+                              minWidth: '13em',
                               maxWidth: '17em',
                               flex: '1 1 30%',
                               borderRadius: '15px',
