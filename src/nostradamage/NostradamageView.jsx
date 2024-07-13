@@ -74,6 +74,8 @@ export default function NostradamageView() {
         sx={{
           width: '100%',
           backgroundColor: '#ed652b',
+          borderTop: 'black solid 1px',
+          boxShadow: '0 -4px 8px rgba(0, 0, 0, 0.2)',
           color: 'white',
           textAlign: 'center',
           padding: '1em 0',
