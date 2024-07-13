@@ -106,6 +106,11 @@ export default function NostradamagePrototype() {
   }, [isConnected]);
 
   const [visiblePulseDivs, setVisiblePulseDivs] = useState({});
+  const [latestClick, setLatestClick] = useState({});
+
+  // const changeClickedItem = (idx) => {
+  //   setLatestClick(idx)
+  // };
 
   // Toggle visibility of the PulseDiv when a Stack is clicked
   const toggleVisibility = (idx) => {
@@ -113,6 +118,7 @@ export default function NostradamagePrototype() {
       ...prev,
       [idx]: !prev[idx]
     }));
+    setLatestClick(idx)
   };
 
   return (
@@ -231,20 +237,33 @@ export default function NostradamagePrototype() {
                             </Stack>
                             <Stack>
                               {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
-                                <Stack key={idx} flexDirection={isSmallScreen ? 'column' : 'row' } gap={2}>
+                                <Stack key={idx} flexDirection={isSmallScreen ? 'column' : 'row'} gap={2}>
                                   <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
                                     {fighter}:
                                   </Typography>
                                   {visiblePulseDivs[matchupName] && (
-                                    <PulseDiv>
-                                      <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
-                                        {JSON.stringify(fighterData)}
-                                      </Typography>
-                                    </PulseDiv>
+                                    <>
+                                      {latestClick == matchupName ? (
+                                        <JelloDiv>
+                                          <PulseDiv>
+                                            <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
+                                              {JSON.stringify(fighterData)}
+                                            </Typography>
+                                          </PulseDiv>
+                                        </JelloDiv>
+                                      ) : (
+                                        <PulseDiv>
+                                          <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
+                                            {JSON.stringify(fighterData)}
+                                          </Typography>
+                                        </PulseDiv>
+                                      )}
+                                    </>
                                   )}
                                 </Stack>
                               ))}
                             </Stack>
+
                            
                           </Box>
 
@@ -267,9 +286,9 @@ export default function NostradamagePrototype() {
                     onClick={() => handleButtonClick(event)}
                     sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}
                   >
-                      <JelloDiv>
+                   
                     {event}
-                      </JelloDiv>
+                     
                   </Button>
                 ))
               )}
