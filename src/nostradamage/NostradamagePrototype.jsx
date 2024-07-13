@@ -158,7 +158,7 @@ export default function NostradamagePrototype() {
               
 
               <FlashDiv>
-                {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Click to predict</Typography>}
+                {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Press to predict</Typography>}
               </FlashDiv>
               {expanded ? (
                 <>

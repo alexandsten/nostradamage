@@ -80,9 +80,9 @@ export default function NostradamageHome({setView}) {
               }}
             >
               <FlashDiv>
-                <h3>Click to try now!</h3>
+                <h3>Press to start!</h3>
               </FlashDiv>
-              
+
               <TadaDiv>
               <div className="image-container">
                 <img 
