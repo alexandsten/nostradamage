@@ -216,7 +216,7 @@ export default function NostradamagePrototype() {
                             borderRadius: '15px',
                             border: '3px solid white',
                             transition: 'background-image 1.8s', // Add transition for smooth effect
-                          
+                            height: visiblePulseDivs[matchupName] ? '100%' : '4em'
                           }}
                           >
                            
