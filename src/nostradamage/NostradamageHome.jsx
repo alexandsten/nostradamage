@@ -4,6 +4,7 @@ import { Typography, Stack, Grid } from '@mui/material';
 import styled, { keyframes } from 'styled-components';
 import fadeIn from 'react-animations/lib/fade-in';
 import tada from 'react-animations/lib/tada';
+import flash from 'react-animations/lib/flash';
 import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/fighter1.png';
@@ -16,6 +17,12 @@ export default function NostradamageHome({setView}) {
  
   const FadeInDiv = styled.div`
     animation: 5s ${fadeInAnimation};
+  `;
+
+  const flashAnimation = keyframes`${flash}`;
+
+  const FlashDiv = styled.div`
+    animation: 3s ${flashAnimation} infinite;
   `;
 
   const tadaAnimation = keyframes`${tada}`;
@@ -72,7 +79,10 @@ export default function NostradamageHome({setView}) {
                 textAlign: 'center' 
               }}
             >
-              <h3>Click to try now!</h3>
+              <FlashDiv>
+                <h3>Click to try now!</h3>
+              </FlashDiv>
+              
               <TadaDiv>
               <div className="image-container">
                 <img 

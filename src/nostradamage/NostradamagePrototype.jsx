@@ -150,12 +150,12 @@ export default function NostradamagePrototype() {
               sx={{ height: '100%', borderRadius: '10px', width: '100%'
               }}
             >
-              <JelloDiv>
+              
                 <Stack direction='row' gap={2} alignItems='flex-start' justifyContent='center' m={3}>
                   {/* <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={fighterLogo}/>  */}
                   <h2>Nostradamage</h2>            
                 </Stack>
-              </JelloDiv>
+              
 
               <FlashDiv>
                 {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Click to predict</Typography>}
@@ -241,7 +241,9 @@ export default function NostradamagePrototype() {
                     onClick={() => handleButtonClick(event)}
                     sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}
                   >
+                      <JelloDiv>
                     {event}
+                      </JelloDiv>
                   </Button>
                 ))
               )}
