@@ -27,12 +27,6 @@ export default function NostradamagePrototype() {
   const [expanded, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
-  const pulseAnimation = keyframes`${pulse}`;
-
-  const PulseDiv = styled.div`
-    animation: 2s ${pulseAnimation} infinite;
-  `;
-
   const flashAnimation = keyframes`${flash}`;
 
   const FlashDiv = styled.div`
@@ -44,6 +38,12 @@ export default function NostradamagePrototype() {
   const JelloDiv = styled.div`
     animation: 1s ${jelloAnimation};
   `;
+  const pulseAnimation = keyframes`${pulse}`;
+
+  const PulseDiv = styled.div`
+    animation: 2s ${pulseAnimation} infinite;
+  `;
+
   const firebaseConfig = {
     apiKey: "AIzaSyBFK9TBeGAkS-5-9zOS4HJog4n_EfITLKI",
     authDomain: "nostradamage-backend-01.firebaseapp.com",
@@ -227,7 +227,7 @@ export default function NostradamagePrototype() {
                             </Stack>
                             <Stack>
                               {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
-                                <Stack key={idx} flexDirection={'row'} gap={2}>
+                                <Stack key={idx} flexDirection={'column'} gap={2}>
                                   <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
                                     {fighter}:
                                   </Typography>
