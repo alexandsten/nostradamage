@@ -37,7 +37,7 @@ export default function NostradamageAbout() {
                   Co-creator
                 </Typography>
                 <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
-                  Data Scientist
+                  Data Scientist / Engineer
                 </Typography>
               </Stack>
             </Grid>
