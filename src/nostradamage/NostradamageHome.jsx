@@ -1,6 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import { Typography, Stack, Grid } from '@mui/material';
+import styled, { keyframes } from 'styled-components';
+import fadeIn from 'react-animations/lib/fade-in';
 import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/fighter1.png';
@@ -8,6 +10,12 @@ import texture2 from './img/texture2.jpg';
 import static2 from './img/static2.webp';
 
 export default function NostradamageHome({setView}) {
+  const fadeInAnimation = keyframes`${fadeIn}`;
+
+ 
+  const FadeInDiv = styled.div`
+    animation: 5s ${fadeInAnimation};
+  `;
   return (
     <Box
       sx={{
@@ -57,6 +65,7 @@ export default function NostradamageHome({setView}) {
                 textAlign: 'center' 
               }}
             >
+              <FadeInDiv>
               <h3>Click to try now!</h3>
               <div className="image-container">
                 <img 
@@ -71,6 +80,7 @@ export default function NostradamageHome({setView}) {
                   alt='fighter' 
                 />
               </div>
+              </FadeInDiv>
             </Grid>
             <Grid item xs={12} sm={12} md={4} p={4}>
             <h3>
