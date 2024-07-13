@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { Typography, Stack, Grid } from '@mui/material';
 import styled, { keyframes } from 'styled-components';
 import fadeIn from 'react-animations/lib/fade-in';
+import tada from 'react-animations/lib/tada';
 import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/fighter1.png';
@@ -15,6 +16,12 @@ export default function NostradamageHome({setView}) {
  
   const FadeInDiv = styled.div`
     animation: 5s ${fadeInAnimation};
+  `;
+
+  const tadaAnimation = keyframes`${tada}`;
+
+  const TadaDiv = styled.div`
+    animation: 1.8s ${tadaAnimation};
   `;
   return (
     <Box
@@ -65,8 +72,8 @@ export default function NostradamageHome({setView}) {
                 textAlign: 'center' 
               }}
             >
-              <FadeInDiv>
               <h3>Click to try now!</h3>
+              <TadaDiv>
               <div className="image-container">
                 <img 
                   className="fighterImage" 
@@ -80,7 +87,7 @@ export default function NostradamageHome({setView}) {
                   alt='fighter' 
                 />
               </div>
-              </FadeInDiv>
+              </TadaDiv>
             </Grid>
             <Grid item xs={12} sm={12} md={4} p={4}>
             <h3>

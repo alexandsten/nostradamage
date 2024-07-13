@@ -16,6 +16,10 @@ import pixelBackground1 from './img/pixBack3.gif';
 import pixelBackground2 from './img/pixBack4.gif';
 import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
+import pulse from 'react-animations/lib/pulse';
+import flash from 'react-animations/lib/flash';
+import jello from 'react-animations/lib/tada';
+import styled, { keyframes } from 'styled-components';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
@@ -23,6 +27,23 @@ export default function NostradamagePrototype() {
   const [expanded, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
+  const pulseAnimation = keyframes`${pulse}`;
+
+  const PulseDiv = styled.div`
+    animation: 2s ${pulseAnimation} infinite;
+  `;
+
+  const flashAnimation = keyframes`${flash}`;
+
+  const FlashDiv = styled.div`
+    animation: 3s ${flashAnimation} infinite;
+  `;
+
+  const jelloAnimation = keyframes`${jello}`;
+
+  const JelloDiv = styled.div`
+    animation: 1s ${jelloAnimation};
+  `;
   const firebaseConfig = {
     apiKey: "AIzaSyBFK9TBeGAkS-5-9zOS4HJog4n_EfITLKI",
     authDomain: "nostradamage-backend-01.firebaseapp.com",
@@ -99,6 +120,7 @@ export default function NostradamagePrototype() {
             maxHeight: '65vh'
           }}
         >
+          
         <Box
             sx={{
               display: 'flex',
@@ -128,12 +150,16 @@ export default function NostradamagePrototype() {
               sx={{ height: '100%', borderRadius: '10px', width: '100%'
               }}
             >
-              <Stack direction='row' gap={2} alignItems='flex-start' justifyContent='center' m={3}>
-                {/* <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={fighterLogo}/>  */}
-                <h2>Nostradamage</h2>            
-              </Stack>
-              
-              {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Click to open fight predictions</Typography>}
+              <JelloDiv>
+                <Stack direction='row' gap={2} alignItems='flex-start' justifyContent='center' m={3}>
+                  {/* <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={fighterLogo}/>  */}
+                  <h2>Nostradamage</h2>            
+                </Stack>
+              </JelloDiv>
+
+              <FlashDiv>
+                {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Click to predict</Typography>}
+              </FlashDiv>
               {expanded ? (
                 <>
                   <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans", fontSize: '1.3em' }}>
@@ -161,24 +187,26 @@ export default function NostradamagePrototype() {
                       >
                         {Object.keys(data[expanded]).map((matchupName, index) => (
                           <Box
-                            key={index}
-                            sx={{
-                              backgroundImage: `url(${staticBackground2})`,
-                              backgroundSize: 'cover', 
-                              padding: '8px',
-                              margin: '4px',
-                              marginTop: '2em',
-                              minWidth: '8em',
-                              maxWidth: '17em',
-                              flex: '1 1 30%',
-                              borderRadius: '15px',
-                              border: '3px solid white',
-                              transition: 'background-image 1.8s', // Add transition for smooth effect
-                              '&:hover': {
-                                backgroundImage: `url(${staticFilm})` // Darker color on hover
-                              },
-                            }}
+                          key={index}
+                          sx={{
+                            backgroundImage: `url(${staticBackground2})`,
+                            backgroundSize: 'cover', 
+                            padding: '12px',
+                            paddingLeft: '16px',
+                            margin: '4px',
+                            marginTop: '2em',
+                            minWidth: '8em',
+                            maxWidth: '17em',
+                            flex: '1 1 30%',
+                            borderRadius: '15px',
+                            border: '3px solid white',
+                            transition: 'background-image 1.8s', // Add transition for smooth effect
+                            '&:hover': {
+                              backgroundImage: `url(${staticFilm})` // Darker color on hover
+                            },
+                          }}
                           >
+                           
                             <Stack>
                                 <Typography className='data' sx={{ fontSize: '18px', color: 'white', fontFamily: 'VT323' }}>
                                   {matchupName}
@@ -186,12 +214,14 @@ export default function NostradamagePrototype() {
                             </Stack>
                             <Stack>
                               {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
-                                <Stack key={idx}>
+                               <PulseDiv>  <Stack key={idx}>
                                   <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>{fighter} {JSON.stringify(fighterData)}</Typography>
-                                </Stack>
+                                </Stack> </PulseDiv>
                               ))}
                             </Stack>
+                           
                           </Box>
+
                         ))}
                       </Box>
                     </Box>
