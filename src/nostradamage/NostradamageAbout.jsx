@@ -12,7 +12,6 @@ export default function NostradamageAbout() {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 33%)',
             margin: '0px',
             borderRadius: '12px',
             padding: '2em',
