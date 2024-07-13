@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTransition, animated } from '@react-spring/web'
+import { useState, useCallback, useRef, useEffect } from 'react'
+import styles from '../styles.module.css'
 import Box from '@mui/material/Box';
-import { Typography, Stack, Grid } from '@mui/material';
+import { Typography, Stack, Grid, useMediaQuery } from '@mui/material';
 import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/fighter1.png';
@@ -8,6 +11,40 @@ import texture2 from './img/texture2.jpg';
 import static2 from './img/static2.webp';
 
 export default function NostradamageHome({setView}) {
+
+  const isSmallScreen = useMediaQuery('(max-width:800px)');
+  const ref = useRef([]);
+  const [items, set] = useState([]);
+  const transitions = useTransition(items, {
+    from: {
+      opacity: 0,
+      height: 0,
+      innerHeight: 0,
+      transform: 'perspective(600px) rotateX(0deg)',
+      color: '#0d31d1',
+    },
+    enter: [
+      { opacity: 1, height: 80, innerHeight: 80 },
+      { transform: 'perspective(600px) rotateX(180deg)', color: '#ed652b' },
+      { transform: 'perspective(600px) rotateX(0deg)', color: '#0d31d1' },
+    ],
+    leave: [{ color: '#0d31d1' }, { innerHeight: 0 }, { opacity: 0, height: 0 }],
+    update: { color: '#ed652b' },
+  });
+
+  const reset = useCallback(() => {
+    ref.current.forEach(clearTimeout);
+    ref.current = [];
+    set([]);
+    ref.current.push(setTimeout(() => set(['NOSTRA', 'PREDICTIONS', 'DAMAGE']), 2000));
+    ref.current.push(setTimeout(() => set(['NOSTRA', 'DAMAGE']), 5000));
+    ref.current.push(setTimeout(() => set(['NOSTRA', 'DAMAGE', 'THE FUTURE OF PREDICTIONS - ']), 8000));
+  }, []);
+
+  useEffect(() => {
+    reset()
+    return () => ref.current.forEach(clearTimeout)
+  }, [])
   return (
     <Box
       sx={{
@@ -16,6 +53,21 @@ export default function NostradamageHome({setView}) {
         minHeight: '100vh',
       }}
     >
+       {!isSmallScreen && (
+        <Stack alignContent={'start'} alignItems={'flex-start'}   
+              sx={{ marginTop: '6em', maxHeight: '20vh', width: '100%', marginLeft: '10%'}}
+        >
+          <div className={styles.container}>
+            <div className={styles.main}>
+              {transitions(({ innerHeight, ...rest }, item) => (
+                <animated.div className={styles.transitionsItem} style={rest} onClick={reset}>
+                  <animated.div style={{ overflow: 'hidden', height: innerHeight }}>{item}</animated.div>
+                </animated.div>
+              ))}
+            </div>
+          </div>
+        </Stack>
+       )}
       <Box
         component="main"
         sx={{
@@ -33,6 +85,7 @@ export default function NostradamageHome({setView}) {
         >
           <h1>Nostradamage</h1>
           {/* <h3>The predictor of the octagon</h3> */}
+          
           <Grid container sx={{ width: '80%' }}>
             <Grid item xs={12} sm={12} md={4} p={4}>
               <h3>
@@ -41,6 +94,7 @@ export default function NostradamageHome({setView}) {
               <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
                 Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. 
               </Typography>
+             
             </Grid>
             <Grid 
               item 

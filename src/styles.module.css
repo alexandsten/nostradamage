@@ -1,0 +1,31 @@
+.main {
+    min-width: 100px;
+    padding: 0 20px;
+    margin: 0 auto;
+   
+  }
+  
+  .transitionsItem {
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    font-size: 3em;
+    font-weight: 800;
+    text-transform: uppercase;
+    will-change: transform, opacity, height;
+    white-space: nowrap;
+    cursor: pointer;
+    line-height: 50px;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    justify-content: center;
+    max-width: 80%;
+  }
+  
