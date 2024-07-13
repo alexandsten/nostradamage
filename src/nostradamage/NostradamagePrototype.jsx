@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
+import { useMediaQuery} from '@mui/material';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, get, goOffline, goOnline } from 'firebase/database';
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
@@ -26,6 +27,9 @@ export default function NostradamagePrototype() {
   const [toFetch, setToFetch] = useState(['UFC 302', 'UFC 303']);
   const [expanded, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
+
+  const isSmallScreen = useMediaQuery('(max-width:800px)');
+  const isSocialScreen = useMediaQuery('(max-width:1000px)');
 
   const flashAnimation = keyframes`${flash}`;
 
@@ -216,7 +220,7 @@ export default function NostradamagePrototype() {
                             borderRadius: '15px',
                             border: '3px solid white',
                             transition: 'background-image 1.8s', // Add transition for smooth effect
-                            height: visiblePulseDivs[matchupName] ? '100%' : '4em'
+                            // height: visiblePulseDivs[matchupName] ? '100%' : '4em'
                           }}
                           >
                            
@@ -227,7 +231,7 @@ export default function NostradamagePrototype() {
                             </Stack>
                             <Stack>
                               {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
-                                <Stack key={idx} flexDirection={'column'} gap={2}>
+                                <Stack key={idx} flexDirection={isSmallScreen ? 'column' : 'row' } gap={2}>
                                   <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
                                     {fighter}:
                                   </Typography>
