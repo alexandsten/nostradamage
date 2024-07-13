@@ -38,7 +38,7 @@ export default function NostradamageHome({setView}) {
     set([]);
     ref.current.push(setTimeout(() => set(['NOSTRA', 'PREDICTIONS', 'DAMAGE']), 2000));
     ref.current.push(setTimeout(() => set(['NOSTRA', 'DAMAGE']), 5000));
-    ref.current.push(setTimeout(() => set(['NOSTRADAMAGE', 'THE FUTURE', 'THE FUTURE OF PREDICTIONS - ']), 8000));
+    ref.current.push(setTimeout(() => set(['NOSTRA', 'DAMAGE', 'UNBIASED PREDICTIONS']), 8000));
   }, []);
 
   useEffect(() => {
