@@ -64,9 +64,11 @@ export default function MainMenu(props) {
          
           <img style={{ width: '3em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
           {!isSmallScreen && ( 
-            <p className='logo' >
-              Nostradamage
-            </p>
+             <Grid onClick={() => props.setSelectedItem('Home')} sx={{  cursor: "pointer", zIndex: 99 }}>
+              <p className='logo' >
+                Nostradamage
+              </p>
+            </Grid>
           )}  
         </Grid>
 
