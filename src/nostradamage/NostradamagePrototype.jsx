@@ -12,7 +12,7 @@ import black from './img/A_black_image.jpg';
 import staticBackground from './img/static3.gif';
 import staticBackground2 from './img/static1.webp';
 import fight from './img/fight.webp';
-import ndLogo from './img/NDLOGONEW.png'
+import ndLogo from './img/NostraLogo2.png'
 import pixelBackground1 from './img/pixBack3.gif';
 import pixelBackground2 from './img/pixBack4.gif';
 import staticFilm from './img/staticFilm.webp';
@@ -172,7 +172,7 @@ export default function NostradamagePrototype() {
             >
               
                 <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
-                  <img style={{ height: '2.5em', width: '2.5em', borderRadius: '50%'}} src={ndLogo}/> 
+                  <img style={{ height: '2.5em', width: '3.5em', borderRadius: '50%'}} src={ndLogo}/> 
                   <h2>Nostradamage</h2>            
                 </Stack>
               

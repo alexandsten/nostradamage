@@ -6,7 +6,7 @@ import 'react-social-icons/instagram'
 import 'react-social-icons/discord'
 import 'react-social-icons/x'
 import 'react-social-icons/tiktok'
-import nostraLogoColor from '../img/NDLOGONEW.png'
+import nostraLogoColor from '../img/NostraLogo2.png'
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" />
 
@@ -62,7 +62,7 @@ export default function MainMenu(props) {
       >
         <Grid item xs={12} sm={1} p={0.2} onClick={() => props.setSelectedItem('Home')} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row', cursor: "pointer", marginTop: '-1em' }}>
          
-          <img style={{ width: '3em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
+          <img style={{ width: '5em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
           {!isSmallScreen && ( 
              <Grid onClick={() => props.setSelectedItem('Home')} sx={{  cursor: "pointer", zIndex: 99 }}>
               <p className='logo' >
