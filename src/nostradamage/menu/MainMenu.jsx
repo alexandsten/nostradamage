@@ -6,7 +6,7 @@ import 'react-social-icons/instagram'
 import 'react-social-icons/discord'
 import 'react-social-icons/x'
 import 'react-social-icons/tiktok'
-import nostraLogoColor from '../img/NDLOGOICON.png'
+import nostraLogoColor from '../img/NDLOGONEW.png'
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" />
 
