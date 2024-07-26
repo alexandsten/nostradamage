@@ -172,7 +172,7 @@ export default function NostradamagePrototype() {
             >
               
                 <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
-                  <img style={{ height: '2.5em', width: '3.5em', borderRadius: '50%'}} src={ndLogo}/> 
+                  <img style={{ height: '2.5em', width: '3em', borderRadius: '50%'}} src={ndLogo}/> 
                   <h2>Nostradamage</h2>            
                 </Stack>
               

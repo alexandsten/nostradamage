@@ -62,7 +62,7 @@ export default function MainMenu(props) {
       >
         <Grid item xs={12} sm={1} p={0.2} onClick={() => props.setSelectedItem('Home')} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row', cursor: "pointer", marginTop: '-1em' }}>
          
-          <img style={{ width: '5em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
+          <img style={{ width: '4em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
           {!isSmallScreen && ( 
              <Grid onClick={() => props.setSelectedItem('Home')} sx={{  cursor: "pointer", zIndex: 99 }}>
               <p className='logo' >
