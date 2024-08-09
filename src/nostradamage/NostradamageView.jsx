@@ -4,7 +4,7 @@ import Stack from '@mui/material/Stack';
 import MainMenu from './menu/MainMenu';
 import NostradamageVision from './NostradamageVision';
 import NostradamageHome from './NostradamageHome';
-import NostradamageDemo from './NostradamageDemo';
+import NostradamageSub from './NostradamageSub';
 import NostradamagePrototype from './NostradamagePrototype';
 import NostradamageAbout from './NostradamageAbout';
 import bgImage from './img/texture2.jpg';
@@ -66,7 +66,7 @@ export default function NostradamageView() {
             {selectedItem === 'Vision' && <NostradamageVision />}
             {selectedItem === 'Prototype' && <NostradamagePrototype />}
             {selectedItem === 'About' && <NostradamageAbout />}
-            {selectedItem === 'Demo' && <NostradamageDemo />}
+            {selectedItem === 'Sub' && <NostradamageSub />}
           </Box>
         </Stack>
         <Box

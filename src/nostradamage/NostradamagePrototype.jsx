@@ -28,8 +28,8 @@ export default function NostradamagePrototype() {
   const [expanded, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
-  const isSmallScreen = useMediaQuery('(max-width:800px)');
-  const isSocialScreen = useMediaQuery('(max-width:1000px)');
+  const isSmallScreen = useMediaQuery('(max-width:1200px)');
+  const isSocialScreen = useMediaQuery('(max-width:1400px)');
 
   const flashAnimation = keyframes`${flash}`;
 
@@ -221,7 +221,7 @@ export default function NostradamagePrototype() {
                             margin: '4px',
                             marginTop: '2em',
                             minWidth: '8em',
-                            maxWidth: '17em',
+                            maxWidth: isSmallScreen ? '12em' : isSocialScreen ? '14em' : '16em',
                             flex: '1 1 30%',
                             borderRadius: '15px',
                             border: '3px solid white',

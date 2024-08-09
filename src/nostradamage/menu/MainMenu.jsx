@@ -94,26 +94,33 @@ export default function MainMenu(props) {
           </Grid>
            )} */}
           {!isSmallScreen && (
-          <Grid item onClick={() => props.setSelectedItem('Home')}>
-            <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
-                Home
-            </Typography>
-          </Grid>
+            <Grid item onClick={() => props.setSelectedItem('Home')}>
+              <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+                  Home
+              </Typography>
+            </Grid>
           )}
             {!isSmallScreen && (
-          <Grid item onClick={() => props.setSelectedItem('Prototype')}>
-              <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
-                Prototype
-              </Typography>
+              <Grid item onClick={() => props.setSelectedItem('Prototype')}>
+                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+                    Prototype
+                  </Typography>
 
-            </Grid>
+                </Grid>
              )}
               {!isSmallScreen && (
-            <Grid item onClick={() => props.setSelectedItem('About')}>
-              <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
-                About us
-              </Typography>
-            </Grid>
+                <Grid item onClick={() => props.setSelectedItem('About')}>
+                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+                    About us
+                  </Typography>
+                </Grid>
+             )}
+               {!isSmallScreen && (
+                <Grid item onClick={() => props.setSelectedItem('Sub')}>
+                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+                    Subsciption
+                  </Typography>
+                </Grid>
              )}
               {isSmallScreen && (
           <Grid  sx={{
@@ -162,6 +169,14 @@ export default function MainMenu(props) {
                 onClick={() => props.setSelectedItem('About')}
               >
                 About us
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                onClick={() => props.setSelectedItem('Sub')}
+              >
+                Subscription
               </Typography>
             </Grid>
           </Grid>
