@@ -27,7 +27,7 @@ export default function NostradamageDemo() {
           <Grid 
             container 
             justifyContent='center' 
-            alignItems='center' 
+            alignItems='top' 
             spacing={4} 
             sx={{ maxWidth: 'lg' }}
           >
@@ -42,6 +42,18 @@ export default function NostradamageDemo() {
                 <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
                   Includes: 
                 </Typography>
+                <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                  Predictions for early prelims 
+                </Typography>
+                <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                  Predictions for prelims 
+                </Typography>
+                <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                  Predictions for main card 
+                </Typography>
+                <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                  Fighter data statistics 
+                </Typography>
               </Stack>
             </Grid>
             <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -54,6 +66,15 @@ export default function NostradamageDemo() {
                 </Typography>
                 <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
                   Includes: 
+                </Typography>
+                <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                  Predictions for early prelims 
+                </Typography>
+                <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                  Predictions for prelims 
+                </Typography>
+                <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                  Predictions for main card 
                 </Typography>
               </Stack>
             </Grid>
