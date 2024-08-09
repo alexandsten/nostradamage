@@ -32,7 +32,10 @@ export default function NostradamageDemo() {
             gap={3}
             sx={{ maxWidth: 'lg' }}
           >
-            <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center', backgroundColor: '#d4af37', borderRadius: '15px' }}>
+            <Grid item xs={12} md={4}
+             direction='column' alignItems='top' justifyContent='center'
+             sx={{ display: 'flex', justifyContent: 'center', backgroundColor: '#d4af37', borderRadius: '15px' }}
+             >
               <Stack direction='column' alignItems='center'>
                 <Typography sx={{ margin: '1em', fontSize: '22px', fontWeight: 'bold', fontFamily: "Pixelify Sans", color: 'black' }}>
                   Monthly membership
@@ -57,7 +60,9 @@ export default function NostradamageDemo() {
                 </Typography>
               </Stack>
             </Grid>
-            <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center', backgroundColor: '#C0C0C0', borderRadius: '15px' }}>
+            <Grid item xs={12} md={4} direction='column' justifyContent='center' alignItems='top' 
+              sx={{ display: 'flex', justifyContent: 'center', backgroundColor: '#C0C0C0', borderRadius: '15px' }}
+            >
               <Stack direction='column' alignItems='center'>
                 <Typography sx={{ margin: '1em', fontSize: '22px', fontWeight: 'bold', fontFamily: "Pixelify Sans", color: 'black' }}>
                   One time fee
