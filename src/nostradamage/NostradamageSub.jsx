@@ -74,7 +74,7 @@ export default function NostradamageDemo() {
               justifyContent: 'center', 
               alignItems: 'flex-start', 
               backgroundColor: '#C0C0C0', 
-              borderRadius: '15px' 
+              borderRadius: '15px',
             }}
           >
             <Stack direction='column' alignItems='flex-start' justifyContent='flex-start' sx={{ height: '100%' }}>

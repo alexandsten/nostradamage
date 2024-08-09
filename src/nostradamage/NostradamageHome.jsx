@@ -36,18 +36,21 @@ export default function NostradamageHome({setView}) {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
+        
       }}
     >
       <Box
         component="main"
         sx={{
           flexGrow: 1,
+          
         }}
       >
         <Stack
           sx={{
             width: '100vw',
-            minHeight: '90vh',
+            minHeight: '70vh',
+            
           }}
           alignItems="center"
           justifyContent="center"
@@ -76,7 +79,8 @@ export default function NostradamageHome({setView}) {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                textAlign: 'center' 
+                textAlign: 'center' ,
+                
               }}
             >
               <FlashDiv>
@@ -113,13 +117,14 @@ export default function NostradamageHome({setView}) {
 
         <Stack
           mt={3}
-          pt={3}
+          pt={20}
           sx={{
             background: 'radial-gradient(circle, rgba(0, 0, 150, 1) 35%, rgba(0, 0, 90, 1) 40%, rgba(0, 0, 30, 1) 40%)',
             backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.7), rgba(0, 0, 0, 0.9)), url(${texture2})`,
             backgroundSize: 'cover', 
             width: '100vw',
-            minHeight: '100vh'
+            minHeight: '100vh',
+            clipPath: 'polygon(0 15%, 25% 10%, 50% 15%, 75% 10%, 100% 15%, 100% 100%, 0 100%)',
           }}
           alignItems="center"
           justifyContent="center"
