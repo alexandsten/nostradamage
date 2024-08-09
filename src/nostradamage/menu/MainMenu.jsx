@@ -108,17 +108,17 @@ export default function MainMenu(props) {
 
                 </Grid>
              )}
+                {!isSmallScreen && (
+                   <Grid item onClick={() => props.setSelectedItem('Sub')}>
+                     <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+                       Subscription
+                     </Typography>
+                   </Grid>
+                )}
               {!isSmallScreen && (
                 <Grid item onClick={() => props.setSelectedItem('About')}>
                   <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
                     About us
-                  </Typography>
-                </Grid>
-             )}
-               {!isSmallScreen && (
-                <Grid item onClick={() => props.setSelectedItem('Sub')}>
-                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
-                    Subsciption
                   </Typography>
                 </Grid>
              )}
@@ -166,17 +166,17 @@ export default function MainMenu(props) {
             <Grid item>
               <Typography
                 sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                onClick={() => props.setSelectedItem('About')}
+                onClick={() => props.setSelectedItem('Sub')}
               >
-                About us
+                Subscription
               </Typography>
             </Grid>
             <Grid item>
               <Typography
                 sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                onClick={() => props.setSelectedItem('Sub')}
+                onClick={() => props.setSelectedItem('About')}
               >
-                Subscription
+                About us
               </Typography>
             </Grid>
           </Grid>
