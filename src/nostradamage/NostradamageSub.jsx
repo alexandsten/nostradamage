@@ -15,17 +15,22 @@ export default function NostradamageDemo() {
           margin: '0px',
           borderRadius: '12px',
           padding: '2em',
-          flexDirection: 'row',
+          flexDirection: 'column',
           minHeight: '80vh',
         }}
+        gap={2}
       >
+        <h2>Subsription model</h2>
+        <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'bold', fontFamily: "Pixelify Sans" }}>
+           The Subsription model is in development.
+        </Typography>
         <Grid 
           container 
           justifyContent='center' 
           alignItems='stretch' 
           spacing={4} 
           gap={3} 
-          sx={{ maxWidth: 'lg' }}
+          sx={{ maxWidth: 'lg', flexDirection: 'row', marginTop: '1em' }}
         >
           <Grid 
             item xs={12} md={4} 
