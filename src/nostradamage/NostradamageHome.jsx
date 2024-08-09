@@ -51,6 +51,7 @@ export default function NostradamageHome({setView}) {
           sx={{
             width: '100vw',
             minHeight: '40vh',
+            marginBottom: '-10em'
           }}
           alignItems="center"
           justifyContent="center"
@@ -118,14 +119,14 @@ export default function NostradamageHome({setView}) {
 
         <Stack
           mt={3}
-          pt={30}
+          pt={50}
           sx={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 255, 0.7)), url(${texture2})`,
 
             backgroundSize: 'cover', 
             width: '100vw',
             minHeight: '100vh',
-            clipPath: 'polygon(0 20%, 20% 10%, 40% 20%, 60% 10%, 80% 20%, 100% 10%, 100% 100%, 0 100%)',
+            clipPath: 'polygon(0 30%, 50% 20%, 100% 10%, 100% 100%, 0 100%)',
 
           }}
           alignItems="center"
