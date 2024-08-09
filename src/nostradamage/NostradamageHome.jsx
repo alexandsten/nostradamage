@@ -47,13 +47,14 @@ export default function NostradamageHome({setView}) {
         }}
       >
         <Stack
+          pt={5}
           sx={{
             width: '100vw',
-            minHeight: '70vh',
-            
+            minHeight: '40vh',
           }}
           alignItems="center"
           justifyContent="center"
+
           flexDirection="column"
         >
           <h1>Nostradamage</h1>
@@ -117,14 +118,15 @@ export default function NostradamageHome({setView}) {
 
         <Stack
           mt={3}
-          pt={20}
+          pt={30}
           sx={{
-            background: 'radial-gradient(circle, rgba(0, 0, 150, 1) 35%, rgba(0, 0, 90, 1) 40%, rgba(0, 0, 30, 1) 40%)',
-            backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.7), rgba(0, 0, 0, 0.9)), url(${texture2})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 255, 0.7)), url(${texture2})`,
+
             backgroundSize: 'cover', 
             width: '100vw',
             minHeight: '100vh',
-            clipPath: 'polygon(0 15%, 25% 10%, 50% 15%, 75% 10%, 100% 15%, 100% 100%, 0 100%)',
+            clipPath: 'polygon(0 20%, 20% 10%, 40% 20%, 60% 10%, 80% 20%, 100% 10%, 100% 100%, 0 100%)',
+
           }}
           alignItems="center"
           justifyContent="center"
