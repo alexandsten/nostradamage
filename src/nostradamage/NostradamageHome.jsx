@@ -9,7 +9,6 @@ import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/fighter1.png';
 import texture2 from './img/texture2.jpg';
-import static2 from './img/static2.webp';
 
 export default function NostradamageHome({setView}) {
   const fadeInAnimation = keyframes`${fadeIn}`;
@@ -121,7 +120,8 @@ export default function NostradamageHome({setView}) {
           mt={3}
           pt={50}
           sx={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 255, 0.7)), url(${texture2})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 102, 0, 0.7)), url(${texture2})`,
+
 
             backgroundSize: 'cover', 
             width: '100vw',

@@ -22,7 +22,7 @@ export default function NostradamageView() {
           body: {
             margin: 0,
             padding: 0,
-            background: '#ed652b',
+            background: 'black',
             overflowX: 'hidden',
             // background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
             // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${texture2})`,
@@ -73,8 +73,8 @@ export default function NostradamageView() {
         component="footer"
         sx={{
           width: '100%',
-          backgroundColor: '#ed652b',
-          borderTop: 'black solid 1px',
+          backgroundColor: 'black',
+          borderTop: '#ed652b solid 1px',
           boxShadow: '0 -4px 8px rgba(0, 0, 0, 0.2)',
           color: 'white',
           textAlign: 'center',

@@ -50,11 +50,12 @@ export default function MainMenu(props) {
           padding: '10px',
           paddingBottom: '0px',
           margin: '0px',
-          backgroundColor: '#ed652b',
+          borderBottom: '3px solid #ed652b',
           paddingRight: '50px',
           zIndex: 5000,
           overflowX: 'hidden',
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.7)',
+          backgroundColor: 'black'
           // '@media (min-width: 1100px)': {
           //   maxWidth: 'calc(100% - 50px)', // Adjust width for larger screens
           // },
