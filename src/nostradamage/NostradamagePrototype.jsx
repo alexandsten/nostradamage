@@ -20,6 +20,9 @@ import styled, { keyframes } from 'styled-components';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
+  const LIAM = import.meta.env.VITE_API_LIAM;
+  const WORD = import.meta.env.VITE_API_WORD;
+
   const [toFetch, setToFetch] = useState(['UFC 302', 'UFC 303', 'UFC 304', 'UFC 305', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
   const [expanded, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
@@ -62,7 +65,7 @@ export default function NostradamagePrototype() {
     setExpanded(event);
     if (!data[event]) {
       try {
-        await signInWithEmailAndPassword(auth, 'alex.andsten@gmail.com', 'jagvetiS11');
+        await signInWithEmailAndPassword(auth, LIAM, WORD);
         console.log('User signed in successfully');
 
         goOnline(database);
