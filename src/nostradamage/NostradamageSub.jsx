@@ -30,6 +30,7 @@ export default function NostradamageDemo() {
           alignItems='stretch' 
           spacing={4} 
           gap={3} 
+          width={'80%'}
           sx={{ maxWidth: 'lg', flexDirection: 'row', marginTop: '1em' }}
         >
           <Grid 

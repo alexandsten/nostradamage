@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
 import staticBackground2 from './img/static1.webp';
 import fight from './img/fight.webp';
-import pixelBackground1 from './img/pixBack3.gif';
+import pixelBackground1 from './img/static2.webp';
 import pixelBackground2 from './img/pixBack4.gif';
 import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
