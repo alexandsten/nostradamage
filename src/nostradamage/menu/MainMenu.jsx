@@ -104,7 +104,7 @@ export default function MainMenu(props) {
             {!isSmallScreen && (
               <Grid item onClick={() => props.setSelectedItem('Prototype')}>
                   <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
-                    Prototype
+                    Predictions
                   </Typography>
 
                 </Grid>
