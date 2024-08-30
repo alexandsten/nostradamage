@@ -14,9 +14,9 @@ export default function NostradamageHome({setView}) {
   const fadeInAnimation = keyframes`${fadeIn}`;
 
  
-  const FadeInDiv = styled.div`
-    animation: 5s ${fadeInAnimation};
-  `;
+  // const FadeInDiv = styled.div`
+  //   animation: 5s ${fadeInAnimation};
+  // `;
 
   const flashAnimation = keyframes`${flash}`;
 
