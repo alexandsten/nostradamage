@@ -106,7 +106,6 @@ export default function MainMenu(props) {
                   <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
                     Predictions
                   </Typography>
-
                 </Grid>
              )}
                 {!isSmallScreen && (
