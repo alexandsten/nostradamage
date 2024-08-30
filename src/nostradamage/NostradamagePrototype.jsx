@@ -20,7 +20,7 @@ import styled, { keyframes } from 'styled-components';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
-  const LIAM = import.meta.env.VITE_API_LIAM;
+  const USER = import.meta.env.VITE_API_USER;
   const WORD = import.meta.env.VITE_API_WORD;
 
   const [toFetch, setToFetch] = useState(['UFC 302', 'UFC 303', 'UFC 304', 'UFC 305', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
@@ -48,13 +48,13 @@ export default function NostradamagePrototype() {
   `;
 
   const firebaseConfig = {
-    apiKey: "AIzaSyBFK9TBeGAkS-5-9zOS4HJog4n_EfITLKI",
-    authDomain: "nostradamage-backend-01.firebaseapp.com",
-    projectId: "nostradamage-backend-01",
-    storageBucket: "nostradamage-backend-01.appspot.com",
-    messagingSenderId: "381854619282",
-    appId: "1:381854619282:web:2b2c211d9613baf52bf84b",
-    databaseURL: 'https://nostradamage-backend-01-default-rtdb.europe-west1.firebasedatabase.app/', 
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_API_DOM,
+    projectId: import.meta.env.VITE_API_ID,
+    storageBucket: import.meta.env.VITE_API_BUCKET,
+    messagingSenderId: import.meta.env.VITE_API_MSGID,
+    appId: import.meta.env.VITE_API_APPID,
+    databaseURL: import.meta.env.VITE_API_URL, 
   };
 
   const firebaseApp = initializeApp(firebaseConfig);
@@ -65,7 +65,7 @@ export default function NostradamagePrototype() {
     setExpanded(event);
     if (!data[event]) {
       try {
-        await signInWithEmailAndPassword(auth, LIAM, WORD);
+        await signInWithEmailAndPassword(auth, USER, WORD);
         console.log('User signed in successfully');
 
         goOnline(database);
