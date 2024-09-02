@@ -24,7 +24,7 @@ export default function NostradamagePrototype() {
   const WORD = import.meta.env.VITE_API_WORD;
 
   const [toFetch, setToFetch] = useState(['UFC 302', 'UFC 303', 'UFC 304', 'UFC 305', 'UFC Fight Night Burns vs Brady', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
-  const [expanded, setExpanded] = useState(null);
+  const [expandedEvent, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
   const isSmallScreen = useMediaQuery('(max-width:1200px)');
@@ -143,7 +143,7 @@ export default function NostradamagePrototype() {
         <Box
             sx={{
               display: 'flex',
-              backgroundImage: expanded 
+              backgroundImage: expandedEvent
                 ? `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.8)), url(${pixelBackground1})` 
                 : `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.7)), url(${pixelBackground2})`,
               backgroundSize: 'cover', 
@@ -172,19 +172,24 @@ export default function NostradamagePrototype() {
               
                 <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
                   {/* <img style={{ height: '2.5em', width: '3em', borderRadius: '50%'}} src={ndLogo}/>  */}
-                  <h2>Nostradamage</h2>            
+                  <h2>Nostradamage</h2>   
+                           
                 </Stack>
-              
+                <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
+                      <Typography className='data' sx={{ fontSize: '32px', color: 'white', fontFamily: 'VT323' }}>
+                        {expandedEvent}
+                      </Typography>
+                  </Stack>
 
               <FlashDiv>
-                {!expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Press to predict</Typography>}
+                {!expandedEvent && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Press to predict</Typography>}
               </FlashDiv>
-              {expanded ? (
+              {expandedEvent ? (
                 <>
                   <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans", fontSize: '1.3em' }}>
                     Reset
                   </Button>
-                  {data[expanded] ? (
+                  {data[expandedEvent] ? (
                     <Box
                       sx={{
                         marginTop: '20px',
@@ -195,8 +200,9 @@ export default function NostradamagePrototype() {
                         flexDirection: 'column'
                       }}
                     >
+                      
                        <FlashDiv>
-                        {expanded && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Press to predict</Typography>}
+                        {expandedEvent && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Press to predict</Typography>}
                       </FlashDiv>
                       <Box
                         sx={{
@@ -207,7 +213,7 @@ export default function NostradamagePrototype() {
                           gap: '1em', // Add gap between items
                         }}
                       >
-                        {Object.keys(data[expanded]).map((matchupName, index) => (
+                        {Object.keys(data[expandedEvent]).map((matchupName, index) => (
                           <Box
                           onClick={() => toggleVisibility(matchupName)}
                           key={index}
@@ -235,7 +241,7 @@ export default function NostradamagePrototype() {
                                 </Typography>
                             </Stack>
                             <Stack>
-                              {Object.entries(data[expanded][matchupName]).map(([fighter, fighterData], idx) => (
+                              {Object.entries(data[expandedEvent][matchupName]).map(([fighter, fighterData], idx) => (
                                 <Stack key={idx} flexDirection={isSmallScreen ? 'column' : 'row'} gap={2}>
                                   <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
                                     {fighter}:
