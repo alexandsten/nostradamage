@@ -1,6 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import goldBg from './img/goldBg.jpg';
+import silverBg from './img/silverBg.jpg';
 import { Grid, Stack } from '@mui/material';
 
 export default function NostradamageDemo() {
@@ -39,7 +41,8 @@ export default function NostradamageDemo() {
               display: 'flex', 
               justifyContent: 'center', 
               alignItems: 'flex-start', 
-              backgroundColor: '#d4af37', 
+              backgroundImage: `url(${goldBg})`, 
+              backgroundSize: 'cover',
               borderRadius: '15px' 
             }}
           >
@@ -74,7 +77,8 @@ export default function NostradamageDemo() {
               display: 'flex', 
               justifyContent: 'center', 
               alignItems: 'flex-start', 
-              backgroundColor: '#C0C0C0', 
+              backgroundImage: `url(${silverBg})`, 
+              backgroundSize: 'cover',
               borderRadius: '15px',
             }}
           >
