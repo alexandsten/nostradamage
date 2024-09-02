@@ -10,6 +10,7 @@ import { Stack } from '@mui/material';
 import staticBackground2 from './img/static1.webp';
 import fight from './img/fight.webp';
 import pixelBackground1 from './img/static2.webp';
+import blackImage from './img/black.jpg';
 import pixelBackground2 from './img/pixBack4.gif';
 import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
@@ -206,9 +207,11 @@ export default function NostradamagePrototype() {
                       </FlashDiv>
                       <Box
                         sx={{
-                          width: '40vw',
+                          width: '100%',
                           display: 'flex',
                           flexDirection: 'row',
+                          justifyContent: 'flex-start',
+                          alignItems: 'flex-start',
                           flexWrap: 'wrap', // Add flexWrap to allow items to wrap
                           gap: '1em', // Add gap between items
                         }}
@@ -218,15 +221,15 @@ export default function NostradamagePrototype() {
                           onClick={() => toggleVisibility(matchupName)}
                           key={index}
                           sx={{
-                            backgroundImage: visiblePulseDivs[matchupName] ? `url(${staticFilm})` : `url(${staticBackground2})`,
+                            backgroundImage: visiblePulseDivs[matchupName] ? `url(${blackImage})` : `url(${staticBackground2})`,
                             cursor: "pointer",
                             backgroundSize: 'cover', 
                             padding: '12px',
                             paddingLeft: '16px',
                             margin: '4px',
                             marginTop: '2em',
-                            minWidth: '8em',
-                            maxWidth: isSmallScreen ? '12em' : isSocialScreen ? '14em' : '16em',
+                            minWidth: '50%',
+                            // maxWidth: isSmallScreen ? '12em' : isSocialScreen ? '14em' : '16em',
                             flex: '1 1 30%',
                             borderRadius: '15px',
                             border: '3px solid white',
