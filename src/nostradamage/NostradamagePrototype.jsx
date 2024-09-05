@@ -185,7 +185,9 @@ export default function NostradamagePrototype() {
               </FlashDiv>
               {expandedEvent ? (
                 <>
-                  <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans", fontSize: '1.3em', backgroundColor: '#ed652b' }}>
+                  <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans", fontSize: '1.3em', backgroundColor: '#ed652b',  '&:hover': {
+                      backgroundColor: '#b6451a', 
+                    }, }}>
                     Reset
                   </Button>
                   {data[expandedEvent] ? (
@@ -291,7 +293,9 @@ export default function NostradamagePrototype() {
                       key={index}
                       variant="contained"
                       onClick={() => handleButtonClick(event)}
-                      sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", backgroundColor: '#ed652b' }}
+                      sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", backgroundColor: '#ed652b',  '&:hover': {
+                        backgroundColor: '#b6451a', 
+                      }, }}
                     >
                     
                       {event}
