@@ -28,7 +28,7 @@ export default function NostradamageAbout() {
           >
             <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
               <Stack direction='column' alignItems='center'>
-                <img style={{ height: '250px', width: '200px', borderRadius: '10px'}} src='https://m.media-amazon.com/images/M/MV5BMjYxOTE3MzEyNF5BMl5BanBnXkFtZTYwNTM5MjUz._V1_FMjpg_UX1000_.jpg' />
+                
                 <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
                   Jonathan
                 </Typography>
@@ -42,7 +42,7 @@ export default function NostradamageAbout() {
             </Grid>
             <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
               <Stack direction='column' alignItems='center'>
-                <img style={{ height: '250px', width: '200px', borderRadius: '10px'}} src='https://m.media-amazon.com/images/M/MV5BMTc3NTM4MDQwNl5BMl5BanBnXkFtZTYwNDY0MjY1._V1_FMjpg_UX1000_.jpg' />
+                
                 <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
                   Alex
                 </Typography>

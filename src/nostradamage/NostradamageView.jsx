@@ -40,57 +40,58 @@ export default function NostradamageView() {
         }}
       >
         <MainMenu setSelectedItem={setSelectedItem} />
-        <Stack
-          sx={{
-            // backgroundImage: `linear-gradient(rgba(0, 0, 150, 0.1), rgba(11, 21, 74, 0.6)), url(${bgImage})`,
-            // backgroundSize: 'cover', 
-            // backgroundColor: '#ed652b',
-            // minHeight: '850px',
-            overflow: 'hidden'
-          }}
-        >
-          <Box
+          <Stack
             sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              flexDirection: 'column',
-              background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${texture2})`,
-              backgroundSize: 'cover',
-              alignItems: 'center',
-              padding: '0px',
-              margin: '0px',
+              // backgroundImage: `linear-gradient(rgba(0, 0, 150, 0.1), rgba(11, 21, 74, 0.6)), url(${bgImage})`,
+              // backgroundSize: 'cover', 
+              // backgroundColor: '#ed652b',
+              // minHeight: '850px',
+              overflow: 'hidden'
             }}
           >
-            {selectedItem === 'Home' && <NostradamageHome setView={setSelectedItem} />}
-            {selectedItem === 'Vision' && <NostradamageVision />}
-            {selectedItem === 'Prototype' && <NostradamagePrototype />}
-            {selectedItem === 'About' && <NostradamageAbout />}
-            {selectedItem === 'Sub' && <NostradamageSub />}
-          </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                flexDirection: 'column',
+                background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${texture2})`,
+                backgroundSize: 'cover',
+                alignItems: 'center',
+                padding: '0px',
+                margin: '0px',
+              }}
+            >
+              {selectedItem === 'Home' && <NostradamageHome setView={setSelectedItem} />}
+              {selectedItem === 'Vision' && <NostradamageVision />}
+              {selectedItem === 'Prototype' && <NostradamagePrototype />}
+              {selectedItem === 'About' && <NostradamageAbout />}
+              {selectedItem === 'Sub' && <NostradamageSub />}
+            </Box>
+          </Stack>
+          <Stack
+          component="footer"
+          sx={{
+            width: '100%',
+            backgroundColor: 'black',
+            borderTop: '#ed652b solid 1px',
+            boxShadow: '0 -4px 8px rgba(0, 0, 0, 0.2)',
+            color: 'white',
+            textAlign: 'center',
+            padding: '1em 0',
+          }}
+          gap={1}
+        >
+          <Typography variant="body2">
+            &copy; 2024 Nostradamage. All rights reserved.
+          </Typography>
+          <Typography variant="body2">
+            Contact us: <a href="mailto:info@nostradamage.com" style={{ color: 'inherit' }}>info@nostradamage.com</a>, 1234 Nostradamage Lane, Imaginary City, 56789
+          </Typography>
+          <Typography sx={{ color: 'white', fontFamily: "Gotu", fontSize: '8px' }}>
+              Background images Designed by Freepik, picture created by Craiyon
+          </Typography>
         </Stack>
-        <Box
-        component="footer"
-        sx={{
-          width: '100%',
-          backgroundColor: 'black',
-          borderTop: '#ed652b solid 1px',
-          boxShadow: '0 -4px 8px rgba(0, 0, 0, 0.2)',
-          color: 'white',
-          textAlign: 'center',
-          padding: '1em 0',
-        }}
-      >
-        <Typography variant="body2">
-          &copy; 2024 Nostradamage. All rights reserved.
-        </Typography>
-        <Typography variant="body2">
-          Contact us: <a href="mailto:info@nostradamage.com" style={{ color: 'inherit' }}>info@nostradamage.com</a>, 1234 Nostradamage Lane, Imaginary City, 56789
-        </Typography>
-        <Typography sx={{ color: 'white', fontFamily: "Gotu", fontSize: '8px' }}>
-            Background images Designed by Freepik, picture created by Craiyon
-        </Typography>
-      </Box>
       </Stack>
     </>
   );
