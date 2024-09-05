@@ -238,10 +238,10 @@ export default function NostradamagePrototype() {
                           >
                            
                             <Stack width={'100%'} justifyContent={'center'} alignItems={'center'}>
-                                <Typography className='data' sx={{ fontSize: '24px', color: 'white', 
-                                  fontFamily: 'VT323' }}>
-                                  {matchupName}
-                                </Typography>
+                              <Typography className='data' sx={{ fontSize: '24px', color: 'white', 
+                                fontFamily: 'VT323' }}>
+                                {matchupName}
+                              </Typography>
                             </Stack>
                             <Stack>
                               {Object.entries(data[expandedEvent][matchupName]).map(([fighter, fighterData], idx) => (
@@ -291,7 +291,7 @@ export default function NostradamagePrototype() {
                       key={index}
                       variant="contained"
                       onClick={() => handleButtonClick(event)}
-                      sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}
+                      sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", backgroundColor: '#ed652b' }}
                     >
                     
                       {event}
