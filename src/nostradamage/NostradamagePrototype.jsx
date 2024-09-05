@@ -16,7 +16,7 @@ import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/textureCracked.jpg';
 import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
-import jello from 'react-animations/lib/tada';
+import fadeIn from 'react-animations/lib/fade-in';
 import styled, { keyframes } from 'styled-components';
 
 export default function NostradamagePrototype() {
@@ -34,14 +34,13 @@ export default function NostradamagePrototype() {
   const flashAnimation = keyframes`${flash}`;
 
   const FlashDiv = styled.div`
-    animation: 3s ${flashAnimation} infinite;
-  `;
+    animation: 3s ${flashAnimation} infinite;`;
 
-  const jelloAnimation = keyframes`${jello}`;
+  const jelloAnimation = keyframes`${fadeIn}`;
 
   const JelloDiv = styled.div`
-    animation: 1s ${jelloAnimation};
-  `;
+    animation: 1s ${jelloAnimation};`;
+
   const pulseAnimation = keyframes`${pulse}`;
 
   const PulseDiv = styled.div`
@@ -217,7 +216,7 @@ export default function NostradamagePrototype() {
                         }}
                       >
                         {Object.keys(data[expandedEvent]).map((matchupName, index) => (
-                          <Box
+                          <Stack
                           onClick={() => toggleVisibility(matchupName)}
                           key={index}
                           sx={{
@@ -236,21 +235,23 @@ export default function NostradamagePrototype() {
                             transition: 'background-image 1.8s', // Add transition for smooth effect
                             // height: visiblePulseDivs[matchupName] ? '100%' : '4em'
                           }}
+                            gap={1}
                           >
                            
-                            <Stack>
-                                <Typography className='data' sx={{ fontSize: '18px', color: 'white', fontFamily: 'VT323' }}>
+                            <Stack width={'100%'} justifyContent={'center'} alignItems={'center'}>
+                                <Typography className='data' sx={{ fontSize: '24px', color: 'white', 
+                                  fontFamily: 'VT323' }}>
                                   {matchupName}
                                 </Typography>
                             </Stack>
                             <Stack>
                               {Object.entries(data[expandedEvent][matchupName]).map(([fighter, fighterData], idx) => (
-                                <Stack key={idx} flexDirection={isSmallScreen ? 'column' : 'row'} gap={2}>
-                                  <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
+                                <Stack key={idx} flexDirection={isSmallScreen ? 'column' : 'row'} gap={2} mt={4} >
+                                  {/* <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
                                     {fighter}:
-                                  </Typography>
+                                  </Typography> */}
                                   {visiblePulseDivs[matchupName] && (
-                                    <>
+                                    <Stack  width={'100%'} justifyContent={'center'} alignItems={'center'}>
                                       {latestClick == matchupName ? (
                                         <JelloDiv>
                                           <PulseDiv>
@@ -266,15 +267,12 @@ export default function NostradamagePrototype() {
                                           </Typography>
                                         </PulseDiv>
                                       )}
-                                    </>
+                                    </ Stack>
                                   )}
                                 </Stack>
                               ))}
                             </Stack>
-
-                           
-                          </Box>
-
+                          </Stack>
                         ))}
                       </Box>
                     </Box>
