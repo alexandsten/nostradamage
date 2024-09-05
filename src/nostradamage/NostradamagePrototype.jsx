@@ -44,8 +44,7 @@ export default function NostradamagePrototype() {
   const pulseAnimation = keyframes`${pulse}`;
 
   const PulseDiv = styled.div`
-    animation: 2s ${pulseAnimation} infinite;
-  `;
+    animation: 2s ${pulseAnimation} infinite; `;
 
   const firebaseConfig = {
     apiKey: import.meta.env.VITE_API_KEY,

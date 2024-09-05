@@ -4,6 +4,7 @@ import { Typography, Stack, Grid } from '@mui/material';
 import styled, { keyframes } from 'styled-components';
 import fadeIn from 'react-animations/lib/fade-in';
 import tada from 'react-animations/lib/tada';
+import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
 import '../../src/fonts/fonts.css';
 import './styles.css';
@@ -17,6 +18,11 @@ export default function NostradamageHome({setView}) {
   // const FadeInDiv = styled.div`
   //   animation: 5s ${fadeInAnimation};
   // `;
+  
+  const pulseAnimation = keyframes`${pulse}`;
+
+  const PulseDiv = styled.div`
+  animation: 2s ${pulseAnimation} infinite; `;
 
   const flashAnimation = keyframes`${flash}`;
 
@@ -88,21 +94,23 @@ export default function NostradamageHome({setView}) {
                 <h3>Press to start!</h3>
               </FlashDiv>
 
-              <TadaDiv>
-              <div className="image-container">
-                <img 
-                  className="fighterImage" 
-                  src={fighter1} 
-                  style={{ 
-                    width: '20em', 
-                    height: '20em', 
-                    borderRadius: '50%', 
-                    alignSelf: 'center' 
-                  }} 
-                  alt='fighter' 
-                />
-              </div>
-              </TadaDiv>
+              <PulseDiv>
+                <TadaDiv>
+                  <div className="image-container">
+                    <img 
+                      className="fighterImage" 
+                      src={fighter1} 
+                      style={{ 
+                        width: '20em', 
+                        height: '20em', 
+                        borderRadius: '50%', 
+                        alignSelf: 'center' 
+                      }} 
+                      alt='fighter' 
+                    />
+                  </div>
+                </TadaDiv>
+              </PulseDiv>
             </Grid>
             <Grid item xs={12} sm={12} md={4} p={4}>
             <h3>
