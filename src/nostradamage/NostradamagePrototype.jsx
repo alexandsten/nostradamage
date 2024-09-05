@@ -219,7 +219,7 @@ export default function NostradamagePrototype() {
                           onClick={() => toggleVisibility(matchupName)}
                           key={index}
                           sx={{
-                            backgroundImage: visiblePulseDivs[matchupName] ? `url(${blackImage})` : `url(${staticBackground2})`,
+                            backgroundImage: visiblePulseDivs[matchupName] ? `url(${staticBackground2})` : `url(${blackImage})` ,
                             cursor: "pointer",
                             backgroundSize: 'cover', 
                             padding: '12px',
@@ -230,7 +230,7 @@ export default function NostradamagePrototype() {
                             // maxWidth: isSmallScreen ? '12em' : isSocialScreen ? '14em' : '16em',
                             flex: '1 1 30%',
                             // borderRadius: '15px',
-                            border: '0.5em solid #ed652b',
+                            border: visiblePulseDivs[matchupName] ? '0.5em solid #ed652b' : '0.5em solid white',
                             transition: 'background-image 1.8s', // Add transition for smooth effect
                             // height: visiblePulseDivs[matchupName] ? '100%' : '4em'
                           }}
