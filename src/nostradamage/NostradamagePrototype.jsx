@@ -285,7 +285,7 @@ export default function NostradamagePrototype() {
                 </>
               ) : (
                 toFetch.map((event, index) => (
-                  <Stack sx={{ backgroundColor: 'black', width: '50%' }}>
+                  <Stack sx={{ backgroundColor: 'black', width: isSmallScreen ? '100%' : '50%' }}>
                     <Button
                       key={index}
                       variant="contained"
