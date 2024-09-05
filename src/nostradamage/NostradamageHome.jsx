@@ -12,13 +12,13 @@ import fighter1 from './img/fighter1.png';
 import texture2 from './img/texture2.jpg';
 
 export default function NostradamageHome({setView}) {
+
   const fadeInAnimation = keyframes`${fadeIn}`;
 
- 
-  // const FadeInDiv = styled.div`
-  //   animation: 5s ${fadeInAnimation};
-  // `;
-  
+  const FadeInDiv = styled.div`
+    animation: 5s ${fadeInAnimation};
+  `;
+
   const pulseAnimation = keyframes`${pulse}`;
 
   const PulseDiv = styled.div`
@@ -70,9 +70,11 @@ export default function NostradamageHome({setView}) {
               <h3>
                 Revolutionizing UFC Predictions
               </h3>
-              <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
-                Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. 
-              </Typography>
+              <FadeInDiv>
+                <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
+                  Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. 
+                </Typography>
+              </FadeInDiv>
             </Grid>
             <Grid 
               item 
@@ -116,9 +118,11 @@ export default function NostradamageHome({setView}) {
             <h3>
             Disclaimer
             </h3>
-            <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
-               We do not take responsibility for any bets placed based on our predictions. Enjoy the excitement of Nostradamage, but please gamble responsibly and at your own risk.
+            <FadeInDiv>
+              <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
+                We do not take responsibility for any bets placed based on our predictions. Enjoy the excitement of Nostradamage, but please gamble responsibly and at your own risk.
               </Typography>
+            </FadeInDiv>
             </Grid>
           </Grid>
           

@@ -36,10 +36,10 @@ export default function NostradamagePrototype() {
   const FlashDiv = styled.div`
     animation: 3s ${flashAnimation} infinite;`;
 
-  const jelloAnimation = keyframes`${fadeIn}`;
+  const fadeAnimation = keyframes`${fadeIn}`;
 
-  const JelloDiv = styled.div`
-    animation: 1s ${jelloAnimation};`;
+  const FadeDiv = styled.div`
+    animation: 1.5s ${fadeAnimation};`;
 
   const pulseAnimation = keyframes`${pulse}`;
 
@@ -252,13 +252,13 @@ export default function NostradamagePrototype() {
                                   {visiblePulseDivs[matchupName] && (
                                     <Stack  width={'100%'} justifyContent={'center'} alignItems={'center'}>
                                       {latestClick == matchupName ? (
-                                        <JelloDiv>
+                                        <FadeDiv>
                                           <PulseDiv>
                                             <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
                                               {JSON.stringify(fighterData)}
                                             </Typography>
                                           </PulseDiv>
-                                        </JelloDiv>
+                                        </FadeDiv>
                                       ) : (
                                         <PulseDiv>
                                           <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
