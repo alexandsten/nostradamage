@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import { Stack } from '@mui/material';
 import staticBackground2 from './img/static1.webp';
 import fight from './img/fight.webp';
-import pixelBackground1 from './img/static2.webp';
+import pixelBackground1 from './img/pixBack3.gif';
 import blackImage from './img/black.jpg';
 import pixelBackground2 from './img/pixBack4.gif';
 import staticFilm from './img/staticFilm.webp';
@@ -143,7 +143,7 @@ export default function NostradamagePrototype() {
             sx={{
               display: 'flex',
               backgroundImage: expandedEvent
-                ? `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.8)), url(${pixelBackground1})` 
+                ? `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.7)), url(${pixelBackground1})` 
                 : `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.7)), url(${pixelBackground2})`,
               backgroundSize: 'cover', 
               backgroundPosition: 'center bottom',
@@ -158,7 +158,7 @@ export default function NostradamagePrototype() {
               maxHeight: '50vh',
               overflowY: 'auto', 
               overflowX: 'hidden',
-              border: '8px solid black', 
+              border: '8px solid black',
             }}
           >
     
@@ -185,7 +185,7 @@ export default function NostradamagePrototype() {
               </FlashDiv>
               {expandedEvent ? (
                 <>
-                  <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans", fontSize: '1.3em' }}>
+                  <Button variant="contained" onClick={resetView} sx={{ marginBottom: '1em', maxWidth: '18em', fontFamily: "Pixelify Sans", fontSize: '1.3em', backgroundColor: '#ed652b' }}>
                     Reset
                   </Button>
                   {data[expandedEvent] ? (
@@ -230,7 +230,7 @@ export default function NostradamagePrototype() {
                             // maxWidth: isSmallScreen ? '12em' : isSocialScreen ? '14em' : '16em',
                             flex: '1 1 30%',
                             borderRadius: '15px',
-                            border: '3px solid white',
+                            border: '3px solid #ed652b',
                             transition: 'background-image 1.8s', // Add transition for smooth effect
                             // height: visiblePulseDivs[matchupName] ? '100%' : '4em'
                           }}
