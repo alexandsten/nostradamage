@@ -286,16 +286,18 @@ export default function NostradamagePrototype() {
                 </>
               ) : (
                 toFetch.map((event, index) => (
-                  <Button
-                    key={index}
-                    variant="contained"
-                    onClick={() => handleButtonClick(event)}
-                    sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}
-                  >
-                   
-                    {event}
-                     
-                  </Button>
+                  <Stack sx={{ backgroundColor: 'black', width: '50%' }}>
+                    <Button
+                      key={index}
+                      variant="contained"
+                      onClick={() => handleButtonClick(event)}
+                      sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}
+                    >
+                    
+                      {event}
+                      
+                    </Button> 
+                  </Stack>
                 ))
               )}
             </Stack>
