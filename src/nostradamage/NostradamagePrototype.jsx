@@ -143,8 +143,8 @@ export default function NostradamagePrototype() {
             sx={{
               display: 'flex',
               backgroundImage: expandedEvent
-                ? `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.7)), url(${pixelBackground1})` 
-                : `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.7)), url(${pixelBackground2})`,
+                ? `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.6)), url(${pixelBackground1})` 
+                : `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.6)), url(${pixelBackground2})`,
               backgroundSize: 'cover', 
               backgroundPosition: 'center bottom',
               justifyContent: 'center',
