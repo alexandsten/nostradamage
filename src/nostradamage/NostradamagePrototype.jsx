@@ -229,8 +229,8 @@ export default function NostradamagePrototype() {
                             minWidth: '50%',
                             // maxWidth: isSmallScreen ? '12em' : isSocialScreen ? '14em' : '16em',
                             flex: '1 1 30%',
-                            borderRadius: '15px',
-                            border: '3px solid #ed652b',
+                            // borderRadius: '15px',
+                            border: '0.5em solid #ed652b',
                             transition: 'background-image 1.8s', // Add transition for smooth effect
                             // height: visiblePulseDivs[matchupName] ? '100%' : '4em'
                           }}
