@@ -88,7 +88,7 @@ export default function NostradamageView() {
           Contact us: <a href="mailto:info@nostradamage.com" style={{ color: 'inherit' }}>info@nostradamage.com</a>, 1234 Nostradamage Lane, Imaginary City, 56789
         </Typography>
         <Typography sx={{ color: 'white', fontFamily: "Gotu", fontSize: '8px' }}>
-            Background images Designed by Freepik
+            Background images Designed by Freepik, picture created by Craiyon
         </Typography>
       </Box>
       </Stack>
