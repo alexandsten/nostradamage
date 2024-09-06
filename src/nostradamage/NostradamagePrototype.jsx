@@ -263,11 +263,9 @@ export default function NostradamagePrototype() {
                                           </PulseDiv>
                                         </FadeDiv>
                                       ) : (
-                                        <PulseDiv>
                                           <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
                                             {JSON.stringify(fighterData)}
                                           </Typography>
-                                        </PulseDiv>
                                       )}
                                     </ Stack>
                                   )}
