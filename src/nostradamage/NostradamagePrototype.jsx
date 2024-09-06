@@ -221,14 +221,15 @@ export default function NostradamagePrototype() {
                           onClick={() => toggleVisibility(matchupName)}
                           key={index}
                           sx={{
-                            backgroundImage: visiblePulseDivs[matchupName] ? `url(${staticBackground2})` : `url(${blackImage})` ,
+                            // backgroundImage: visiblePulseDivs[matchupName] ? `url(${staticBackground2})` : `url(${blackImage})` ,
                             cursor: "pointer",
-                            backgroundSize: 'cover', 
+                            // backgroundSize: 'cover', 
                             padding: '12px',
                             paddingLeft: '16px',
                             margin: '4px',
                             marginTop: '2em',
                             minWidth: '50%',
+                            backgroundColor: 'black',
                             // maxWidth: isSmallScreen ? '12em' : isSocialScreen ? '14em' : '16em',
                             flex: '1 1 30%',
                             // borderRadius: '15px',
