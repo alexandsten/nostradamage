@@ -184,19 +184,37 @@ export default function NostradamagePrototype() {
             >
               
                 <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
-                  {/* <img style={{ height: '2.5em', width: '3em', borderRadius: '50%'}} src={ndLogo}/>  */}
-                  <SlideInLeftDiv>
-                    <Typography className='data' 
-                      style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
-                        Nostra
-                      </Typography>
-                  </SlideInLeftDiv>
-                  <SlideInRightDiv>
-                    <Typography className='data' 
-                      style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
-                        damage
-                      </Typography>
-                  </SlideInRightDiv>
+                  {
+                    expandedEvent ? (
+                        <>
+                          <Typography className='data' 
+                            style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                              Nostra
+                            </Typography>
+                        
+                          <Typography className='data' 
+                            style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                              damage
+                            </Typography>
+                        </>
+                    ) : (
+                      <>
+                        <SlideInLeftDiv>
+                          <Typography className='data' 
+                            style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                              Nostra
+                            </Typography>
+                        </SlideInLeftDiv>
+                        <SlideInRightDiv>
+                          <Typography className='data' 
+                            style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                              damage
+                            </Typography>
+                        </SlideInRightDiv>
+                      </>
+                    )
+                  }
+                  
                      
                            
                 </Stack>
