@@ -186,10 +186,16 @@ export default function NostradamagePrototype() {
                 <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
                   {/* <img style={{ height: '2.5em', width: '3em', borderRadius: '50%'}} src={ndLogo}/>  */}
                   <SlideInLeftDiv>
-                    <h2>Nostra</h2>
+                    <Typography className='data' 
+                      style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                        Nostra
+                      </Typography>
                   </SlideInLeftDiv>
                   <SlideInRightDiv>
-                    <h2>damage</h2>
+                    <Typography className='data' 
+                      style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                        damage
+                      </Typography>
                   </SlideInRightDiv>
                      
                            
