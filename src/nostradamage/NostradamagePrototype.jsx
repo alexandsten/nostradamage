@@ -13,11 +13,13 @@ import pixelBackground1 from './img/pixBack3.gif';
 import blackImage from './img/black.jpg';
 import pixelBackground2 from './img/pixBack4.gif';
 import staticFilm from './img/staticFilm.webp';
-import monitorTexture from './img/textureCracked.jpg';
+import monitorTexture from './img/orangeBack.jpg';
 import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
 import fadeIn from 'react-animations/lib/fade-in';
 import styled, { keyframes } from 'styled-components';
+import slideInRight from 'react-animations/lib/slide-in-right';
+import slideInLeft from 'react-animations/lib/slide-in-left';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
@@ -30,6 +32,18 @@ export default function NostradamagePrototype() {
 
   const isSmallScreen = useMediaQuery('(max-width:1200px)');
   const isSocialScreen = useMediaQuery('(max-width:1400px)');
+
+  const SlideInRightAnimation = keyframes`${slideInRight}`;
+
+  const SlideInRightDiv = styled.div`
+    animation: 2s ${SlideInRightAnimation};
+  `;
+
+  const SlideInLeftAnimation = keyframes`${slideInLeft}`;
+
+  const SlideInLeftDiv = styled.div`
+    animation: 2s ${SlideInLeftAnimation};
+  `;
 
   const flashAnimation = keyframes`${flash}`;
 
@@ -171,7 +185,13 @@ export default function NostradamagePrototype() {
               
                 <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
                   {/* <img style={{ height: '2.5em', width: '3em', borderRadius: '50%'}} src={ndLogo}/>  */}
-                  <h2>Nostradamage</h2>   
+                  <SlideInLeftDiv>
+                    <h2>Nostra</h2>
+                  </SlideInLeftDiv>
+                  <SlideInRightDiv>
+                    <h2>damage</h2>
+                  </SlideInRightDiv>
+                     
                            
                 </Stack>
                 <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
