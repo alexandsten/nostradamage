@@ -70,12 +70,10 @@ export default function NostradamageHome({setView}) {
               <h3>
                 Revolutionizing UFC Predictions
               </h3>
-              <FadeInDiv>
                 <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
                   Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. 
                 </Typography>
-              </FadeInDiv>
-            </Grid>
+              </Grid>
             <Grid 
               item 
               xs={12} 
@@ -115,14 +113,12 @@ export default function NostradamageHome({setView}) {
               </PulseDiv>
             </Grid>
             <Grid item xs={12} sm={12} md={4} p={4}>
-            <h3>
-            Disclaimer
-            </h3>
-            <FadeInDiv>
+              <h3>
+                Disclaimer
+              </h3>
               <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
                 We do not take responsibility for any bets placed based on our predictions. Enjoy the excitement of Nostradamage, but please gamble responsibly and at your own risk.
               </Typography>
-            </FadeInDiv>
             </Grid>
           </Grid>
           
