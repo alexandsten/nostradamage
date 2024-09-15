@@ -139,36 +139,44 @@ export default function MainMenu(props) {
             <Stack role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
               <Grid container direction="column" spacing={2} sx={{ padding: '20px', backgroundColor: '#141414', height: '102vh', overflow: 'hidden' }}>
                 <Grid item>
-                  <Typography
-                    sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                    onClick={() => props.setSelectedItem('Home')}
-                  >
-                    Home
-                  </Typography>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    <Typography
+                      sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                      onClick={() => props.setSelectedItem('Home')}
+                    >
+                      Home
+                    </Typography>
+                  </Link>
                 </Grid>
                 <Grid item>
-                  <Typography
-                    sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                    onClick={() => props.setSelectedItem('Prototype')}
-                  >
-                    Prototype
-                  </Typography>
+                  <Link to="/predictor" style={{ textDecoration: 'none' }}>
+                    <Typography
+                      sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                      onClick={() => props.setSelectedItem('Prototype')}
+                    >
+                      Prototype
+                    </Typography>
+                  </Link>
                 </Grid>
                 <Grid item>
-                  <Typography
-                    sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                    onClick={() => props.setSelectedItem('Sub')}
-                  >
-                    Subscription
-                  </Typography>
+                  <Link to="/subscription" style={{ textDecoration: 'none' }}>
+                    <Typography
+                      sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                      onClick={() => props.setSelectedItem('Sub')}
+                    >
+                      Subscription
+                    </Typography>
+                  </Link>
                 </Grid>
                 <Grid item>
-                <Typography
-                  sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                  onClick={() => props.setSelectedItem('About')}
-                >
-                  About us
-                </Typography>
+                  <Link to="/about" style={{ textDecoration: 'none' }}>
+                    <Typography
+                      sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                      onClick={() => props.setSelectedItem('About')}
+                    >
+                      About us
+                    </Typography>
+                </Link>
               </Grid>
             </Grid>
           </Stack>

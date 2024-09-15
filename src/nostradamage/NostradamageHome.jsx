@@ -12,6 +12,7 @@ import './styles.css';
 import fighter1 from './img/fighter1.png';
 import texture2 from './img/texture2.jpg';
 import NostradamageFooter from './NostradamageFooter';
+import { Link } from 'react-router-dom';
 
 export default function NostradamageHome({setView}) {
 
@@ -141,19 +142,21 @@ export default function NostradamageHome({setView}) {
 
                         <PulseDiv>
                           <TadaDiv>
-                            <div className="image-container">
-                              <img 
-                                className="fighterImage" 
-                                src={fighter1} 
-                                style={{ 
-                                  width: '20em', 
-                                  height: '20em', 
-                                  borderRadius: '50%', 
-                                  alignSelf: 'center' 
-                                }} 
-                                alt='fighter' 
-                              />
-                            </div>
+                            <Link to="/predictor" style={{ textDecoration: 'none' }}>
+                              <div className="image-container">
+                                <img 
+                                  className="fighterImage" 
+                                  src={fighter1} 
+                                  style={{ 
+                                    width: '20em', 
+                                    height: '20em', 
+                                    borderRadius: '50%', 
+                                    alignSelf: 'center' 
+                                  }} 
+                                  alt='fighter' 
+                                />
+                              </div>
+                            </Link>
                           </TadaDiv>
                         </PulseDiv>
                       </Grid>
