@@ -62,20 +62,22 @@ export default function MainMenu(props) {
           // },
         }}
       >
+        
         <Grid item xs={12} sm={1} p={0.2} onClick={() => props.setSelectedItem('Home')} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'row', cursor: "pointer", marginTop: '-1em' }}>
-         
-          <img style={{ width: '4em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
-          {!isSmallScreen && ( 
-            <Link to="/" style={{ textDecoration: 'none' }}>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <img style={{ width: '4em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
+          </Link>
+            {!isSmallScreen && ( 
               <Grid onClick={() => props.setSelectedItem('Home')} sx={{  cursor: "pointer", zIndex: 99 }}>
-                <p className='logo' >
-                  Nostradamage
-                </p>
+                 <Link to="/" style={{ textDecoration: 'none' }}>
+                  <p className='logo' >
+                    Nostradamage
+                  </p>
+                </Link>
               </Grid>
-            </Link>
-          )}  
+            )}  
         </Grid>
-
+        
         <Grid container item xs={12} sm={11} spacing={2} justifyContent={'flex-end'} gap={3}>
           {!isSmallScreen && (
             <Link to="/" style={{ textDecoration: 'none' }}>
