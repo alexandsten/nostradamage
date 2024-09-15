@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Grid, Typography, Avatar, IconButton, Drawer, Stack, useMediaQuery, GlobalStyles} from '@mui/material';
 // import { Menu as MenuIcon } from '@mui/icons-material';
 import { SocialIcon } from 'react-social-icons';
@@ -65,62 +66,52 @@ export default function MainMenu(props) {
          
           <img style={{ width: '4em', height: '3em', marginRight: '2em' }} src={nostraLogoColor} />
           {!isSmallScreen && ( 
-             <Grid onClick={() => props.setSelectedItem('Home')} sx={{  cursor: "pointer", zIndex: 99 }}>
-              <p className='logo' >
-                Nostradamage
-              </p>
-            </Grid>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Grid onClick={() => props.setSelectedItem('Home')} sx={{  cursor: "pointer", zIndex: 99 }}>
+                <p className='logo' >
+                  Nostradamage
+                </p>
+              </Grid>
+            </Link>
           )}  
         </Grid>
 
-        <Grid container item xs={12} sm={11} spacing={2} justifyContent={'flex-end'}>
-        {/* {!isSocialScreen && (
-          <Grid item >
-            <SocialIcon url="https://www.tiktok.com" style={{ width: '40px', height: '40px' }}/>
-          </Grid>
-           )}
-           {!isSocialScreen && (
-          <Grid item >
-            <SocialIcon url="https://www.instagram.com" style={{ width: '40px', height: '40px' }}/>
-          </Grid>
-           )}
-           {!isSocialScreen && (
-          <Grid item >
-            <SocialIcon url="https://www.x.com" style={{ width: '40px', height: '40px' }}/>
-          </Grid>
-           )}
-           {!isSocialScreen && (
-          <Grid item sx={{ marginRight: '5%'}}>
-            <SocialIcon url="https://www.discord.com" style={{ width: '40px', height: '40px' }}/>
-          </Grid>
-           )} */}
+        <Grid container item xs={12} sm={11} spacing={2} justifyContent={'flex-end'} gap={3}>
           {!isSmallScreen && (
-            <Grid item onClick={() => props.setSelectedItem('Home')}>
-              <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Home' ? '#ed652b' : 'white' }}>
-                  Home
-              </Typography>
-            </Grid>
+            <Link to="/" style={{ textDecoration: 'none' }}>
+              <Grid item onClick={() => props.setSelectedItem('Home')}>
+                <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Home' ? '#ed652b' : 'white' }}>
+                    Home
+                </Typography>
+              </Grid>
+            </Link>
           )}
             {!isSmallScreen && (
-              <Grid item onClick={() => props.setSelectedItem('Prototype')}>
-                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Prototype' ? '#ed652b' : 'white' }}>
-                    Predictions
-                  </Typography>
-                </Grid>
+              <Link to="/predictor" style={{ textDecoration: 'none' }}>
+                <Grid item onClick={() => props.setSelectedItem('Prototype')}>
+                    <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Prototype' ? '#ed652b' : 'white' }}>
+                      Predictions
+                    </Typography>
+                  </Grid>
+                </Link>
              )}
                 {!isSmallScreen && (
-                   <Grid item onClick={() => props.setSelectedItem('Sub')}>
-                     <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Sub' ? '#ed652b' : 'white' }}>
-                       Subscription
-                     </Typography>
-                   </Grid>
+                  <Link to="/subscription" style={{ textDecoration: 'none' }}>
+                    <Grid item onClick={() => props.setSelectedItem('Sub')}>
+                      <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Sub' ? '#ed652b' : 'white' }}>
+                        Subscription
+                      </Typography>
+                    </Grid>
+                   </Link>
                 )}
               {!isSmallScreen && (
-                <Grid item onClick={() => props.setSelectedItem('About')}>
-                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'About' ? '#ed652b' : 'white' }}>
-                    About us
-                  </Typography>
-                </Grid>
+                <Link to="/about" style={{ textDecoration: 'none' }}>
+                  <Grid item onClick={() => props.setSelectedItem('About')}>
+                    <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'About' ? '#ed652b' : 'white' }}>
+                      About us
+                    </Typography>
+                  </Grid>
+                </Link>
              )}
             {isSmallScreen && (
               <Grid  sx={{

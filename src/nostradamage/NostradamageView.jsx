@@ -24,9 +24,6 @@ export default function NostradamageView() {
             padding: 0,
             background: 'black',
             overflowX: 'hidden',
-            // background: 'radial-gradient(circle, rgba(255,185,0,1) 0%, #ed652b 60%)',
-            // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${texture2})`,
-            // backgroundSize: 'cover',
           },
           html: {
             margin: 0,
@@ -42,10 +39,6 @@ export default function NostradamageView() {
         <MainMenu setSelectedItem={setSelectedItem} selectedItem={selectedItem} />
           <Stack
             sx={{
-              // backgroundImage: `linear-gradient(rgba(0, 0, 150, 0.1), rgba(11, 21, 74, 0.6)), url(${bgImage})`,
-              // backgroundSize: 'cover', 
-              // backgroundColor: '#ed652b',
-              // minHeight: '850px',
               overflow: 'hidden'
             }}
           >

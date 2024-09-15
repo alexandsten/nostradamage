@@ -1,20 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
-import Header from './components/Header'
-import MovieAPI from './components/MovieAPI'
-import Footer from './components/Footer'
-import NostradamageView from './nostradamage/NostradamageView'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NostradamageView from './nostradamage/NostradamageView';
 import '../src/fonts/fonts.css';
+import NostradamageHome from './nostradamage/NostradamageHome';
+import NostradamagePrototype from './nostradamage/NostradamagePrototype';
+import NostradamageSub from './nostradamage/NostradamageSub';
+import NostradamageAbout from './nostradamage/NostradamageAbout';
 
 function App() {
-
   return (
     <>
-     <NostradamageView />
+      <Router>
+        <Routes>
+          <Route path="/" element={<NostradamageHome />} />
+          <Route path="/predictor" element={<NostradamagePrototype />} />
+          <Route path="/subscription" element={<NostradamageSub />} />
+          <Route path="/about" element={<NostradamageAbout />} />
+          <Route path="/nostradamage" element={<NostradamageView />} /> 
+        </Routes>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
