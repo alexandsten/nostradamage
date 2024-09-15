@@ -96,92 +96,92 @@ export default function MainMenu(props) {
            )} */}
           {!isSmallScreen && (
             <Grid item onClick={() => props.setSelectedItem('Home')}>
-              <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+              <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Home' ? '#ed652b' : 'white' }}>
                   Home
               </Typography>
             </Grid>
           )}
             {!isSmallScreen && (
               <Grid item onClick={() => props.setSelectedItem('Prototype')}>
-                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Prototype' ? '#ed652b' : 'white' }}>
                     Predictions
                   </Typography>
                 </Grid>
              )}
                 {!isSmallScreen && (
                    <Grid item onClick={() => props.setSelectedItem('Sub')}>
-                     <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+                     <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Sub' ? '#ed652b' : 'white' }}>
                        Subscription
                      </Typography>
                    </Grid>
                 )}
               {!isSmallScreen && (
                 <Grid item onClick={() => props.setSelectedItem('About')}>
-                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}>
+                  <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'About' ? '#ed652b' : 'white' }}>
                     About us
                   </Typography>
                 </Grid>
              )}
-              {isSmallScreen && (
-          <Grid  sx={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            marginTop: '20px', // Adjust margin as needed
-            marginRight: '20px', // Adjust margin as needed
-            overflowX: 'hidden',
-          }} item>
-            <IconButton onClick={toggleDrawer(true)} sx={{ paddingRight: '1em'}} >
-            <svg xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-1.5em' }} width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
-            </IconButton>
+            {isSmallScreen && (
+              <Grid  sx={{
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                marginTop: '20px', // Adjust margin as needed
+                marginRight: '20px', // Adjust margin as needed
+                overflowX: 'hidden',
+              }} item>
+                <IconButton onClick={toggleDrawer(true)} sx={{ paddingRight: '1em'}} >
+                <svg xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-1.5em' }} width="1em" height="1em" viewBox="0 0 512 512"><path fill="white" d="M80 96h352v32H80zm0 144h352v32H80zm0 144h352v32H80z"/></svg>
+                </IconButton>
+              </Grid>
+              )}
+            </Grid>
           </Grid>
-           )}
-        </Grid>
-      </Grid>
 
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={toggleDrawer(false)}
-        sx={{ zIndex: 9999 }}
-      >
-        <Stack role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-          <Grid container direction="column" spacing={2} sx={{ padding: '20px', backgroundColor: '#141414', height: '102vh', overflow: 'hidden' }}>
-            <Grid item>
-              <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                onClick={() => props.setSelectedItem('Home')}
-              >
-                Home
-              </Typography>
+          <Drawer
+            anchor="right"
+            open={drawerOpen}
+            onClose={toggleDrawer(false)}
+            sx={{ zIndex: 9999 }}
+          >
+            <Stack role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+              <Grid container direction="column" spacing={2} sx={{ padding: '20px', backgroundColor: '#141414', height: '102vh', overflow: 'hidden' }}>
+                <Grid item>
+                  <Typography
+                    sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                    onClick={() => props.setSelectedItem('Home')}
+                  >
+                    Home
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                    onClick={() => props.setSelectedItem('Prototype')}
+                  >
+                    Prototype
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography
+                    sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                    onClick={() => props.setSelectedItem('Sub')}
+                  >
+                    Subscription
+                  </Typography>
+                </Grid>
+                <Grid item>
+                <Typography
+                  sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                  onClick={() => props.setSelectedItem('About')}
+                >
+                  About us
+                </Typography>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                onClick={() => props.setSelectedItem('Prototype')}
-              >
-                Prototype
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                onClick={() => props.setSelectedItem('Sub')}
-              >
-                Subscription
-              </Typography>
-            </Grid>
-            <Grid item>
-              <Typography
-                sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
-                onClick={() => props.setSelectedItem('About')}
-              >
-                About us
-              </Typography>
-            </Grid>
-          </Grid>
-        </Stack>
-      </Drawer>
+          </Stack>
+        </Drawer>
     </>
   );
 }

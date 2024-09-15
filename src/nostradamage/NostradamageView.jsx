@@ -39,7 +39,7 @@ export default function NostradamageView() {
           width: '100%'
         }}
       >
-        <MainMenu setSelectedItem={setSelectedItem} />
+        <MainMenu setSelectedItem={setSelectedItem} selectedItem={selectedItem} />
           <Stack
             sx={{
               // backgroundImage: `linear-gradient(rgba(0, 0, 150, 0.1), rgba(11, 21, 74, 0.6)), url(${bgImage})`,

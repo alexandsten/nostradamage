@@ -16,7 +16,7 @@ export default function NostradamageAbout() {
             borderRadius: '12px',
             padding: '2em',
             flexDirection: 'row',
-            minHeight: '80vh'
+            minHeight: '50vh'
           }}
         >
           <Grid 
