@@ -11,6 +11,7 @@ import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/fighter1.png';
 import texture2 from './img/texture2.jpg';
+import staticBack from './img/static1.webp';
 import NostradamageFooter from './NostradamageFooter';
 import { Link } from 'react-router-dom';
 
@@ -196,9 +197,9 @@ export default function NostradamageHome({setView}) {
                         height: '35em',
                         width: '70%',
                         backgroundColor: 'white',
-                        // backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${static2})`,
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${staticBack})`,
                         backgroundSize: 'cover', 
-                        border: '8px solid black',
+                        border: '8px solid white',
                         borderRadius: '2em',
                         marginTop: '2em'
                       }}
@@ -209,13 +210,13 @@ export default function NostradamageHome({setView}) {
                     >
                     
                       {/* <iframe title="netflix2" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiZTk2MzRmMzUtMzk3Yy00ZWZhLTlkMTktZjJkYWE5YTY0MDdlIiwidCI6ImY3NGUwNTA1LWMyODMtNDljZC04ODU5LWVkNDJjMmJmZDc5NCJ9" frameborder="0" allowFullScreen="true"></iframe> */}
-                      <Typography sx={{fontSize: '1.8em', fontFamily: 'VT323', color: 'black' }}>
+                      <Typography sx={{fontSize: '1.8em', fontFamily: 'VT323', color: 'white' }}>
                         Dynamic power BI stats coming soon
                       </Typography>
                     </Stack>
                     <Stack m={3} justifyContent={'center'} alignItems={'center'}>
                       <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>66% success rate over the last 6 months</Typography>
-                      <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>3/5 correct picks for the last main fight card</Typography>
+                      <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>8/11 correct picks for the last fight card</Typography>
                     </Stack>
                   </Stack>
                 </Box>
