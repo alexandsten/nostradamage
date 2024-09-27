@@ -25,7 +25,7 @@ export default function NostradamageFooter() {
               &copy; 2024 Nostradamage. All rights reserved.
             </Typography>
             <Typography variant="body2">
-              Contact us: <a href="mailto:info@nostradamage.com" style={{ color: 'inherit' }}>nostradmg@gmail.com</a>
+              Contact us: <a href="mailto:nostradmg@gmail.com" style={{ color: 'inherit' }}>nostradmg@gmail.com</a>
             </Typography>
             <Typography sx={{ color: 'white', fontFamily: "Gotu", fontSize: '9px' }}>
                 Background images Designed by Freepik, picture created by Craiyon, gifs by giphy.com
