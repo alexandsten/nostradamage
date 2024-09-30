@@ -41,7 +41,7 @@ exports.handler = async (event) => {
     console.error('Error fetching data:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Error fetching data", error: error.message }),
+      body: JSON.stringify({ message: "Errorrrrr fetching data", error: error.message }),
     };
   }
 };
