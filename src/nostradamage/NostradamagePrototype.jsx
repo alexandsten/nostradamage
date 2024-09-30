@@ -82,7 +82,7 @@ export default function NostradamagePrototype() {
     setExpanded(event);
     if (!data[event]) {
       try {
-        const response = await fetch('/.functions/fetchData', {
+        const response = await fetch('/.netlify/functions/fetchFirebaseData', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
