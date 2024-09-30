@@ -1,8 +1,8 @@
 const admin = require("firebase-admin");
 const { initializeApp } = require('firebase-admin/app');
-const { getDatabase, ref, get, goOffline, goOnline } = require('firebase-admin/database');
+const { getDatabase, ref, get } = require('firebase-admin/database');
 
-// Initialize Firebase Admin SDK with service account (can use env vars for sensitive info)
+// Initialize Firebase Admin SDK
 if (!admin.apps.length) {
   initializeApp({
     credential: admin.credential.cert({
@@ -14,26 +14,38 @@ if (!admin.apps.length) {
   });
 }
 
+// Function to fetch fighter data
 exports.handler = async (event) => {
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  };
+
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers,
+      body: '',
+    };
+  }
+
   try {
-    const { eventName } = JSON.parse(event.body); // Extract event name from frontend request
-
+    const { eventName } = JSON.parse(event.body);
     const db = getDatabase();
-    goOnline(db); // Go online and connect to Firebase Realtime Database
-
-    const snapshot = await get(ref(db, eventName)); // Query the Firebase DB
+    const snapshot = await get(ref(db, eventName));
     const fighterData = snapshot.val();
 
-    goOffline(db); // Go offline to avoid leaving the connection open
-    
     if (fighterData) {
       return {
         statusCode: 200,
+        headers,
         body: JSON.stringify(fighterData),
       };
     } else {
       return {
         statusCode: 404,
+        headers,
         body: JSON.stringify({ message: "Data not found" }),
       };
     }
@@ -41,7 +53,8 @@ exports.handler = async (event) => {
     console.error('Error fetching data:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Errorrrrr fetching data", error: error.message }),
+      headers,
+      body: JSON.stringify({ message: "Error fetching data", error: error.message }),
     };
   }
 };

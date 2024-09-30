@@ -1,6 +1,6 @@
 const admin = require("firebase-admin");
 const { initializeApp } = require('firebase-admin/app');
-const { getDatabase, ref, get, goOffline, goOnline } = require('firebase-admin/database');
+const { getDatabase, ref, get } = require('firebase-admin/database');
 
 // Initialize Firebase Admin SDK with service account (can use env vars for sensitive info)
 if (!admin.apps.length) {
@@ -15,25 +15,39 @@ if (!admin.apps.length) {
 }
 
 exports.handler = async (event) => {
+
+  const headers = {
+    'Access-Control-Allow-Origin': '*', // Allow requests from all origins (for development)
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS', // Allow POST and OPTIONS requests
+  };
+
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers,
+      body: '',
+    };
+  }
+
   try {
     const { eventName } = JSON.parse(event.body); // Extract event name from frontend request
 
-    const db = getDatabase();
-    goOnline(db); // Go online and connect to Firebase Realtime Database
+    const db = getDatabase(); // Get the database instance
 
     const snapshot = await get(ref(db, eventName)); // Query the Firebase DB
     const fighterData = snapshot.val();
 
-    goOffline(db); // Go offline to avoid leaving the connection open
-    
     if (fighterData) {
       return {
         statusCode: 200,
+        headers, // Include the headers in the response
         body: JSON.stringify(fighterData),
       };
     } else {
       return {
         statusCode: 404,
+        headers, // Include the headers in the response
         body: JSON.stringify({ message: "Data not found" }),
       };
     }
@@ -41,7 +55,8 @@ exports.handler = async (event) => {
     console.error('Error fetching data:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Errorrrrr fetching data", error: error.message }),
+      headers, // Include the headers in the response
+      body: JSON.stringify({ message: "Error fetching data", error: error.message }),
     };
   }
 };
