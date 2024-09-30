@@ -82,32 +82,27 @@ export default function NostradamagePrototype() {
     setExpanded(event);
     if (!data[event]) {
       try {
-        await signInWithEmailAndPassword(auth, USER, WORD);
-        console.log('User signed in successfully');
-
-        goOnline(database);
-        setIsConnected(true); // Mark connection as active
-
-        const snapshot = await get(ref(database, event));
-        const fighterData = snapshot.val();
-        if (fighterData) {
-          setData((prevData) => ({ ...prevData, [event]: fighterData }));
+        const response = await fetch('/.netlify/functions/fetchFirebaseData', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ eventName: event }),
+        });
+  
+        const fetchedData = await response.json();
+  
+        if (response.ok) {
+          setData((prevData) => ({ ...prevData, [event]: fetchedData }));
+        } else {
+          console.error('Error fetching data:', fetchedData.message);
         }
-
-        await signOut(auth);
-        goOffline(database);
-        setIsConnected(false); // Mark connection as inactive
-        console.log('User signed out and disconnected from database successfully');
       } catch (error) {
         console.error('Error fetching data:', error);
-        if (isConnected) {
-          goOffline(database);
-          setIsConnected(false);
-        }
       }
     }
   };
-
+  
   const resetView = () => {
     setExpanded(null);
   };
