@@ -30,7 +30,7 @@ export default function NostradamagePrototype() {
   const WORD = import.meta.env.VITE_API_WORD;
 
   const [toFetch, setToFetch] = useState([ 
-   'UFC 307 Pereira vs Rountree Jr ', 'UFC 306 Noche', 'UFC 305', 'UFC 304', 'UFC 303', 'UFC 302', 'UFC Fight Night Moicano vs Saint Denis ', 'UFC Fight Night Burns vs Brady', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
+   'UFC Fight Night Royval vs Taira','UFC 307 Pereira vs Rountree Jr ', 'UFC 306 Noche', 'UFC 305', 'UFC 304', 'UFC 303', 'UFC 302', 'UFC Fight Night Moicano vs Saint Denis ', 'UFC Fight Night Burns vs Brady', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
   const [expandedEvent, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
