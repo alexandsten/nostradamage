@@ -1,16 +1,13 @@
-const API_URL = 'http://localhost:5000/api'; // Ändra till din server-URL
-
-// Funktion för att hämta "Hello World"
+// Detta är en mock-funktion som genererar ett "Hello World"-meddelande
 export const fetchHelloWorld = async () => {
-  try {
-    const response = await fetch(`${API_URL}/hello`);
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+    try {
+      // Generera ett meddelande istället för att hämta från databasen
+      const data = { message: 'Hello World!' };
+  
+      return data; // Returnera det genererade meddelandet
+    } catch (error) {
+      console.error('Error fetching hello world:', error);
+      throw error; // Kasta ett fel om något går fel
     }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Error fetching hello world:', error);
-    throw error; // Låt felmeddelandet bubbla upp
-  }
-};
+  };
+  

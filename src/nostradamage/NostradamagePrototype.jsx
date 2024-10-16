@@ -30,28 +30,28 @@ export default function NostradamagePrototype() {
   const USER = import.meta.env.VITE_API_USER;
   const WORD = import.meta.env.VITE_API_WORD;
 
-  // const [message, setMessage] = useState('');
-  // const [error, setError] = useState(null);
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState(null);
 
-  // useEffect(() => {
-  //   const getHelloWorld = async () => {
-  //     try {
-  //       const data = await fetchHelloWorld();
-  //       setMessage(data.message);
-  //     } catch (err) {
-  //       setError(err.message);
-  //     }
-  //   };
+  useEffect(() => {
+    const getHelloWorld = async () => {
+      try {
+        const data = await fetchHelloWorld();
+        setMessage(data.message);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
 
-  //   getHelloWorld();
-  // }, []);
+    getHelloWorld();
+  }, []);
 
-  // if (error) {
-  //   return <div>Error: {error}</div>;
-  // }
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
-  // console.log(message)
-  
+  console.log(message)
+
   const [toFetch, setToFetch] = useState([ 
    'UFC Fight Night Royval vs Taira','UFC 307 Pereira vs Rountree Jr ', 'UFC 306 Noche', 'UFC 305', 'UFC 304', 'UFC 303', 'UFC 302', 'UFC Fight Night Moicano vs Saint Denis ', 'UFC Fight Night Burns vs Brady', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
   const [expandedEvent, setExpanded] = useState(null);
