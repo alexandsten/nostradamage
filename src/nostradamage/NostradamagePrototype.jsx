@@ -38,12 +38,12 @@ export default function NostradamagePrototype() {
       try {
         const data = await fetchHelloWorld();
         setMessage(data);
-        console.log(data)
+        console.log(data);
       } catch (err) {
         setError(err);
       }
     };
-
+  
     getHelloWorld();
   }, []);
 
