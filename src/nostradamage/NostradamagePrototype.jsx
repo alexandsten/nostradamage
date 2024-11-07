@@ -37,9 +37,10 @@ export default function NostradamagePrototype() {
     const getHelloWorld = async () => {
       try {
         const data = await fetchHelloWorld();
-        setMessage(data.message);
+        setMessage(data);
+        console.log(data)
       } catch (err) {
-        setError(err.message);
+        setError(err);
       }
     };
 
