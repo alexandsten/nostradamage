@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { fetchHelloWorld } from '../../src/api/dummyApi';
 import Box from '@mui/material/Box';
 import texture2 from './img/texture2.jpg';
 import { useMediaQuery} from '@mui/material';
