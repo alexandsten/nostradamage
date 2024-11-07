@@ -33,19 +33,19 @@ export default function NostradamagePrototype() {
   const [message, setMessage] = useState('');
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const getHelloWorld = async () => {
-      try {
-        const data = await fetchHelloWorld();
-        setMessage(data);
-        console.log(data);
-      } catch (err) {
-        setError(err);
-      }
-    };
+  // useEffect(() => {
+  //   const getHelloWorld = async () => {
+  //     try {
+  //       const data = await fetchHelloWorld();
+  //       setMessage(data);
+  //       console.log(data);
+  //     } catch (err) {
+  //       setError(err);
+  //     }
+  //   };
   
-    getHelloWorld();
-  }, []);
+  //   getHelloWorld();
+  // }, []);
 
   if (error) {
     return <div>Error: {error}</div>;
