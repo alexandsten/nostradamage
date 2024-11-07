@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchHelloWorld } from '../../src/api/api';
+import { fetchHelloWorld } from '../../src/api/dummyApi';
 import Box from '@mui/material/Box';
 import texture2 from './img/texture2.jpg';
 import { useMediaQuery} from '@mui/material';
@@ -33,19 +33,19 @@ export default function NostradamagePrototype() {
   const [message, setMessage] = useState('');
   const [error, setError] = useState(null);
 
-  // useEffect(() => {
-  //   const getHelloWorld = async () => {
-  //     try {
-  //       const data = await fetchHelloWorld();
-  //       setMessage(data);
-  //       console.log(data);
-  //     } catch (err) {
-  //       setError(err);
-  //     }
-  //   };
+  useEffect(() => {
+    const getHelloWorld = async () => {
+      try {
+        const data = await fetchHelloWorld();
+        setMessage(data);
+        console.log(data);
+      } catch (err) {
+        setError(err);
+      }
+    };
   
-  //   getHelloWorld();
-  // }, []);
+    getHelloWorld();
+  }, []);
 
   if (error) {
     return <div>Error: {error}</div>;
