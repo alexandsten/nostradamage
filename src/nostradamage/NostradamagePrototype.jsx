@@ -36,22 +36,34 @@ export default function NostradamagePrototype() {
   useEffect(() => {
     const getHelloWorld = async () => {
       try {
-        const data = await fetchHelloWorld();
-        setMessage(data);
-        console.log(data);
+        // Gör anropet till API:t
+        const response = await fetch('https://nostradamage.onrender.com/api/hello-world');
+        
+        // Om svaret inte är OK (statuskod 200), kasta ett fel
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+  
+        // Omvandla svaret till JSON
+        const data = await response.json();
+        
+        // Nu har du själva data från API:t
+        setMessage(data.message);  // Här får du tillgång till 'message' från ditt svar
+        console.log(data);  // För att debugga och kolla strukturen på datat
+  
       } catch (err) {
-        setError(err);
+        setError(err);  // Hantera eventuella fel
+        console.error('Error fetching data:', err);
       }
     };
   
+    // Kör funktionen när komponenten laddas
     getHelloWorld();
   }, []);
 
   if (error) {
     return <div>Error: {error}</div>;
   }
-
-  console.log(message)
 
   const [toFetch, setToFetch] = useState([ 
    'UFC Fight Night Royval vs Taira','UFC 307 Pereira vs Rountree Jr ', 'UFC 306 Noche', 'UFC 305', 'UFC 304', 'UFC 303', 'UFC 302', 'UFC Fight Night Moicano vs Saint Denis ', 'UFC Fight Night Burns vs Brady', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
