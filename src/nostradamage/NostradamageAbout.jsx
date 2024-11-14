@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import { GlobalStyles, Typography } from '@mui/material';
+import { GlobalStyles, Typography, styled as muiStyled } from '@mui/material';
 import texture2 from './img/texture2.jpg';
 import MainMenu from './menu/MainMenu';
 import { Grid, Stack } from '@mui/material';
 import NostradamageFooter from './NostradamageFooter';
 
 export default function NostradamageAbout() {
+
+  const Text = muiStyled(Typography)({
+    fontSize: '1.8em',
+    fontFamily: 'VT323',
+    color: 'white'
+  });
 
   const [selectedItem, setSelectedItem] = useState('About');
 
@@ -73,29 +79,29 @@ export default function NostradamageAbout() {
                   <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
                     <Stack direction='column' alignItems='center'>
                       
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                      <Text>
                         Jonathan
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                      </Text>
+                      <Text>
                         Co-creator
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                      </Text>
+                      <Text>
                         Data Scientist
-                      </Typography>
+                      </Text>
                     </Stack>
                   </Grid>
                   <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
                     <Stack direction='column' alignItems='center'>
                       
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                      <Text>
                         Alex
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
+                      </Text>
+                      <Text>
                         Co-creator
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans" }}>
-                        Frontend / fullstack
-                      </Typography>
+                      </Text>
+                      <Text>
+                        Frontend / Fullstack
+                      </Text>
                     </Stack>
                   </Grid>
                 </Grid>

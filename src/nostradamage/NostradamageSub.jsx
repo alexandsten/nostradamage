@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import { GlobalStyles, Typography } from '@mui/material';
+import { GlobalStyles, Typography, styled as muiStyled } from '@mui/material';
 import texture2 from './img/texture2.jpg';
 import goldBg from './img/goldBg.jpg';
 import silverBg from './img/silverBg.jpg';
@@ -9,6 +9,30 @@ import MainMenu from './menu/MainMenu';
 import NostradamageFooter from './NostradamageFooter';
 
 export default function NostradamageSub() {
+
+  const Text = muiStyled(Typography)({
+    margin: '1em', 
+    fontSize: '18px', 
+    fontWeight: 'semibold', 
+    fontFamily: "Pixelify Sans", 
+    color: 'black'
+  });
+
+  const TextBold = muiStyled(Typography)({
+    margin: '1em', 
+    fontSize: '18px', 
+    fontWeight: 'bold', 
+    fontFamily: "Pixelify Sans", 
+    color: 'black'
+  });
+
+  const TitleText = muiStyled(Typography)({
+    margin: '1em', 
+    fontSize: '22px', 
+    fontWeight: 'bold', 
+    fontFamily: "Pixelify Sans", 
+    color: 'black'
+  });
 
   const [selectedItem, setSelectedItem] = useState('Sub');
 
@@ -67,9 +91,9 @@ export default function NostradamageSub() {
                 gap={2}
               >
                 <h2>Subsription model</h2>
-                <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'bold', fontFamily: "Pixelify Sans" }}>
+                <h3>
                   The Subsription model is in development.
-                </Typography>
+                </h3>
                 <Grid 
                   container 
                   justifyContent='center' 
@@ -91,27 +115,27 @@ export default function NostradamageSub() {
                     }}
                   >
                     <Stack direction='column' alignItems='flex-start' justifyContent='center' sx={{ height: '100%' }}>
-                      <Typography sx={{ margin: '1em', fontSize: '22px', fontWeight: 'bold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      <TitleText>
                         Monthly membership
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </TitleText>
+                      <Text>
                         All inclusive - monthly fee
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'bold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </Text>
+                      <TextBold>
                         Includes: 
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </TextBold>
+                      <Text>
                         Predictions for early prelims 
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </Text>
+                      <Text>
                         Predictions for prelims 
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </Text>
+                      <Text>
                         Predictions for main card 
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </Text>
+                      <Text>
                         Fighter data statistics 
-                      </Typography>
+                      </Text>
                     </Stack>
                   </Grid>
 
@@ -127,24 +151,24 @@ export default function NostradamageSub() {
                     }}
                   >
                     <Stack direction='column' alignItems='flex-start' justifyContent='flex-start' sx={{ height: '100%' }}>
-                      <Typography sx={{ margin: '1em', fontSize: '22px', fontWeight: 'bold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      <TitleText>
                         One time fee
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </TitleText>
+                      <Text>
                         Pay per fightcard
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'bold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </Text>
+                      <TextBold>
                         Includes: 
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </TextBold>
+                      <Text>
                         Predictions for early prelims 
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </Text>
+                      <Text>
                         Predictions for prelims 
-                      </Typography>
-                      <Typography sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", color: 'black' }}>
+                      </Text>
+                      <Text>
                         Predictions for main card 
-                      </Typography>
+                      </Text>
                     </Stack>
                   </Grid>
                 </Grid>
