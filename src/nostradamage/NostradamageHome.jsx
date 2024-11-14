@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import { Typography, Stack, Grid, GlobalStyles } from '@mui/material';
+import { Typography, Stack, Grid, GlobalStyles, styled as muiStyled } from '@mui/material';
 import MainMenu from './menu/MainMenu';
 import styled, { keyframes } from 'styled-components';
 import fadeIn from 'react-animations/lib/fade-in';
@@ -16,6 +16,24 @@ import NostradamageFooter from './NostradamageFooter';
 import { Link } from 'react-router-dom';
 
 export default function NostradamageHome({setView}) {
+
+  const Text = muiStyled(Typography)({
+      fontSize: '1.2em',
+      fontFamily: 'VT323',
+      color: 'white'
+  });
+
+  const TextPowerBIHeader = muiStyled(Typography)({
+      fontSize: '1.8em', 
+      fontFamily: 'VT323', 
+      color: 'white'
+  });
+
+  const TextPowerBI = muiStyled(Typography)({
+      fontSize: '1.3em', 
+      fontFamily: 'VT323',
+      color: 'white'
+});
 
   const [selectedItem, setSelectedItem] = useState('Home');
 
@@ -117,9 +135,9 @@ export default function NostradamageHome({setView}) {
                         <h3>
                           Revolutionizing UFC Predictions
                         </h3>
-                          <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
+                          <Text>
                             Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. 
-                          </Typography>
+                          </Text>
                         </Grid>
                       <Grid 
                         item 
@@ -165,9 +183,9 @@ export default function NostradamageHome({setView}) {
                         <h3>
                           Disclaimer
                         </h3>
-                        <Typography sx={{fontSize: '1.2em', fontFamily: 'VT323' }}>
+                        <Text>
                           We do not take responsibility for any bets placed based on our predictions. Enjoy the excitement of Nostradamage, but please gamble responsibly and at your own risk.
-                        </Typography>
+                        </Text>
                       </Grid>
                     </Grid>
                     
@@ -210,13 +228,13 @@ export default function NostradamageHome({setView}) {
                     >
                     
                       {/* <iframe title="netflix2" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiZTk2MzRmMzUtMzk3Yy00ZWZhLTlkMTktZjJkYWE5YTY0MDdlIiwidCI6ImY3NGUwNTA1LWMyODMtNDljZC04ODU5LWVkNDJjMmJmZDc5NCJ9" frameborder="0" allowFullScreen="true"></iframe> */}
-                      <Typography sx={{fontSize: '1.8em', fontFamily: 'VT323', color: 'white' }}>
+                      <TextPowerBIHeader>
                         Dynamic power BI stats coming soon
-                      </Typography>
+                      </TextPowerBIHeader>
                     </Stack>
                     <Stack m={3} justifyContent={'center'} alignItems={'center'}>
-                      <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>66% success rate over the last 6 months</Typography>
-                      <Typography sx={{fontSize: '1.3em', fontFamily: 'VT323' }}>8/11 correct picks for the last fight card</Typography>
+                      <TextPowerBI>66% success rate over the last 6 months</TextPowerBI>
+                      <TextPowerBI>8/11 correct picks for the last fight card</TextPowerBI>
                     </Stack>
                   </Stack>
                 </Box>
