@@ -106,18 +106,18 @@ export default function MainMenu(props) {
                 {!isSmallScreen && (
                   <Link to="/subscription" style={{ textDecoration: 'none' }}>
                     <Grid item onClick={() => props.setSelectedItem('Sub')}>
-                      <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Sub' ? '#ed652b' : 'white' }}>
+                      <MenuText sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, color: props.selectedItem == 'Sub' ? '#ed652b' : 'white' }}>
                         Subscription
-                      </Typography>
+                      </MenuText>
                     </Grid>
                    </Link>
                 )}
               {!isSmallScreen && (
                 <Link to="/about" style={{ textDecoration: 'none' }}>
                   <Grid item onClick={() => props.setSelectedItem('About')}>
-                    <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'About' ? '#ed652b' : 'white' }}>
+                    <MenuText sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, color: props.selectedItem == 'About' ? '#ed652b' : 'white' }}>
                       About us
-                    </Typography>
+                    </MenuText>
                   </Grid>
                 </Link>
              )}
@@ -148,42 +148,42 @@ export default function MainMenu(props) {
               <Grid container direction="column" spacing={2} sx={{ padding: '20px', backgroundColor: '#141414', height: '102vh', overflow: 'hidden' }}>
                 <Grid item>
                   <Link to="/" style={{ textDecoration: 'none' }}>
-                    <Typography
-                      sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                    <MenuText
+                      sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, color: 'white' }}
                       onClick={() => props.setSelectedItem('Home')}
                     >
                       Home
-                    </Typography>
+                    </MenuText>
                   </Link>
                 </Grid>
                 <Grid item>
                   <Link to="/predictor" style={{ textDecoration: 'none' }}>
-                    <Typography
-                      sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                    <MenuText
+                      sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, color: 'white' }}
                       onClick={() => props.setSelectedItem('Prototype')}
                     >
                       Prototype
-                    </Typography>
+                    </MenuText>
                   </Link>
                 </Grid>
                 <Grid item>
                   <Link to="/subscription" style={{ textDecoration: 'none' }}>
-                    <Typography
-                      sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                    <MenuText
+                      sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' },color: 'white' }}
                       onClick={() => props.setSelectedItem('Sub')}
                     >
                       Subscription
-                    </Typography>
+                    </MenuText>
                   </Link>
                 </Grid>
                 <Grid item>
                   <Link to="/about" style={{ textDecoration: 'none' }}>
-                    <Typography
-                      sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: 'white' }}
+                    <MenuText
+                      sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, color: 'white' }}
                       onClick={() => props.setSelectedItem('About')}
                     >
                       About us
-                    </Typography>
+                    </MenuText>
                 </Link>
               </Grid>
             </Grid>
