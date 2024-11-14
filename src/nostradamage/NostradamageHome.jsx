@@ -9,7 +9,7 @@ import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
 import '../../src/fonts/fonts.css';
 import './styles.css';
-import fighter1 from './img/fighter1.png';
+import fighter1 from './img/fighter1Nostra.webp';
 import texture2 from './img/texture2.jpg';
 import staticBack from './img/static1.webp';
 import NostradamageFooter from './NostradamageFooter';
