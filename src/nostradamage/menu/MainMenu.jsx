@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Grid, Typography, Avatar, IconButton, Drawer, Stack, useMediaQuery, GlobalStyles} from '@mui/material';
+import { Grid, Typography, Avatar, IconButton, Drawer, Stack, useMediaQuery, GlobalStyles, styled as muiStyled} from '@mui/material';
 // import { Menu as MenuIcon } from '@mui/icons-material';
 import { SocialIcon } from 'react-social-icons';
 import 'react-social-icons/instagram'
@@ -14,6 +14,12 @@ import nostraLogoColor from '../img/NostraLogo3.png'
 
 
 export default function MainMenu(props) {
+
+  const MenuText = muiStyled(Typography)({
+    fontSize: '20px',
+    fontWeight: 'semiBold',
+    fontFamily: "Pixelify Sans",
+  });
 
   const isSmallScreen = useMediaQuery('(max-width:800px)');
   const isSocialScreen = useMediaQuery('(max-width:1000px)');
@@ -82,18 +88,18 @@ export default function MainMenu(props) {
           {!isSmallScreen && (
             <Link to="/" style={{ textDecoration: 'none' }}>
               <Grid item onClick={() => props.setSelectedItem('Home')}>
-                <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Home' ? '#ed652b' : 'white' }}>
+                <MenuText sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' },  color: props.selectedItem == 'Home' ? '#ed652b' : 'white' }}>
                     Home
-                </Typography>
+                </MenuText>
               </Grid>
             </Link>
           )}
             {!isSmallScreen && (
               <Link to="/predictor" style={{ textDecoration: 'none' }}>
                 <Grid item onClick={() => props.setSelectedItem('Prototype')}>
-                    <Typography sx={{ fontSize: '20px', fontWeight: 'semiBold', cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, fontFamily: "Pixelify Sans", color: props.selectedItem == 'Prototype' ? '#ed652b' : 'white' }}>
+                    <MenuText sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, color: props.selectedItem == 'Prototype' ? '#ed652b' : 'white' }}>
                       Predictions
-                    </Typography>
+                    </MenuText>
                   </Grid>
                 </Link>
              )}

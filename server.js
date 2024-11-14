@@ -6,7 +6,11 @@ import { supabase } from './src/api/supabaseClient.js';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Tillåt specifikt Netlify-domänen att komma åt din backend
+app.use(cors({
+  origin: ['https://nostradamage.netlify.app', 'http://localhost:5173', 'http://localhost:5000'],
+  methods: ['GET', 'POST'], 
+}));
 app.use(express.json());
 
 // Dummy-rutt för att hämta data från Supabase
