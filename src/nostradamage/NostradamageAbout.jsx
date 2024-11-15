@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import { GlobalStyles, Typography, styled as muiStyled } from '@mui/material';
 import texture2 from './img/texture2.jpg';
+import AlexPixel from './img/AlexPixel1.webp';
+import JonathanPixel from './img/JonathanPixel1.webp';
 import MainMenu from './menu/MainMenu';
 import { Grid, Stack } from '@mui/material';
 import NostradamageFooter from './NostradamageFooter';
@@ -88,6 +90,19 @@ export default function NostradamageAbout() {
                       <Text>
                         Data Scientist
                       </Text>
+                      <div className="image-container">
+                        <img 
+                          className="fighterImage" 
+                          src={JonathanPixel} 
+                          style={{ 
+                            width: '20em', 
+                            height: '20em', 
+                            borderRadius: '50%', 
+                            alignSelf: 'center' 
+                          }} 
+                          alt='fighter' 
+                        />
+                      </div>
                     </Stack>
                   </Grid>
                   <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -102,6 +117,19 @@ export default function NostradamageAbout() {
                       <Text>
                         Frontend / Fullstack
                       </Text>
+                      <div className="image-container">
+                        <img 
+                          className="fighterImage" 
+                          src={AlexPixel} 
+                          style={{ 
+                            width: '20em', 
+                            height: '20em', 
+                            borderRadius: '50%', 
+                            alignSelf: 'center' 
+                          }} 
+                          alt='fighter' 
+                        />
+                      </div>
                     </Stack>
                   </Grid>
                 </Grid>
