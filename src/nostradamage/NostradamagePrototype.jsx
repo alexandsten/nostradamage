@@ -15,7 +15,7 @@ import pixelBackground1 from './img/pixBack3.gif';
 import blackImage from './img/black.jpg';
 import pixelBackground2 from './img/pixBack4.gif';
 import staticFilm from './img/staticFilm.webp';
-import monitorTexture from './img/orangeBack.jpg';
+import monitorTexture from './img/brick1.webp';
 import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
 import fadeIn from 'react-animations/lib/fade-in';
@@ -220,7 +220,7 @@ export default function NostradamagePrototype() {
                   sx={{
                     padding: '1em',
                     backgroundImage: `linear-gradient(rgba(0, 0, 150, 0.1), rgba(11, 21, 74, 0.6)), url(${monitorTexture})`,
-                    backgroundSize: 'cover', 
+                    backgroundSize: '50%',
                     border: '1px solid rgba(0, 0, 50, 1)', 
                     justifyContent: 'center',
                     alignItems: 'center',
