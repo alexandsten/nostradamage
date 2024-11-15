@@ -11,7 +11,7 @@ import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/fighter1Nostra.webp';
 import texture2 from './img/texture2.jpg';
-import staticBack from './img/static1.webp';
+import powerBiScreen from './img/2_fighters.webp';
 import NostradamageFooter from './NostradamageFooter';
 import { Link } from 'react-router-dom';
 
@@ -215,7 +215,7 @@ export default function NostradamageHome({setView}) {
                         height: '35em',
                         width: '70%',
                         backgroundColor: 'white',
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${staticBack})`,
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${powerBiScreen})`,
                         backgroundSize: 'cover', 
                         border: '8px solid white',
                         borderRadius: '2em',
