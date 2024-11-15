@@ -79,7 +79,7 @@ export default function NostradamageAbout() {
                   sx={{ maxWidth: 'lg' }}
                 >
                   <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Stack direction='column' alignItems='center'>
+                    <Stack direction='column' alignItems='center' gap={2}>
                       
                       <Text>
                         Jonathan
@@ -106,7 +106,7 @@ export default function NostradamageAbout() {
                     </Stack>
                   </Grid>
                   <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Stack direction='column' alignItems='center'>
+                    <Stack direction='column' alignItems='center' gap={2}>
                       
                       <Text>
                         Alex
