@@ -217,6 +217,7 @@ export default function NostradamageHome({setView}) {
                         backgroundColor: 'white',
                         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${powerBiScreen})`,
                         backgroundSize: 'cover', 
+                        backgroundPosition: 'center',
                         border: '8px solid white',
                         borderRadius: '2em',
                         marginTop: '2em'
