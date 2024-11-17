@@ -9,7 +9,7 @@ import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
 import '../../src/fonts/fonts.css';
 import './styles.css';
-import fighter1 from './img/crazyman.webp';
+import fighter1 from './img/crazymanLogo.png';
 import texture2 from './img/texture2.jpg';
 import powerBiScreen from './img/octagonFight.webp';
 import NostradamageFooter from './NostradamageFooter';
