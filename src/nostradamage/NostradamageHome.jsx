@@ -9,9 +9,9 @@ import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
 import '../../src/fonts/fonts.css';
 import './styles.css';
-import fighter1 from './img/fighter1Nostra.webp';
+import fighter1 from './img/crazyman.webp';
 import texture2 from './img/texture2.jpg';
-import powerBiScreen from './img/2_fighters.webp';
+import powerBiScreen from './img/octagonFight.webp';
 import NostradamageFooter from './NostradamageFooter';
 import { Link } from 'react-router-dom';
 
