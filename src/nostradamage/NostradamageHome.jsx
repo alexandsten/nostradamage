@@ -167,8 +167,8 @@ export default function NostradamageHome({setView}) {
                                   className="fighterImage" 
                                   src={fighter1} 
                                   style={{ 
-                                    width: '20em', 
-                                    height: '20em', 
+                                    width: '15em', 
+                                    height: '15em', 
                                     borderRadius: '50%', 
                                     alignSelf: 'center' 
                                   }} 

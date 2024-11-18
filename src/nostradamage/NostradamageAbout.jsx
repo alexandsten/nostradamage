@@ -95,8 +95,8 @@ export default function NostradamageAbout() {
                           className="fighterImage" 
                           src={JonathanPixel} 
                           style={{ 
-                            width: '20em', 
-                            height: '20em', 
+                            width: '15em', 
+                            height: '15em', 
                             borderRadius: '50%', 
                             alignSelf: 'center' 
                           }} 
@@ -122,8 +122,8 @@ export default function NostradamageAbout() {
                           className="fighterImage" 
                           src={AlexPixel} 
                           style={{ 
-                            width: '20em', 
-                            height: '20em', 
+                            width: '15em', 
+                            height: '15em', 
                             borderRadius: '50%', 
                             alignSelf: 'center' 
                           }} 
