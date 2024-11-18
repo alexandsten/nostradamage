@@ -11,9 +11,9 @@ import { Stack } from '@mui/material';
 import staticBackground2 from './img/static1.webp';
 import MainMenu from './menu/MainMenu';
 import fight from './img/fight.webp';
-import pixelBackground1 from './img/pixBack3.gif';
+import pixelBackground1 from './img/2FightersBackground.webp';
 import blackImage from './img/black.jpg';
-import pixelBackground2 from './img/pixBack4.gif';
+import pixelBackground2 from './img/2Fighters.webp';
 import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/brick1.webp';
 import pulse from 'react-animations/lib/pulse';
@@ -237,10 +237,10 @@ export default function NostradamagePrototype() {
                     sx={{
                       display: 'flex',
                       backgroundImage: expandedEvent
-                        ? `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.6)), url(${pixelBackground1})` 
-                        : `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.6)), url(${pixelBackground2})`,
+                        ? `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.6)), url(${pixelBackground2})` 
+                        : `linear-gradient(rgba(0, 0, 10, 0.9), rgba(0, 0, 0, 0.6)), url(${pixelBackground1})`,
                       backgroundSize: 'cover', 
-                      backgroundPosition: 'center bottom',
+                      backgroundPosition: 'center top',
                       justifyContent: 'center',
                       width: '60vw',
                       borderRadius: '12px',
