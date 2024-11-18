@@ -9,7 +9,7 @@ import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
 import '../../src/fonts/fonts.css';
 import './styles.css';
-import fighter1 from './img/crazymanLogo.png';
+import fighter1 from './img/poserNostra.webp';
 import texture2 from './img/texture2.jpg';
 import powerBiScreen from './img/octagonFight.webp';
 import NostradamageFooter from './NostradamageFooter';
@@ -167,8 +167,8 @@ export default function NostradamageHome({setView}) {
                                   className="fighterImage" 
                                   src={fighter1} 
                                   style={{ 
-                                    width: '15em', 
-                                    height: '15em', 
+                                    width: '20em', 
+                                    height: '20em', 
                                     borderRadius: '50%', 
                                     alignSelf: 'center' 
                                   }} 
