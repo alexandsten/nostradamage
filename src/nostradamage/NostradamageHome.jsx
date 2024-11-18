@@ -11,7 +11,7 @@ import '../../src/fonts/fonts.css';
 import './styles.css';
 import fighter1 from './img/poserNostra.webp';
 import texture2 from './img/texture2.jpg';
-import powerBiScreen from './img/octagonFight.webp';
+import powerBiScreen from './img/2Fighters.webp';
 import NostradamageFooter from './NostradamageFooter';
 import { Link } from 'react-router-dom';
 
