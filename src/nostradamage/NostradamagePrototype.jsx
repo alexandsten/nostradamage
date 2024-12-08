@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import texture2 from './img/texture2.jpg';
 import { useMediaQuery} from '@mui/material';
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, get, goOffline, goOnline } from 'firebase/database';
-import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import Button from '@mui/material/Button';
 import { GlobalStyles, Typography } from '@mui/material';
 import { Stack } from '@mui/material';
@@ -26,49 +23,15 @@ import NostradamageFooter from './NostradamageFooter';
 
 export default function NostradamagePrototype() {
   const [data, setData] = useState({});
-  const USER = import.meta.env.VITE_API_USER;
-  const WORD = import.meta.env.VITE_API_WORD;
-
-  const [message, setMessage] = useState('');
   const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const getHelloWorld = async () => {
-      try {
-        // Gör anropet till API:t
-        const response = await fetch('https://nostradamage.onrender.com/api/TestPredictionDB');
-        
-        // Om svaret inte är OK (statuskod 200), kasta ett fel
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-  
-        // Omvandla svaret till JSON
-        const data = await response.json();
-        
-        // Nu har du själva data från API:t
-  
-      } catch (err) {
-        setError(err);  // Hantera eventuella fel
-        console.error('Error fetching data:', err);
-      }
-    };
-  
-    // Kör funktionen när komponenten laddas
-    getHelloWorld();
-  }, []);
 
   if (error) {
     return <div>Error: {error}</div>;
   }
 
-  const [toFetch, setToFetch] = useState([  'UFC 308 Topuria vs Holloway', 'UFC Fight Night Hernandez vs Pereira', 'UFC Fight Night Lemos vs Jandiroba', 'UFC Fight Night Magny vs Prates ',
-   'UFC Fight Night Royval vs Taira','UFC 307 Pereira vs Rountree Jr ', 'UFC 306 Noche', 'UFC 305', 'UFC 304', 'UFC 303', 'UFC 302', 'UFC Fight Night Moicano vs Saint Denis ', 'UFC Fight Night Burns vs Brady', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
-
    const [UFCEvents, setUFCEvents] = useState(['TestPredictionDB']);
 
   const [expandedEvent, setExpanded] = useState(null);
-  const [isConnected, setIsConnected] = useState(false);
 
   const isSmallScreen = useMediaQuery('(max-width:1200px)');
   const isSocialScreen = useMediaQuery('(max-width:1400px)');
@@ -100,49 +63,7 @@ export default function NostradamagePrototype() {
   const PulseDiv = styled.div`
     animation: 2s ${pulseAnimation}; `;
 
-  const firebaseConfig = {
-    apiKey: import.meta.env.VITE_API_KEY,
-    authDomain: import.meta.env.VITE_API_DOM,
-    projectId: import.meta.env.VITE_API_ID,
-    storageBucket: import.meta.env.VITE_API_BUCKET,
-    messagingSenderId: import.meta.env.VITE_API_MSGID,
-    appId: import.meta.env.VITE_API_APPID,
-    databaseURL: import.meta.env.VITE_API_URL, 
-  };
 
-  const firebaseApp = initializeApp(firebaseConfig);
-  const database = getDatabase(firebaseApp);
-  const auth = getAuth(firebaseApp);
-
-  const handleButtonClick = async (event) => {
-    setExpanded(event);
-    if (!data[event]) {
-      try {
-        await signInWithEmailAndPassword(auth, USER, WORD);
-        console.log('User signed in successfully');
-
-        goOnline(database);
-        setIsConnected(true); // Mark connection as active
-
-        const snapshot = await get(ref(database, event));
-        const fighterData = snapshot.val();
-        if (fighterData) {
-          setData((prevData) => ({ ...prevData, [event]: fighterData }));
-        }
-
-        await signOut(auth);
-        goOffline(database);
-        setIsConnected(false); // Mark connection as inactive
-        console.log('User signed out and disconnected from database successfully');
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        if (isConnected) {
-          goOffline(database);
-          setIsConnected(false);
-        }
-      }
-    }
-  };
 
   const handleEventClick = async (event) => {
     setExpanded(event);
@@ -169,15 +90,6 @@ export default function NostradamagePrototype() {
   const resetView = () => {
     setExpanded(null);
   };
-
-  // Ensure cleanup on unmount
-  useEffect(() => {
-    return () => {
-      if (isConnected) {
-        goOffline(database);
-      }
-    };
-  }, [isConnected]);
 
   const [visiblePulseDivs, setVisiblePulseDivs] = useState({});
   const [latestClick, setLatestClick] = useState({});
@@ -279,8 +191,6 @@ export default function NostradamagePrototype() {
                       border: '8px solid black',
                     }}
                   >
-            
-
                     
                     <Stack direction='column' justifyContent='center' alignItems='center' 
                       sx={{ height: '100%', borderRadius: '10px', width: '100%'
