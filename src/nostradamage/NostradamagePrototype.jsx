@@ -148,7 +148,7 @@ export default function NostradamagePrototype() {
     setExpanded(event);
     try {
       // Gör anropet till API:t
-      const response = await fetch('https://nostradamage.onrender.com/api/TestPredictionDB');
+      const response = await fetch(`https://nostradamage.onrender.com/api/${event}`);
       
       // Om svaret inte är OK (statuskod 200), kasta ett fel
       if (!response.ok) {
