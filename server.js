@@ -32,3 +32,22 @@ app.get('/api/hello-world', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
+app.get('/api/TestPredictionDB', async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('TestPredictionDB')
+      .select('*')
+
+    if (error) throw error;
+
+    res.json(data); // Skickar data tillbaka till frontend
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});

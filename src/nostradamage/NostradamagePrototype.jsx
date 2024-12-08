@@ -36,7 +36,7 @@ export default function NostradamagePrototype() {
     const getHelloWorld = async () => {
       try {
         // Gör anropet till API:t
-        const response = await fetch('https://nostradamage.onrender.com/api/hello-world');
+        const response = await fetch('https://nostradamage.onrender.com/api/TestPredictionDB');
         
         // Om svaret inte är OK (statuskod 200), kasta ett fel
         if (!response.ok) {
