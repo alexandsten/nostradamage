@@ -391,7 +391,7 @@ export default function NostradamagePrototype() {
                                     <Stack width={'100%'} justifyContent={'center'} alignItems={'center'}>
                                       <Typography className='data' sx={{ fontSize: '24px', color: 'white', 
                                         fontFamily: 'VT323' }}>
-                                        {JSON.stringify(matchupName)}
+                                        {data[expandedEvent][matchupName].Fight}
                                       </Typography>
                                     </Stack>
                                     <Stack>
