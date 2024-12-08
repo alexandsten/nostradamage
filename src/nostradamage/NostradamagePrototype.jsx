@@ -47,8 +47,6 @@ export default function NostradamagePrototype() {
         const data = await response.json();
         
         // Nu har du själva data från API:t
-        setMessage(data.message);  // Här får du tillgång till 'message' från ditt svar
-        console.log(data);  // För att debugga och kolla strukturen på datat
   
       } catch (err) {
         setError(err);  // Hantera eventuella fel
@@ -66,6 +64,9 @@ export default function NostradamagePrototype() {
 
   const [toFetch, setToFetch] = useState([  'UFC 308 Topuria vs Holloway', 'UFC Fight Night Hernandez vs Pereira', 'UFC Fight Night Lemos vs Jandiroba', 'UFC Fight Night Magny vs Prates ',
    'UFC Fight Night Royval vs Taira','UFC 307 Pereira vs Rountree Jr ', 'UFC 306 Noche', 'UFC 305', 'UFC 304', 'UFC 303', 'UFC 302', 'UFC Fight Night Moicano vs Saint Denis ', 'UFC Fight Night Burns vs Brady', 'UFC Fight Night Namajunas vs Cortez', 'UFC Fight Night Lemos vs Jandiroba', 'UFC on ABC Sandhagen vs Nurmagomedov', 'UFC Fight Night Cannonier vs Borralho']);
+
+   const [UFCEvents, setUFCEvents] = useState(['TestPredictionDB']);
+
   const [expandedEvent, setExpanded] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
 
@@ -143,6 +144,28 @@ export default function NostradamagePrototype() {
     }
   };
 
+  const handleEventClick = async (event) => {
+    setExpanded(event);
+    try {
+      // Gör anropet till API:t
+      const response = await fetch('https://nostradamage.onrender.com/api/TestPredictionDB');
+      
+      // Om svaret inte är OK (statuskod 200), kasta ett fel
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      // Omvandla svaret till JSON
+      const eventData = await response.json();
+      setData((prevData) => ({ ...prevData, [event]: eventData }));
+    } catch (err) {
+      setError(err);  // Hantera eventuella fel
+      console.error('Error fetching data:', err);
+    }
+   
+    console.log(data)
+  }
+
   const resetView = () => {
     setExpanded(null);
   };
@@ -174,6 +197,7 @@ export default function NostradamagePrototype() {
 
   const [selectedItem, setSelectedItem] = useState('Prototype');
 
+  console.log(data)
   return (
     <>
       
@@ -367,7 +391,7 @@ export default function NostradamagePrototype() {
                                     <Stack width={'100%'} justifyContent={'center'} alignItems={'center'}>
                                       <Typography className='data' sx={{ fontSize: '24px', color: 'white', 
                                         fontFamily: 'VT323' }}>
-                                        {matchupName}
+                                        {JSON.stringify(matchupName)}
                                       </Typography>
                                     </Stack>
                                     <Stack>
@@ -409,13 +433,13 @@ export default function NostradamagePrototype() {
                           )}
                         </>
                       ) : (
-                        toFetch.map((event, index) => (
+                        UFCEvents.map((event, index) => (
                           <Stack mt={3} sx={{ backgroundColor: 'white', width: isSmallScreen ? '100%' : '50%',  
                             border: '5px solid black',  }}>
                             <Button
                               key={index}
                               variant="contained"
-                              onClick={() => handleButtonClick(event)}
+                              onClick={() => handleEventClick(event)}
                               sx={{ margin: '1em', fontSize: '18px', fontWeight: 'semiBold', fontFamily: "Pixelify Sans", backgroundColor: '#ed652b',  '&:hover': {
                                 backgroundColor: '#b6451a', 
                               }, }}
