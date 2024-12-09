@@ -261,7 +261,7 @@ export default function NostradamagePrototype() {
                           {
                             expandedEvent ? (
                             <LoadingText>
-                              {JSON.stringify(expandedEvent).replaceAll('_', ' ')}
+                              {JSON.stringify(expandedEvent).replaceAll('_', ' ').slice(1, -1)}
                             </LoadingText>
                             ) : (
                               null
@@ -451,7 +451,7 @@ export default function NostradamagePrototype() {
                                 backgroundColor: '#b6451a', 
                               }, }}
                             >
-                            {JSON.stringify(event).replaceAll('_', ' ')}
+                              {JSON.stringify(event).replaceAll('_', ' ').slice(1, -1)}
                             </Button> 
                           </Stack>
                         ))
