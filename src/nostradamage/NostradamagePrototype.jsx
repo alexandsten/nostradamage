@@ -59,7 +59,7 @@ export default function NostradamagePrototype() {
     return <div>Error: {error}</div>;
   }
 
-   const [UFCEvents, setUFCEvents] = useState(['TestPredictionDB']);
+   const [UFCEvents, setUFCEvents] = useState(['TestPredictionDB', 'UFC_309', 'UFC_Fight_Night_Yan_vs_Figueiredo']);
 
   const [expandedEvent, setExpanded] = useState(null);
 

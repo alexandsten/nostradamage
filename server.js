@@ -34,6 +34,37 @@ app.get('/api/TestPredictionDB', async (req, res) => {
     const { data, error } = await supabase
       .from('TestPredictionDB')
       .select('*')
+      .eq('Event', 'UFC 309 Jones vs Miocic');
+
+    if (error) throw error;
+
+    res.json(data); // Skickar data tillbaka till frontend
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get('/api/UFC_309', async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('TestPredictionDB')
+      .select('*')
+      .eq('Event', 'UFC 309 Jones vs Miocic');
+
+    if (error) throw error;
+
+    res.json(data); // Skickar data tillbaka till frontend
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get('/api/UFC_Fight_Night_Yan_vs_Figueiredo', async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('TestPredictionDB')
+      .select('*')
+      .eq('Event', 'UFC Fight Night Yan vs Figueiredo');
 
     if (error) throw error;
 
