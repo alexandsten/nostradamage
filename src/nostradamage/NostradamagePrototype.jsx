@@ -338,7 +338,7 @@ export default function NostradamagePrototype() {
                                             <Stack  width={'100%'} justifyContent={'center'} alignItems={'center'}>
                                               {latestClick == matchupName ? (
                                                 <>
-                                                  <Stack  width={'33%'} justifyContent={'center'} alignItems={'center'}>
+                                                  <Stack  width={isSmallScreen ? '90%' : '40%'} justifyContent={'center'} alignItems={'center'}>
                                                     {/* <FadeDiv>
                                                       <PulseDiv> */}
                                                         <Stack width={'100%'} flexDirection={'row'} justifyContent={'space-between'} alignItems={'center'}>
@@ -379,7 +379,7 @@ export default function NostradamagePrototype() {
                                                 </>
                                               ) : (
                                                 <>
-                                                  <Stack  width={'33%'} justifyContent={'center'} alignItems={'center'}>
+                                                  <Stack  width={isSmallScreen ? '90%' : '40%'} justifyContent={'center'} alignItems={'center'}>
                                                     <Stack width={'100%'} flexDirection={'row'} justifyContent={'space-between'} alignItems={'center'}>
                                                       <EventData>
                                                         Winner:&nbsp;
