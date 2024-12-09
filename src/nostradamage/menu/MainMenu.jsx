@@ -103,7 +103,7 @@ export default function MainMenu(props) {
                   </Grid>
                 </Link>
              )}
-                {!isSmallScreen && (
+                {/* {!isSmallScreen && (
                   <Link to="/subscription" style={{ textDecoration: 'none' }}>
                     <Grid item onClick={() => props.setSelectedItem('Sub')}>
                       <MenuText sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' }, color: props.selectedItem == 'Sub' ? '#ed652b' : 'white' }}>
@@ -111,7 +111,7 @@ export default function MainMenu(props) {
                       </MenuText>
                     </Grid>
                    </Link>
-                )}
+                )} */}
               {!isSmallScreen && (
                 <Link to="/about" style={{ textDecoration: 'none' }}>
                   <Grid item onClick={() => props.setSelectedItem('About')}>
@@ -166,7 +166,7 @@ export default function MainMenu(props) {
                     </MenuText>
                   </Link>
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                   <Link to="/subscription" style={{ textDecoration: 'none' }}>
                     <MenuText
                       sx={{ cursor: 'pointer', '&:hover': { textDecoration: 'underline' },color: 'white' }}
@@ -175,7 +175,7 @@ export default function MainMenu(props) {
                       Subscription
                     </MenuText>
                   </Link>
-                </Grid>
+                </Grid> */}
                 <Grid item>
                   <Link to="/about" style={{ textDecoration: 'none' }}>
                     <MenuText
