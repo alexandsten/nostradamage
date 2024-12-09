@@ -258,9 +258,16 @@ export default function NostradamagePrototype() {
                                   
                         </Stack>
                         <Stack direction='row' gap={1} alignItems='flex-start' justifyContent='center' m={3}>
-                              <Typography className='data' sx={{ fontSize: '32px', color: 'white', fontFamily: 'VT323' }}>
-                                {expandedEvent}
-                              </Typography>
+                          {
+                            expandedEvent ? (
+                            <LoadingText>
+                              {JSON.stringify(expandedEvent).replaceAll('_', ' ')}
+                            </LoadingText>
+                            ) : (
+                              null
+                            )
+                          }
+                          
                           </Stack>
 
                       <FlashDiv>
@@ -444,9 +451,7 @@ export default function NostradamagePrototype() {
                                 backgroundColor: '#b6451a', 
                               }, }}
                             >
-                            
-                              {event}
-                              
+                            {JSON.stringify(event).replaceAll('_', ' ')}
                             </Button> 
                           </Stack>
                         ))
