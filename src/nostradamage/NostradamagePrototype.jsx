@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import texture2 from './img/texture2.jpg';
 import { useMediaQuery} from '@mui/material';
 import Button from '@mui/material/Button';
 import { GlobalStyles, Typography } from '@mui/material';
 import { Stack } from '@mui/material';
-import staticBackground2 from './img/static1.webp';
 import MainMenu from './menu/MainMenu';
 import fight from './img/fight.webp';
 import pixelBackground1 from './img/2FightersBackground.webp';
-import blackImage from './img/black.jpg';
 import pixelBackground2 from './img/2Fighters.webp';
-import staticFilm from './img/staticFilm.webp';
 import monitorTexture from './img/brick1.webp';
 import pulse from 'react-animations/lib/pulse';
 import flash from 'react-animations/lib/flash';
