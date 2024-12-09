@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import texture2 from './img/texture2.jpg';
 import { useMediaQuery} from '@mui/material';
 import Button from '@mui/material/Button';
-import { GlobalStyles, Typography } from '@mui/material';
+import { GlobalStyles, Typography, styled as muiStyled } from '@mui/material';
 import { Stack } from '@mui/material';
 import MainMenu from './menu/MainMenu';
 import fight from './img/fight.webp';
@@ -19,6 +19,39 @@ import slideInLeft from 'react-animations/lib/slide-in-left';
 import NostradamageFooter from './NostradamageFooter';
 
 export default function NostradamagePrototype() {
+
+  const isSmallScreen = useMediaQuery('(max-width:1200px)');
+  const isSocialScreen = useMediaQuery('(max-width:1400px)');
+
+  const NostraBigText = muiStyled(Typography)({
+      color: 'white',
+      fontSize:  isSmallScreen ? '1.5em' : '4em',
+      fontFamily: 'Pixelify Sans'
+  });
+
+  const PressPredict = muiStyled(Typography)({
+      color: 'white',
+      fontSize: '2em',
+      fontFamily: 'VT323'
+  });
+
+  const EventName = muiStyled(Typography)({
+      fontSize: isSmallScreen ? '1.2em' : '1.8em',
+      color: 'white', 
+      fontFamily: 'VT323'
+  });
+
+  const EventData = muiStyled(Typography)({
+    fontSize: isSmallScreen ? '0.8em' : '1.2em',
+    color: 'white', 
+    fontFamily: 'VT323'
+  });
+
+  const LoadingText = muiStyled(Typography)({
+    fontSize: isSmallScreen ? '1.8em' : '2.4em',
+    fontFamily: 'VT323'
+  });
+
   const [data, setData] = useState({});
   const [error, setError] = useState(null);
 
@@ -30,8 +63,7 @@ export default function NostradamagePrototype() {
 
   const [expandedEvent, setExpanded] = useState(null);
 
-  const isSmallScreen = useMediaQuery('(max-width:1200px)');
-  const isSocialScreen = useMediaQuery('(max-width:1400px)');
+
 
   const SlideInRightAnimation = keyframes`${slideInRight}`;
 
@@ -198,29 +230,25 @@ export default function NostradamagePrototype() {
                           {
                             expandedEvent ? (
                                 <>
-                                  <Typography className='data' 
-                                    style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                                  <NostraBigText>
                                       Nostra
-                                    </Typography>
+                                  </NostraBigText>
                                 
-                                  <Typography className='data' 
-                                    style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                                  <NostraBigText>
                                       damage
-                                    </Typography>
+                                  </NostraBigText>
                                 </>
                             ) : (
                               <>
                                 <SlideInLeftDiv>
-                                  <Typography className='data' 
-                                    style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                                    <NostraBigText>
                                       Nostra
-                                    </Typography>
+                                    </NostraBigText>
                                 </SlideInLeftDiv>
                                 <SlideInRightDiv>
-                                  <Typography className='data' 
-                                    style={{ color: 'white', fontSize:  isSmallScreen ? '1.5em' : '4em', fontFamily: 'Pixelify Sans'}}>
+                                  <NostraBigText>
                                       damage
-                                    </Typography>
+                                  </NostraBigText>
                                 </SlideInRightDiv>
                               </>
                             )
@@ -236,7 +264,7 @@ export default function NostradamagePrototype() {
                           </Stack>
 
                       <FlashDiv>
-                        {!expandedEvent && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Press to predict</Typography>}
+                        {!expandedEvent && <PressPredict>Press to predict</PressPredict>}
                       </FlashDiv>
                       {expandedEvent ? (
                         <>
@@ -258,7 +286,7 @@ export default function NostradamagePrototype() {
                             >
                               
                               <FlashDiv>
-                                {expandedEvent && <Typography className='data' style={{ color: 'white', fontSize: '20px', fontFamily: 'VT323'}}>Press to predict</Typography>}
+                                {expandedEvent && <PressPredict>Press to predict</PressPredict>}
                               </FlashDiv>
                               <Box
                                 sx={{
@@ -296,10 +324,9 @@ export default function NostradamagePrototype() {
                                   >
                                   
                                     <Stack width={'100%'} justifyContent={'center'} alignItems={'center'}>
-                                      <Typography className='data' sx={{ fontSize: '24px', color: 'white', 
-                                        fontFamily: 'VT323' }}>
+                                      <EventName>
                                         {data[expandedEvent][matchupName].Fight}
-                                      </Typography>
+                                      </EventName>
                                     </Stack>
                                     <Stack>
                                       {Object.entries(data[expandedEvent][matchupName]).map(([fighter, fighterData], idx) => (
@@ -312,15 +339,15 @@ export default function NostradamagePrototype() {
                                               {latestClick == matchupName ? (
                                                 <FadeDiv>
                                                   <PulseDiv>
-                                                    <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
+                                                    <EventData>
                                                       {JSON.stringify(fighterData)}
-                                                    </Typography>
+                                                    </EventData>
                                                   </PulseDiv>
                                                 </FadeDiv>
                                               ) : (
-                                                  <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
+                                                  <EventData>
                                                     {JSON.stringify(fighterData)}
-                                                  </Typography>
+                                                  </EventData>
                                               )}
                                             </ Stack>
                                           )}
@@ -333,7 +360,7 @@ export default function NostradamagePrototype() {
                             </Box>
                           ) : (
                             <Stack direction='row' justifyContent='center' alignItems='center' gap={1}>
-                              <Typography sx={{ fontSize: '2.4em', fontFamily: 'VT323' }}>Loading...</Typography>
+                              <LoadingText>Loading...</LoadingText>
                               <img style={{ height: '4em', width: '4em', borderRadius: '50%'}} src={fight}/>
                             </Stack>
                             
