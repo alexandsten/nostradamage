@@ -329,30 +329,92 @@ export default function NostradamagePrototype() {
                                       </EventName>
                                     </Stack>
                                     <Stack>
-                                      {Object.entries(data[expandedEvent][matchupName]).map(([fighter, fighterData], idx) => (
-                                        <Stack key={idx} flexDirection={isSmallScreen ? 'column' : 'row'} gap={2} mt={4} >
+                                     
+                                        <Stack flexDirection={isSmallScreen ? 'column' : 'row'} gap={2} mt={4} >
                                           {/* <Typography className='data' sx={{ fontSize: '20px', color: 'white', fontFamily: 'VT323' }}>
                                             {fighter}:
                                           </Typography> */}
                                           {visiblePulseDivs[matchupName] && (
                                             <Stack  width={'100%'} justifyContent={'center'} alignItems={'center'}>
                                               {latestClick == matchupName ? (
-                                                <FadeDiv>
-                                                  <PulseDiv>
-                                                    <EventData>
-                                                      {JSON.stringify(fighterData)}
-                                                    </EventData>
-                                                  </PulseDiv>
-                                                </FadeDiv>
+                                                <>
+                                                  <FadeDiv>
+                                                    <PulseDiv>
+                                                      <Stack width={'100%'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+                                                        <EventData>
+                                                          Winner:
+                                                        </EventData>
+                                                        <EventData>
+                                                          {data[expandedEvent][matchupName].Pred_winner}
+                                                        </EventData>
+                                                      </Stack>
+                                                      <Stack width={'100%'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+                                                        <EventData>
+                                                          Win percentage:
+                                                        </EventData>
+                                                        <EventData>
+                                                          {data[expandedEvent][matchupName].Pred_win_pct}
+                                                        </EventData>
+                                                      </Stack>
+                                                      <Stack width={'100%'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+                                                        <EventData>
+                                                          Method:
+                                                        </EventData>
+                                                        <EventData>
+                                                          {data[expandedEvent][matchupName].Pred_method}
+                                                        </EventData>
+                                                      </Stack>
+                                                      <Stack width={'100%'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+                                                        <EventData>
+                                                          Method percentage:
+                                                        </EventData>
+                                                        <EventData>
+                                                          {data[expandedEvent][matchupName].Pred_method_pct}
+                                                        </EventData>
+                                                      </Stack>
+                                                    </PulseDiv>
+                                                  </FadeDiv>
+                                                </>
                                               ) : (
-                                                  <EventData>
-                                                    {JSON.stringify(fighterData)}
-                                                  </EventData>
+                                                <>
+                                                  <Stack width={'100%'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+                                                    <EventData>
+                                                      Winner:
+                                                    </EventData>
+                                                    <EventData>
+                                                      {data[expandedEvent][matchupName].Pred_winner}
+                                                    </EventData>
+                                                  </Stack>
+                                                  <Stack width={'100%'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+                                                    <EventData>
+                                                      Win percentage:
+                                                    </EventData>
+                                                    <EventData>
+                                                      {data[expandedEvent][matchupName].Pred_win_pct}
+                                                    </EventData>
+                                                  </Stack>
+                                                  <Stack width={'100%'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+                                                    <EventData>
+                                                      Method:
+                                                    </EventData>
+                                                    <EventData>
+                                                      {data[expandedEvent][matchupName].Pred_method}
+                                                    </EventData>
+                                                  </Stack>
+                                                  <Stack width={'100%'} flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+                                                    <EventData>
+                                                      Method percentage:
+                                                    </EventData>
+                                                    <EventData>
+                                                      {data[expandedEvent][matchupName].Pred_method_pct}
+                                                    </EventData>
+                                                  </Stack>
+                                                </>
                                               )}
                                             </ Stack>
                                           )}
                                         </Stack>
-                                      ))}
+                                    
                                     </Stack>
                                   </Stack>
                                 ))}
