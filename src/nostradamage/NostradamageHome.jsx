@@ -136,7 +136,7 @@ export default function NostradamageHome({setView}) {
                           Revolutionizing UFC Predictions
                         </h3>
                           <Text>
-                            Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using advanced algorithms and machine learning. 
+                            Nostradamage is an innovative product designed to predict UFC MMA fight outcomes using our proprietary, cutting-edge algorithms. These algorithms are constantly learning and improving.
                           </Text>
                         </Grid>
                       <Grid 
