@@ -87,10 +87,6 @@ app.get('/api/UFC_Fight_Night_Yan_vs_Figueiredo', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
-
 app.get('/api/UFC_311_Makhachev_vs_Moicano', async (req, res) => {
   try {
     const { data, error } = await supabase
