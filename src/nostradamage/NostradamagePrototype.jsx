@@ -21,7 +21,6 @@ import NostradamageFooter from './NostradamageFooter';
 export default function NostradamagePrototype() {
 
   const isSmallScreen = useMediaQuery('(max-width:1200px)');
-  const isSocialScreen = useMediaQuery('(max-width:1400px)');
 
   const NostraBigText = muiStyled(Typography)({
       color: 'white',
@@ -122,10 +121,6 @@ export default function NostradamagePrototype() {
 
   const [visiblePulseDivs, setVisiblePulseDivs] = useState({});
   const [latestClick, setLatestClick] = useState({});
-
-  // const changeClickedItem = (idx) => {
-  //   setLatestClick(idx)
-  // };
 
   // Toggle visibility of the PulseDiv when a Stack is clicked
   const toggleVisibility = (idx) => {
@@ -311,7 +306,6 @@ export default function NostradamagePrototype() {
                                   onClick={() => toggleVisibility(matchupName)}
                                   key={index}
                                   sx={{
-                                    // backgroundImage: visiblePulseDivs[matchupName] ? `url(${staticBackground2})` : `url(${blackImage})` ,
                                     cursor: "pointer",
                                     // backgroundSize: 'cover', 
                                     padding: '12px',
@@ -320,12 +314,9 @@ export default function NostradamagePrototype() {
                                     marginTop: '2em',
                                     minWidth: '50%',
                                     backgroundColor: 'black',
-                                    // maxWidth: isSmallScreen ? '12em' : isSocialScreen ? '14em' : '16em',
                                     flex: '1 1 30%',
-                                    // borderRadius: '15px',
                                     border: visiblePulseDivs[matchupName] ? '0.5em solid #ed652b' : '0.5em solid white',
                                     transition: 'background-image 1.8s', // Add transition for smooth effect
-                                    // height: visiblePulseDivs[matchupName] ? '100%' : '4em'
                                   }}
                                     gap={1}
                                   >
