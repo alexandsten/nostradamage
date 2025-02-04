@@ -33,24 +33,24 @@ export default function NostradamageFooter() {
             }}
             gap={5}
           >
-            <Stack direction="row" spacing={2} justifyContent="center">
+             <Stack direction="row" spacing={2} justifyContent="center">
               <IconButton 
                 component="a" 
-                href="https://www.youtube.com/@Nostradamage" 
+                href="https://www.instagram.com/nostradmg/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 sx={{ color: "white" }}
               >
-                <SocialIcon url="https:/instagram.com" />
+                <SocialIcon url="https://www.instagram.com/nostradmg/" target="_blank" rel="noopener noreferrer" />
               </IconButton>
               <IconButton 
                 component="a" 
-                href="https://www.instagram.com/nostradamage" 
+                href="https://www.youtube.com/@NostraDamage-n4r" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 sx={{ color: "white" }}
               >
-                <SocialIcon url="https:/youtube.com" />
+                <SocialIcon url="https://www.youtube.com/@NostraDamage-n4r" target="_blank" rel="noopener noreferrer" />
               </IconButton>
             </Stack>
             <Text>
