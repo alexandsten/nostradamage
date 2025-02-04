@@ -3,7 +3,12 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import goldBg from './img/goldBg.jpg';
 import silverBg from './img/silverBg.jpg';
-import { Grid, Stack, styled as muiStyled } from '@mui/material';
+import { Grid, Stack, styled as muiStyled, IconButton } from '@mui/material';
+import { SocialIcon } from 'react-social-icons';
+import 'react-social-icons/instagram'
+import 'react-social-icons/discord'
+import 'react-social-icons/x'
+import 'react-social-icons/tiktok'
 
 export default function NostradamageFooter() {
 
@@ -28,6 +33,26 @@ export default function NostradamageFooter() {
             }}
             gap={5}
           >
+            <Stack direction="row" spacing={2} justifyContent="center">
+              <IconButton 
+                component="a" 
+                href="https://www.youtube.com/@Nostradamage" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                sx={{ color: "white" }}
+              >
+                <SocialIcon url="https:/instagram.com" />
+              </IconButton>
+              <IconButton 
+                component="a" 
+                href="https://www.instagram.com/nostradamage" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                sx={{ color: "white" }}
+              >
+                <SocialIcon url="https:/youtube.com" />
+              </IconButton>
+            </Stack>
             <Text>
               &copy; 2024 Nostradamage. All rights reserved.
             </Text>
