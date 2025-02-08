@@ -42,6 +42,21 @@ app.get('/api/TestPredictionDB', async (req, res) => {
   }
 });
 
+app.get('/api/UFC_312_Du_Plessis_vs_Strickland_2_', async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('TestPredictionDB')
+      .select('*')
+      .eq('Event', 'UFC 312 Du Plessis vs Strickland 2 ');
+
+    if (error) throw error;
+
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 app.get('/api/UFC_Fight_Night_Covington_vs_Buckley', async (req, res) => {
   try {
     const { data, error } = await supabase
