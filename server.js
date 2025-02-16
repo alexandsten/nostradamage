@@ -27,12 +27,13 @@ app.get('/api/hello-world', async (req, res) => {
   }
 });
 
+
 app.get('/api/TestPredictionDB', async (req, res) => {
   try {
     const { data, error } = await supabase
       .from('TestPredictionDB')
       .select('*')
-      .eq('Event', 'UFC Fight Night Cannonier vs Rodrigues ');
+      .eq('Event', 'UFC 309 Jones vs Miocic');
 
     if (error) throw error;
 
@@ -42,12 +43,12 @@ app.get('/api/TestPredictionDB', async (req, res) => {
   }
 });
 
-app.get('/api/TestPredictionDB', async (req, res) => {
+app.get('/api/UFC_Fight_Night_Cannonier_vs_Rodrigues_', async (req, res) => {
   try {
     const { data, error } = await supabase
       .from('TestPredictionDB')
       .select('*')
-      .eq('Event', 'UFC 309 Jones vs Miocic');
+      .eq('Event', 'UFC Fight Night Cannonier vs Rodrigues ');
 
     if (error) throw error;
 
