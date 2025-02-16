@@ -32,6 +32,21 @@ app.get('/api/TestPredictionDB', async (req, res) => {
     const { data, error } = await supabase
       .from('TestPredictionDB')
       .select('*')
+      .eq('Event', 'UFC Fight Night Cannonier vs Rodrigues ');
+
+    if (error) throw error;
+
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get('/api/TestPredictionDB', async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('TestPredictionDB')
+      .select('*')
       .eq('Event', 'UFC 309 Jones vs Miocic');
 
     if (error) throw error;
