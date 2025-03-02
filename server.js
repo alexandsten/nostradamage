@@ -43,6 +43,21 @@ app.get('/api/TestPredictionDB', async (req, res) => {
   }
 });
 
+app.get('/api/UFC_Fight_Night_Cejudo_vs_Song', async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from('TestPredictionDB')
+      .select('*')
+      .eq('Event', 'UFC Fight Night Cejudo vs Song');
+
+    if (error) throw error;
+
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 app.get('/api/UFC_Fight_Night_Cannonier_vs_Rodrigues_', async (req, res) => {
   try {
     const { data, error } = await supabase
